@@ -7,16 +7,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaiementType extends AbstractType
+class Paiement1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('montant_payé')
+            ->add('montant_paye')
             ->add('date_paiement')
             ->add('mode_paiement')
-            ->add('réservation')
-            ->add('entréeSortie')
+            ->add('reservation')
+            ->add('entreeSortie')
         ;
     }
 

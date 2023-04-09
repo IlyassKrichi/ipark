@@ -195,6 +195,13 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\IParkController"/>
       </call>
     </service>
+    <service id="App\Controller\PaiementController" class="App\Controller\PaiementController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementController"/>
+      </call>
+    </service>
     <service id="App\Controller\ReservationController" class="App\Controller\ReservationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -206,6 +213,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true">
@@ -780,6 +790,7 @@
       <argument type="collection">
         <argument>App\Form\Client1Type</argument>
         <argument>App\Form\ClientType</argument>
+        <argument>App\Form\Paiement1Type</argument>
         <argument>App\Form\PaiementType</argument>
         <argument>App\Form\ReservationType</argument>
         <argument>App\Form\RéservationType</argument>
@@ -1735,7 +1746,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.dg83XEb"/>
+      <argument type="service" id=".service_locator.pZTb604"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3193,6 +3204,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3200,6 +3214,8 @@
     <service id=".abstract.instanceof.App\Form\Client1Type" class="App\Form\Client1Type" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ClientType" class="App\Form\ClientType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" abstract="true"/>
@@ -3576,6 +3592,25 @@
         <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.69GazA_" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paiementRepository" type="service_closure" id="App\Repository\PaiementRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.W6WaZsJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paiement" type="service_closure" id=".errored..service_locator.W6WaZsJ.App\Entity\Paiement"/>
+      </argument>
+    </service>
+    <service id=".service_locator.bSws.pL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="paiement" type="service_closure" id=".errored..service_locator.bSws.pL.App\Entity\Paiement"/>
+        <argument key="paiementRepository" type="service_closure" id="App\Repository\PaiementRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.caJHb8S" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3595,7 +3630,7 @@
         <argument key="reservationRepository" type="service_closure" id="App\Repository\ReservationRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.06hn86r" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.h.FCutF" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ClientController::delete" type="service_closure" id=".service_locator.T1NedXT"/>
@@ -3603,6 +3638,11 @@
         <argument key="App\Controller\ClientController::index" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController::new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController::show" type="service_closure" id=".service_locator.lTbvCHw"/>
+        <argument key="App\Controller\PaiementController::delete" type="service_closure" id=".service_locator.bSws.pL"/>
+        <argument key="App\Controller\PaiementController::edit" type="service_closure" id=".service_locator.bSws.pL"/>
+        <argument key="App\Controller\PaiementController::index" type="service_closure" id=".service_locator.69GazA_"/>
+        <argument key="App\Controller\PaiementController::new" type="service_closure" id=".service_locator.69GazA_"/>
+        <argument key="App\Controller\PaiementController::show" type="service_closure" id=".service_locator.W6WaZsJ"/>
         <argument key="App\Controller\ReservationController::delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::index" type="service_closure" id=".service_locator.caJHb8S"/>
@@ -3617,6 +3657,11 @@
         <argument key="App\Controller\ClientController:index" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController:new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController:show" type="service_closure" id=".service_locator.lTbvCHw"/>
+        <argument key="App\Controller\PaiementController:delete" type="service_closure" id=".service_locator.bSws.pL"/>
+        <argument key="App\Controller\PaiementController:edit" type="service_closure" id=".service_locator.bSws.pL"/>
+        <argument key="App\Controller\PaiementController:index" type="service_closure" id=".service_locator.69GazA_"/>
+        <argument key="App\Controller\PaiementController:new" type="service_closure" id=".service_locator.69GazA_"/>
+        <argument key="App\Controller\PaiementController:show" type="service_closure" id=".service_locator.W6WaZsJ"/>
         <argument key="App\Controller\ReservationController:delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:index" type="service_closure" id=".service_locator.caJHb8S"/>
@@ -3693,11 +3738,12 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.dg83XEb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.pZTb604" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\Client1Type" type="service_closure" id="App\Form\Client1Type"/>
         <argument key="App\Form\ClientType" type="service_closure" id="App\Form\ClientType"/>
+        <argument key="App\Form\Paiement1Type" type="service_closure" id="App\Form\Paiement1Type"/>
         <argument key="App\Form\PaiementType" type="service_closure" id="App\Form\PaiementType"/>
         <argument key="App\Form\ReservationType" type="service_closure" id="App\Form\ReservationType"/>
         <argument key="App\Form\RéservationType" type="service_closure" id="App\Form\RéservationType"/>
@@ -3773,6 +3819,12 @@
     <service id=".service_locator.CshazM0.App\Controller\IParkController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\IParkController"/>
       <argument>App\Controller\IParkController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PaiementController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PaiementController"/>
+      <argument>App\Controller\PaiementController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
@@ -3898,12 +3950,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.06hn86r"/>
+      <argument type="service" id=".service_locator.h.FCutF"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.06hn86r"/>
+      <argument type="service" id=".service_locator.h.FCutF"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -3914,6 +3966,8 @@
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator.lTbvCHw.App\Entity\Client" class="App\Entity\Client"/>
     <service id=".errored..service_locator.T1NedXT.App\Entity\Client" class="App\Entity\Client"/>
+    <service id=".errored..service_locator.W6WaZsJ.App\Entity\Paiement" class="App\Entity\Paiement"/>
+    <service id=".errored..service_locator.bSws.pL.App\Entity\Paiement" class="App\Entity\Paiement"/>
     <service id=".errored..service_locator.h9c0uBq.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id=".errored..service_locator.doLz9ae.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
@@ -4550,14 +4604,14 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.06hn86r"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.h.FCutF"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.OW6g8UR" alias=".service_locator.06hn86r"/>
+    <service id=".service_locator.3ioQ_k6" alias=".service_locator.h.FCutF"/>
     <service id=".service_locator.eGlXAqC" alias=".service_locator.ErfwHK_"/>
-    <service id=".service_locator.RU2o8Ic" alias=".service_locator.dg83XEb"/>
+    <service id=".service_locator.MUuDY3." alias=".service_locator.pZTb604"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -4580,6 +4634,9 @@
     <service id=".service_locator..r890Xk" alias=".service_locator.sUhGGzt"/>
     <service id=".service_locator.s0WpMKf" alias=".service_locator.lTbvCHw"/>
     <service id=".service_locator.PUMF11i" alias=".service_locator.T1NedXT"/>
+    <service id=".service_locator.YPaucVN" alias=".service_locator.69GazA_"/>
+    <service id=".service_locator.k39SJCv" alias=".service_locator.W6WaZsJ"/>
+    <service id=".service_locator.8Uv64mj" alias=".service_locator.bSws.pL"/>
     <service id=".service_locator.LuS44bc" alias=".service_locator.caJHb8S"/>
     <service id=".service_locator.bRbdH2p" alias=".service_locator.h9c0uBq"/>
     <service id=".service_locator.y7DUdZ3" alias=".service_locator.doLz9ae"/>
