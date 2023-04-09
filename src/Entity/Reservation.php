@@ -32,6 +32,9 @@ class Reservation
     #[ORM\JoinColumn(nullable: false)]
     private ?Client $client = null;
 
+    #[ORM\Column(length: 100)]
+    private ?string $type_vehicule = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -98,6 +101,18 @@ class Reservation
     public function setClient(?Client $client): self
     {
         $this->client = $client;
+
+        return $this;
+    }
+
+    public function getTypeVehicule(): ?string
+    {
+        return $this->type_vehicule;
+    }
+
+    public function setTypeVehicule(string $type_vehicule): self
+    {
+        $this->type_vehicule = $type_vehicule;
 
         return $this;
     }
