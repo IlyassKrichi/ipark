@@ -181,12 +181,32 @@
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
+    <service id="App\Controller\ClientController" class="App\Controller\ClientController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\ClientController"/>
+      </call>
+    </service>
     <service id="App\Controller\IParkController" class="App\Controller\IParkController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CshazM0.App\Controller\IParkController"/>
       </call>
+    </service>
+    <service id="App\Controller\RéservationController" class="App\Controller\RéservationController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\RéservationController"/>
+      </call>
+    </service>
+    <service id="App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -745,9 +765,12 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ClientType</argument>
+        <argument>App\Form\RéservationType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1700,7 +1723,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.y4dplYt"/>
+      <argument type="service" id=".service_locator.7HAY3BR"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3152,9 +3175,19 @@
         <argument>Lint a Twig template and outputs encountered errors</argument>
       </call>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RéservationController" class="App\Controller\RéservationController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RéservationController" class="App\Controller\RéservationController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\RéservationController" class="App\Controller\RéservationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ClientType" class="App\Form\ClientType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EntréeSortieRepository" class="App\Repository\EntréeSortieRepository" autowire="true" abstract="true"/>
@@ -3506,13 +3539,71 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.HBdvAhp" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.sUhGGzt" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.lTbvCHw" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="client" type="service_closure" id=".errored..service_locator.lTbvCHw.App\Entity\Client"/>
+      </argument>
+    </service>
+    <service id=".service_locator.T1NedXT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="client" type="service_closure" id=".errored..service_locator.T1NedXT.App\Entity\Client"/>
+        <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.ZHjtxDp" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="réservationRepository" type="service_closure" id="App\Repository\RéservationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.T.cCDjl" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="réservation" type="service_closure" id=".errored..service_locator.T.cCDjl.App\Entity\Réservation"/>
+      </argument>
+    </service>
+    <service id=".service_locator._Wjw.xi" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="réservation" type="service_closure" id=".errored..service_locator._Wjw.xi.App\Entity\Réservation"/>
+        <argument key="réservationRepository" type="service_closure" id="App\Repository\RéservationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LJGd0Qx" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Controller\ClientController::delete" type="service_closure" id=".service_locator.T1NedXT"/>
+        <argument key="App\Controller\ClientController::edit" type="service_closure" id=".service_locator.T1NedXT"/>
+        <argument key="App\Controller\ClientController::index" type="service_closure" id=".service_locator.sUhGGzt"/>
+        <argument key="App\Controller\ClientController::new" type="service_closure" id=".service_locator.sUhGGzt"/>
+        <argument key="App\Controller\ClientController::show" type="service_closure" id=".service_locator.lTbvCHw"/>
+        <argument key="App\Controller\RéservationController::delete" type="service_closure" id=".service_locator._Wjw.xi"/>
+        <argument key="App\Controller\RéservationController::edit" type="service_closure" id=".service_locator._Wjw.xi"/>
+        <argument key="App\Controller\RéservationController::index" type="service_closure" id=".service_locator.ZHjtxDp"/>
+        <argument key="App\Controller\RéservationController::new" type="service_closure" id=".service_locator.ZHjtxDp"/>
+        <argument key="App\Controller\RéservationController::show" type="service_closure" id=".service_locator.T.cCDjl"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
+        <argument key="App\Controller\ClientController:delete" type="service_closure" id=".service_locator.T1NedXT"/>
+        <argument key="App\Controller\ClientController:edit" type="service_closure" id=".service_locator.T1NedXT"/>
+        <argument key="App\Controller\ClientController:index" type="service_closure" id=".service_locator.sUhGGzt"/>
+        <argument key="App\Controller\ClientController:new" type="service_closure" id=".service_locator.sUhGGzt"/>
+        <argument key="App\Controller\ClientController:show" type="service_closure" id=".service_locator.lTbvCHw"/>
+        <argument key="App\Controller\RéservationController:delete" type="service_closure" id=".service_locator._Wjw.xi"/>
+        <argument key="App\Controller\RéservationController:edit" type="service_closure" id=".service_locator._Wjw.xi"/>
+        <argument key="App\Controller\RéservationController:index" type="service_closure" id=".service_locator.ZHjtxDp"/>
+        <argument key="App\Controller\RéservationController:new" type="service_closure" id=".service_locator.ZHjtxDp"/>
+        <argument key="App\Controller\RéservationController:show" type="service_closure" id=".service_locator.T.cCDjl"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
       </argument>
@@ -3584,9 +3675,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.y4dplYt" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.7HAY3BR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ClientType" type="service_closure" id="App\Form\ClientType"/>
+        <argument key="App\Form\RéservationType" type="service_closure" id="App\Form\RéservationType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -3650,9 +3743,21 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\ClientController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ClientController"/>
+      <argument>App\Controller\ClientController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\IParkController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\IParkController"/>
       <argument>App\Controller\IParkController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\RéservationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\RéservationController"/>
+      <argument>App\Controller\RéservationController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
@@ -3772,12 +3877,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.HBdvAhp"/>
+      <argument type="service" id=".service_locator.LJGd0Qx"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.HBdvAhp"/>
+      <argument type="service" id=".service_locator.LJGd0Qx"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -3786,6 +3891,10 @@
       </call>
     </service>
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.lTbvCHw.App\Entity\Client" class="App\Entity\Client"/>
+    <service id=".errored..service_locator.T1NedXT.App\Entity\Client" class="App\Entity\Client"/>
+    <service id=".errored..service_locator.T.cCDjl.App\Entity\Réservation" class="App\Entity\Réservation"/>
+    <service id=".errored..service_locator._Wjw.xi.App\Entity\Réservation" class="App\Entity\Réservation"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -4420,14 +4529,14 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.HBdvAhp"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.LJGd0Qx"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.L.EDYUC" alias=".service_locator.HBdvAhp"/>
+    <service id=".service_locator.ADcVpw." alias=".service_locator.LJGd0Qx"/>
     <service id=".service_locator.eGlXAqC" alias=".service_locator.ErfwHK_"/>
-    <service id=".service_locator.Za9MpXe" alias=".service_locator.y4dplYt"/>
+    <service id=".service_locator.8KZKePZ" alias=".service_locator.7HAY3BR"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -4447,6 +4556,12 @@
     <service id="argument_resolver.not_tagged_controller" alias="debug.argument_resolver.not_tagged_controller"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
+    <service id=".service_locator..r890Xk" alias=".service_locator.sUhGGzt"/>
+    <service id=".service_locator.s0WpMKf" alias=".service_locator.lTbvCHw"/>
+    <service id=".service_locator.PUMF11i" alias=".service_locator.T1NedXT"/>
+    <service id=".service_locator.XqNCg1o" alias=".service_locator.ZHjtxDp"/>
+    <service id=".service_locator.RGF2aXa" alias=".service_locator.T.cCDjl"/>
+    <service id=".service_locator.4zMnTtz" alias=".service_locator._Wjw.xi"/>
     <service id=".service_locator.tu0TVXY" alias=".service_locator.CshazM0"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
   </services>
