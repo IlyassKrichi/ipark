@@ -19,16 +19,13 @@ class Client
     private ?string $nom = null;
 
     #[ORM\Column(length: 100)]
-    private ?string $prénom = null;
+    private ?string $prenom = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 100, nullable: true)]
     private ?string $genre = null;
 
     #[ORM\Column(length: 100)]
     private ?string $email = null;
-
-    #[ORM\Column(length: 100)]
-    private ?string $mdp = null;
 
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $GSM = null;
@@ -39,12 +36,12 @@ class Client
     #[ORM\Column(length: 100)]
     private ?string $type_vehicule = null;
 
-    #[ORM\OneToMany(mappedBy: 'client', targetEntity: Réservation::class, orphanRemoval: true)]
-    private Collection $Réservation;
+    #[ORM\OneToMany(mappedBy: 'client', targetEntity: Reservation::class, orphanRemoval: true)]
+    private Collection $Reservation;
 
     public function __construct()
     {
-        $this->Réservation = new ArrayCollection();
+        $this->Reservation = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -64,14 +61,14 @@ class Client
         return $this;
     }
 
-    public function getPrénom(): ?string
+    public function getPrenom(): ?string
     {
-        return $this->prénom;
+        return $this->prenom;
     }
 
-    public function setPrénom(string $prénom): self
+    public function setPrenom(string $prenom): self
     {
-        $this->prénom = $prénom;
+        $this->prenom = $prenom;
 
         return $this;
     }
@@ -81,7 +78,7 @@ class Client
         return $this->genre;
     }
 
-    public function setGenre(string $genre): self
+    public function setGenre(?string $genre): self
     {
         $this->genre = $genre;
 
@@ -93,21 +90,9 @@ class Client
         return $this->email;
     }
 
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): self
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    public function getMdp(): ?string
-    {
-        return $this->mdp;
-    }
-
-    public function setMdp(string $mdp): self
-    {
-        $this->mdp = $mdp;
 
         return $this;
     }
@@ -149,29 +134,29 @@ class Client
     }
 
     /**
-     * @return Collection<int, Réservation>
+     * @return Collection<int, Reservation>
      */
-    public function getRéservation(): Collection
+    public function getReservation(): Collection
     {
-        return $this->Réservation;
+        return $this->Reservation;
     }
 
-    public function addRServation(Réservation $rServation): self
+    public function addReservation(Reservation $reservation): self
     {
-        if (!$this->Réservation->contains($rServation)) {
-            $this->Réservation->add($rServation);
-            $rServation->setClient($this);
+        if (!$this->Reservation->contains($reservation)) {
+            $this->Reservation->add($reservation);
+            $reservation->setClient($this);
         }
 
         return $this;
     }
 
-    public function removeRServation(Réservation $rServation): self
+    public function removeReservation(Reservation $reservation): self
     {
-        if ($this->Réservation->removeElement($rServation)) {
+        if ($this->Reservation->removeElement($reservation)) {
             // set the owning side to null (unless already changed)
-            if ($rServation->getClient() === $this) {
-                $rServation->setClient(null);
+            if ($reservation->getClient() === $this) {
+                $reservation->setClient(null);
             }
         }
 

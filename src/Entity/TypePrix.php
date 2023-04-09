@@ -19,7 +19,7 @@ class TypePrix
     private ?string $type = null;
 
     #[ORM\Column]
-    private ?int $tarif = null;
+    private ?float $tarif = null;
 
     #[ORM\ManyToMany(targetEntity: Parking::class, mappedBy: 'TypePrix')]
     private Collection $parkings;
@@ -46,12 +46,12 @@ class TypePrix
         return $this;
     }
 
-    public function getTarif(): ?int
+    public function getTarif(): ?float
     {
         return $this->tarif;
     }
 
-    public function setTarif(int $tarif): self
+    public function setTarif(float $tarif): self
     {
         $this->tarif = $tarif;
 

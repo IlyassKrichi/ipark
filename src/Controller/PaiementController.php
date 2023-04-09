@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Paiement;
-use App\Form\PaiementType;
+use App\Form\Paiement1Type;
 use App\Repository\PaiementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +25,7 @@ class PaiementController extends AbstractController
     public function new(Request $request, PaiementRepository $paiementRepository): Response
     {
         $paiement = new Paiement();
-        $form = $this->createForm(PaiementType::class, $paiement);
+        $form = $this->createForm(Paiement1Type::class, $paiement);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -51,7 +51,7 @@ class PaiementController extends AbstractController
     #[Route('/{id}/edit', name: 'app_paiement_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Paiement $paiement, PaiementRepository $paiementRepository): Response
     {
-        $form = $this->createForm(PaiementType::class, $paiement);
+        $form = $this->createForm(Paiement1Type::class, $paiement);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

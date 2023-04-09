@@ -15,7 +15,7 @@ class Paiement
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?float $montant_payé = null;
+    private ?float $montant_paye = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_paiement = null;
@@ -24,24 +24,24 @@ class Paiement
     private ?string $mode_paiement = null;
 
     #[ORM\OneToOne(mappedBy: 'Paiement', cascade: ['persist', 'remove'])]
-    private ?Réservation $réservation = null;
+    private ?Reservation $reservation = null;
 
     #[ORM\OneToOne(mappedBy: 'Paiement', cascade: ['persist', 'remove'])]
-    private ?EntréeSortie $entréeSortie = null;
+    private ?EntreeSortie $entreeSortie = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getMontantPayé(): ?float
+    public function getMontantPaye(): ?float
     {
-        return $this->montant_payé;
+        return $this->montant_paye;
     }
 
-    public function setMontantPayé(float $montant_payé): self
+    public function setMontantPaye(float $montant_paye): self
     {
-        $this->montant_payé = $montant_payé;
+        $this->montant_paye = $montant_paye;
 
         return $this;
     }
@@ -70,36 +70,36 @@ class Paiement
         return $this;
     }
 
-    public function getRéservation(): ?Réservation
+    public function getReservation(): ?Reservation
     {
-        return $this->réservation;
+        return $this->reservation;
     }
 
-    public function setRéservation(Réservation $réservation): self
+    public function setReservation(Reservation $reservation): self
     {
         // set the owning side of the relation if necessary
-        if ($réservation->getPaiement() !== $this) {
-            $réservation->setPaiement($this);
+        if ($reservation->getPaiement() !== $this) {
+            $reservation->setPaiement($this);
         }
 
-        $this->réservation = $réservation;
+        $this->reservation = $reservation;
 
         return $this;
     }
 
-    public function getEntréeSortie(): ?EntréeSortie
+    public function getEntreeSortie(): ?EntreeSortie
     {
-        return $this->entréeSortie;
+        return $this->entreeSortie;
     }
 
-    public function setEntréeSortie(EntréeSortie $entréeSortie): self
+    public function setEntreeSortie(EntreeSortie $entreeSortie): self
     {
         // set the owning side of the relation if necessary
-        if ($entréeSortie->getPaiement() !== $this) {
-            $entréeSortie->setPaiement($this);
+        if ($entreeSortie->getPaiement() !== $this) {
+            $entreeSortie->setPaiement($this);
         }
 
-        $this->entréeSortie = $entréeSortie;
+        $this->entreeSortie = $entreeSortie;
 
         return $this;
     }

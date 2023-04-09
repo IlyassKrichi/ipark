@@ -18,25 +18,22 @@ class Parking
     #[ORM\Column(length: 100)]
     private ?string $nom = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $adresse = null;
-
     #[ORM\Column]
-    private ?int $capacité = null;
+    private ?int $capacite = null;
 
     #[ORM\Column(length: 100)]
     private ?string $emplacement_geo = null;
 
-    #[ORM\ManyToMany(targetEntity: TypePrix::class, inversedBy: 'parkings')]
-    private Collection $TypePrix;
-
     #[ORM\OneToMany(mappedBy: 'parking', targetEntity: Place::class, orphanRemoval: true)]
     private Collection $Place;
 
+    #[ORM\ManyToMany(targetEntity: TypePrix::class, inversedBy: 'parkings')]
+    private Collection $TypePrix;
+
     public function __construct()
     {
-        $this->TypePrix = new ArrayCollection();
         $this->Place = new ArrayCollection();
+        $this->TypePrix = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -56,26 +53,14 @@ class Parking
         return $this;
     }
 
-    public function getAdresse(): ?string
+    public function getCapacite(): ?int
     {
-        return $this->adresse;
+        return $this->capacite;
     }
 
-    public function setAdresse(string $adresse): self
+    public function setCapacite(int $capacite): self
     {
-        $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    public function getCapacité(): ?int
-    {
-        return $this->capacité;
-    }
-
-    public function setCapacité(int $capacité): self
-    {
-        $this->capacité = $capacité;
+        $this->capacite = $capacite;
 
         return $this;
     }
@@ -88,30 +73,6 @@ class Parking
     public function setEmplacementGeo(string $emplacement_geo): self
     {
         $this->emplacement_geo = $emplacement_geo;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, TypePrix>
-     */
-    public function getTypePrix(): Collection
-    {
-        return $this->TypePrix;
-    }
-
-    public function addTypePrix(TypePrix $typePrix): self
-    {
-        if (!$this->TypePrix->contains($typePrix)) {
-            $this->TypePrix->add($typePrix);
-        }
-
-        return $this;
-    }
-
-    public function removeTypePrix(TypePrix $typePrix): self
-    {
-        $this->TypePrix->removeElement($typePrix);
 
         return $this;
     }
@@ -142,6 +103,30 @@ class Parking
                 $place->setParking(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, TypePrix>
+     */
+    public function getTypePrix(): Collection
+    {
+        return $this->TypePrix;
+    }
+
+    public function addTypePrix(TypePrix $typePrix): self
+    {
+        if (!$this->TypePrix->contains($typePrix)) {
+            $this->TypePrix->add($typePrix);
+        }
+
+        return $this;
+    }
+
+    public function removeTypePrix(TypePrix $typePrix): self
+    {
+        $this->TypePrix->removeElement($typePrix);
 
         return $this;
     }

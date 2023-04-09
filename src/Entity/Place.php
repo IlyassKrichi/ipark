@@ -25,12 +25,12 @@ class Place
     #[ORM\JoinColumn(nullable: false)]
     private ?Parking $parking = null;
 
-    #[ORM\OneToMany(mappedBy: 'place', targetEntity: Réservation::class, orphanRemoval: true)]
-    private Collection $Réservation;
+    #[ORM\OneToMany(mappedBy: 'place', targetEntity: Reservation::class, orphanRemoval: true)]
+    private Collection $Reservation;
 
     public function __construct()
     {
-        $this->Réservation = new ArrayCollection();
+        $this->Reservation = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -75,29 +75,29 @@ class Place
     }
 
     /**
-     * @return Collection<int, Réservation>
+     * @return Collection<int, Reservation>
      */
-    public function getRéservation(): Collection
+    public function getReservation(): Collection
     {
-        return $this->Réservation;
+        return $this->Reservation;
     }
 
-    public function addRServation(Réservation $rServation): self
+    public function addReservation(Reservation $reservation): self
     {
-        if (!$this->Réservation->contains($rServation)) {
-            $this->Réservation->add($rServation);
-            $rServation->setPlace($this);
+        if (!$this->Reservation->contains($reservation)) {
+            $this->Reservation->add($reservation);
+            $reservation->setPlace($this);
         }
 
         return $this;
     }
 
-    public function removeRServation(Réservation $rServation): self
+    public function removeReservation(Reservation $reservation): self
     {
-        if ($this->Réservation->removeElement($rServation)) {
+        if ($this->Reservation->removeElement($reservation)) {
             // set the owning side to null (unless already changed)
-            if ($rServation->getPlace() === $this) {
-                $rServation->setPlace(null);
+            if ($reservation->getPlace() === $this) {
+                $reservation->setPlace(null);
             }
         }
 

@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IParkController extends AbstractController
 {
-    #[Route('/i/park', name: 'app_i_park')]
+    #[Route('/ipark', name: 'app_i_park')]
     public function index(): JsonResponse
     {
         return $this->json([

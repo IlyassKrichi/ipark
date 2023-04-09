@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Montant_payé</th>
+                <th>Montant_paye</th>
                 <th>Date_paiement</th>
                 <th>Mode_paiement</th>
                 <th>actions</th>
@@ -19,7 +19,7 @@
         {% for paiement in paiements %}
             <tr>
                 <td>{{ paiement.id }}</td>
-                <td>{{ paiement.montantPayé }}</td>
+                <td>{{ paiement.montantPaye }}</td>
                 <td>{{ paiement.datePaiement ? paiement.datePaiement|date('Y-m-d') : '' }}</td>
                 <td>{{ paiement.modePaiement }}</td>
                 <td>
