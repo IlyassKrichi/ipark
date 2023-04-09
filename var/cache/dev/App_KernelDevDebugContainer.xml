@@ -209,22 +209,9 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\ReservationController"/>
       </call>
     </service>
-    <service id="App\Form\Client1Type" class="App\Form\Client1Type" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
+    <service id="App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
-    <service id="App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true">
@@ -788,12 +775,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
-        <argument>App\Form\Client1Type</argument>
-        <argument>App\Form\ClientType</argument>
-        <argument>App\Form\Paiement1Type</argument>
-        <argument>App\Form\PaiementType</argument>
         <argument>App\Form\ReservationType</argument>
-        <argument>App\Form\RéservationType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -1746,7 +1728,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.pZTb604"/>
+      <argument type="service" id=".service_locator.L_d6Pc3"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3210,18 +3192,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Client1Type" class="App\Form\Client1Type" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\Client1Type" class="App\Form\Client1Type" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ClientType" class="App\Form\ClientType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\Paiement1Type" class="App\Form\Paiement1Type" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\RéservationType" class="App\Form\RéservationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ClientRepository" class="App\Repository\ClientRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EntreeSortieRepository" class="App\Repository\EntreeSortieRepository" autowire="true" abstract="true"/>
@@ -3738,15 +3710,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.pZTb604" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.L_d6Pc3" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Form\Client1Type" type="service_closure" id="App\Form\Client1Type"/>
-        <argument key="App\Form\ClientType" type="service_closure" id="App\Form\ClientType"/>
-        <argument key="App\Form\Paiement1Type" type="service_closure" id="App\Form\Paiement1Type"/>
-        <argument key="App\Form\PaiementType" type="service_closure" id="App\Form\PaiementType"/>
         <argument key="App\Form\ReservationType" type="service_closure" id="App\Form\ReservationType"/>
-        <argument key="App\Form\RéservationType" type="service_closure" id="App\Form\RéservationType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -4611,7 +4578,7 @@
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.3ioQ_k6" alias=".service_locator.h.FCutF"/>
     <service id=".service_locator.eGlXAqC" alias=".service_locator.ErfwHK_"/>
-    <service id=".service_locator.MUuDY3." alias=".service_locator.pZTb604"/>
+    <service id=".service_locator.VhZvUo1" alias=".service_locator.L_d6Pc3"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator.VZoQk0z" alias=".service_locator.CshazM0"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
