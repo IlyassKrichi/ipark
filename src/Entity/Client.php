@@ -33,9 +33,6 @@ class Client
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $adresse = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $type_vehicule = null;
-
     #[ORM\OneToMany(mappedBy: 'client', targetEntity: Reservation::class, orphanRemoval: true)]
     private Collection $Reservation;
 
@@ -117,18 +114,6 @@ class Client
     public function setAdresse(?string $adresse): self
     {
         $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    public function getTypeVehicule(): ?string
-    {
-        return $this->type_vehicule;
-    }
-
-    public function setTypeVehicule(string $type_vehicule): self
-    {
-        $this->type_vehicule = $type_vehicule;
 
         return $this;
     }
