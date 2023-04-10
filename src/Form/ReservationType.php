@@ -15,9 +15,6 @@ class ReservationType extends AbstractType
             ->add('date_reservation')
             ->add('type_vehicule')
             ->add('place')
-            ->add('Paiement')
-            ->add('entreeSortie')
-            ->add('client')
         ;
     }
 
