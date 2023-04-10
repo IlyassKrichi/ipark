@@ -15,9 +15,9 @@ class ReservationType extends AbstractType
         $builder
             ->add('date_reservation')
             ->add('type_vehicule', ChoiceType::class, ['choices' => [
-                'voiture'=>'voiture',
-            'motorcycle'=>'motorcycle','bicycle'=>'bicycle',
-            'truck'=>'truck','expanded'=>true]])
+                'Voiture'=>'Voiture',
+            'Moto'=>'Moto','Vélo'=>'Velo',
+            'Camion'=>'Camion']])
             
         ;
     }
