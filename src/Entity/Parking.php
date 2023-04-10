@@ -30,6 +30,9 @@ class Parking
     #[ORM\ManyToMany(targetEntity: TypePrix::class, inversedBy: 'parkings')]
     private Collection $TypePrix;
 
+    #[ORM\Column(length: 100)]
+    private ?string $adresse = null;
+
     public function __construct()
     {
         $this->Place = new ArrayCollection();
@@ -127,6 +130,18 @@ class Parking
     public function removeTypePrix(TypePrix $typePrix): self
     {
         $this->TypePrix->removeElement($typePrix);
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
 
         return $this;
     }

@@ -195,13 +195,6 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\IParkController"/>
       </call>
     </service>
-    <service id="App\Controller\PaiementController" class="App\Controller\PaiementController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementController"/>
-      </call>
-    </service>
     <service id="App\Controller\ReservationController" class="App\Controller\ReservationController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -210,7 +203,6 @@
       </call>
     </service>
     <service id="App\Form\ClientType" class="App\Form\ClientType" autowire="true" autoconfigure="true"/>
-    <service id="App\Form\PaiementType" class="App\Form\PaiementType" autowire="true" autoconfigure="true"/>
     <service id="App\Form\ReservationType" class="App\Form\ReservationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -3186,9 +3178,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\IParkController" class="App\Controller\IParkController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3564,25 +3553,6 @@
         <argument key="clientRepository" type="service_closure" id="App\Repository\ClientRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.69GazA_" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="paiementRepository" type="service_closure" id="App\Repository\PaiementRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.W6WaZsJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="paiement" type="service_closure" id=".errored..service_locator.W6WaZsJ.App\Entity\Paiement"/>
-      </argument>
-    </service>
-    <service id=".service_locator.bSws.pL" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="paiement" type="service_closure" id=".errored..service_locator.bSws.pL.App\Entity\Paiement"/>
-        <argument key="paiementRepository" type="service_closure" id="App\Repository\PaiementRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.caJHb8S" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3602,7 +3572,7 @@
         <argument key="reservationRepository" type="service_closure" id="App\Repository\ReservationRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.h.FCutF" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.06hn86r" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ClientController::delete" type="service_closure" id=".service_locator.T1NedXT"/>
@@ -3610,11 +3580,6 @@
         <argument key="App\Controller\ClientController::index" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController::new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController::show" type="service_closure" id=".service_locator.lTbvCHw"/>
-        <argument key="App\Controller\PaiementController::delete" type="service_closure" id=".service_locator.bSws.pL"/>
-        <argument key="App\Controller\PaiementController::edit" type="service_closure" id=".service_locator.bSws.pL"/>
-        <argument key="App\Controller\PaiementController::index" type="service_closure" id=".service_locator.69GazA_"/>
-        <argument key="App\Controller\PaiementController::new" type="service_closure" id=".service_locator.69GazA_"/>
-        <argument key="App\Controller\PaiementController::show" type="service_closure" id=".service_locator.W6WaZsJ"/>
         <argument key="App\Controller\ReservationController::delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::index" type="service_closure" id=".service_locator.caJHb8S"/>
@@ -3629,11 +3594,6 @@
         <argument key="App\Controller\ClientController:index" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController:new" type="service_closure" id=".service_locator.sUhGGzt"/>
         <argument key="App\Controller\ClientController:show" type="service_closure" id=".service_locator.lTbvCHw"/>
-        <argument key="App\Controller\PaiementController:delete" type="service_closure" id=".service_locator.bSws.pL"/>
-        <argument key="App\Controller\PaiementController:edit" type="service_closure" id=".service_locator.bSws.pL"/>
-        <argument key="App\Controller\PaiementController:index" type="service_closure" id=".service_locator.69GazA_"/>
-        <argument key="App\Controller\PaiementController:new" type="service_closure" id=".service_locator.69GazA_"/>
-        <argument key="App\Controller\PaiementController:show" type="service_closure" id=".service_locator.W6WaZsJ"/>
         <argument key="App\Controller\ReservationController:delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:index" type="service_closure" id=".service_locator.caJHb8S"/>
@@ -3789,12 +3749,6 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
-    <service id=".service_locator.CshazM0.App\Controller\PaiementController" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\PaiementController"/>
-      <argument>App\Controller\PaiementController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.CshazM0" method="withContext"/>
-    </service>
     <service id=".service_locator.CshazM0.App\Controller\ReservationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ReservationController"/>
       <argument>App\Controller\ReservationController</argument>
@@ -3917,12 +3871,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.h.FCutF"/>
+      <argument type="service" id=".service_locator.06hn86r"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.h.FCutF"/>
+      <argument type="service" id=".service_locator.06hn86r"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -3933,8 +3887,6 @@
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator.lTbvCHw.App\Entity\Client" class="App\Entity\Client"/>
     <service id=".errored..service_locator.T1NedXT.App\Entity\Client" class="App\Entity\Client"/>
-    <service id=".errored..service_locator.W6WaZsJ.App\Entity\Paiement" class="App\Entity\Paiement"/>
-    <service id=".errored..service_locator.bSws.pL.App\Entity\Paiement" class="App\Entity\Paiement"/>
     <service id=".errored..service_locator.h9c0uBq.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id=".errored..service_locator.doLz9ae.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
@@ -4571,12 +4523,12 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.h.FCutF"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.06hn86r"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
-    <service id=".service_locator.3ioQ_k6" alias=".service_locator.h.FCutF"/>
+    <service id=".service_locator.OW6g8UR" alias=".service_locator.06hn86r"/>
     <service id=".service_locator.eGlXAqC" alias=".service_locator.ErfwHK_"/>
     <service id=".service_locator.VhZvUo1" alias=".service_locator.L_d6Pc3"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -4601,9 +4553,6 @@
     <service id=".service_locator..r890Xk" alias=".service_locator.sUhGGzt"/>
     <service id=".service_locator.s0WpMKf" alias=".service_locator.lTbvCHw"/>
     <service id=".service_locator.PUMF11i" alias=".service_locator.T1NedXT"/>
-    <service id=".service_locator.YPaucVN" alias=".service_locator.69GazA_"/>
-    <service id=".service_locator.k39SJCv" alias=".service_locator.W6WaZsJ"/>
-    <service id=".service_locator.8Uv64mj" alias=".service_locator.bSws.pL"/>
     <service id=".service_locator.LuS44bc" alias=".service_locator.caJHb8S"/>
     <service id=".service_locator.bRbdH2p" alias=".service_locator.h9c0uBq"/>
     <service id=".service_locator.y7DUdZ3" alias=".service_locator.doLz9ae"/>
