@@ -39,6 +39,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Symfony\\Component\\Validator\\' => 28,
             'Symfony\\Component\\String\\' => 25,
             'Symfony\\Component\\Stopwatch\\' => 28,
+            'Symfony\\Component\\Security\\Http\\' => 32,
             'Symfony\\Component\\Security\\Csrf\\' => 32,
             'Symfony\\Component\\Security\\Core\\' => 32,
             'Symfony\\Component\\Runtime\\' => 26,
@@ -60,6 +61,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Symfony\\Component\\Config\\' => 25,
             'Symfony\\Component\\Cache\\' => 24,
             'Symfony\\Bundle\\TwigBundle\\' => 26,
+            'Symfony\\Bundle\\SecurityBundle\\' => 30,
             'Symfony\\Bundle\\MakerBundle\\' => 27,
             'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Twig\\' => 20,
@@ -168,6 +170,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/symfony/stopwatch',
         ),
+        'Symfony\\Component\\Security\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/security-http',
+        ),
         'Symfony\\Component\\Security\\Csrf\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/security-csrf',
@@ -251,6 +257,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'Symfony\\Bundle\\TwigBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/twig-bundle',
+        ),
+        'Symfony\\Bundle\\SecurityBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/security-bundle',
         ),
         'Symfony\\Bundle\\MakerBundle\\' => 
         array (
