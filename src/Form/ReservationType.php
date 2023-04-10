@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Reservation;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,8 +14,11 @@ class ReservationType extends AbstractType
     {
         $builder
             ->add('date_reservation')
-            ->add('type_vehicule')
-            ->add('place')
+            ->add('type_vehicule', ChoiceType::class, ['choices' => [
+                'voiture'=>'voiture',
+            'motorcycle'=>'motorcycle','bicycle'=>'bicycle',
+            'truck'=>'truck','expanded'=>true]])
+            
         ;
     }
 
