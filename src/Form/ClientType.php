@@ -18,6 +18,7 @@ class Client1Type extends AbstractType
             ->add('prenom')
             ->add('genre', ChoiceType::class, ['expanded' => true, 'multiple' => false,'choices' => ['M' => 'Masculin', 'F' => 'Feminin']])
             ->add('email')
+            ->add('mdp')
             ->add('GSM')
             ->add('adresse')
         ;

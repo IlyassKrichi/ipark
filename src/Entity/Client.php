@@ -36,6 +36,9 @@ class Client
     #[ORM\OneToMany(mappedBy: 'client', targetEntity: Reservation::class, orphanRemoval: true)]
     private Collection $Reservation;
 
+    #[ORM\Column(length: 100)]
+    private ?string $mdp = null;
+
     public function __construct()
     {
         $this->Reservation = new ArrayCollection();
@@ -144,6 +147,18 @@ class Client
                 $reservation->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): self
+    {
+        $this->mdp = $mdp;
 
         return $this;
     }
