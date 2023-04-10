@@ -18,7 +18,6 @@ class Client1Type extends AbstractType
             ->add('email')
             ->add('GSM')
             ->add('adresse')
-            ->add('type_vehicule')
         ;
     }
 
