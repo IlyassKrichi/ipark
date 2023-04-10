@@ -82,59 +82,54 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
                 <th>Email</th>
                 <th>GSM</th>
                 <th>Adresse</th>
-                <th>Type_vehicule</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 23
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new RuntimeError('Variable "clients" does not exist.', 23, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["clients"]) || array_key_exists("clients", $context) ? $context["clients"] : (function () { throw new RuntimeError('Variable "clients" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["client"]) {
-            // line 24
+            // line 23
             echo "            <tr>
                 <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo "</td>
+                <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "nom", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "nom", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "prenom", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "prenom", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "genre", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "genre", [], "any", false, false, false, 28), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "email", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>";
             // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "email", [], "any", false, false, false, 29), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "GSM", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                 <td>";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "GSM", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "adresse", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "typeVehicule", [], "any", false, false, false, 32), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["client"], "adresse", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_client_show", ["id" => twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_client_show", ["id" => twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_client_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_client_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["client"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -142,7 +137,7 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 39
+            // line 37
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -151,12 +146,12 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['client'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 41
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 46
+        // line 44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_client_new");
         echo "\">Create new</a>
 ";
@@ -177,7 +172,7 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
 
     public function getDebugInfo()
     {
-        return array (  160 => 46,  155 => 43,  146 => 39,  137 => 35,  133 => 34,  128 => 32,  124 => 31,  120 => 30,  116 => 29,  112 => 28,  108 => 27,  104 => 26,  100 => 25,  97 => 24,  92 => 23,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  155 => 44,  150 => 41,  141 => 37,  132 => 33,  128 => 32,  123 => 30,  119 => 29,  115 => 28,  111 => 27,  107 => 26,  103 => 25,  99 => 24,  96 => 23,  91 => 22,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -199,7 +194,6 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
                 <th>Email</th>
                 <th>GSM</th>
                 <th>Adresse</th>
-                <th>Type_vehicule</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -213,7 +207,6 @@ class __TwigTemplate_c400e251ff8ac9cf0509110d427a9492 extends Template
                 <td>{{ client.email }}</td>
                 <td>{{ client.GSM }}</td>
                 <td>{{ client.adresse }}</td>
-                <td>{{ client.typeVehicule }}</td>
                 <td>
                     <a href=\"{{ path('app_client_show', {'id': client.id}) }}\">show</a>
                     <a href=\"{{ path('app_client_edit', {'id': client.id}) }}\">edit</a>

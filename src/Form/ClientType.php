@@ -3,7 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Client;
+use PhpParser\Parser\Multiple;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,7 +16,7 @@ class Client1Type extends AbstractType
         $builder
             ->add('nom')
             ->add('prenom')
-            ->add('genre')
+            ->add('genre', ChoiceType::class, ['expanded' => true, 'multiple' => false,'choices' => ['M' => 'Masculin', 'F' => 'Feminin']])
             ->add('email')
             ->add('GSM')
             ->add('adresse')
