@@ -28,10 +28,6 @@ class Reservation
     #[ORM\OneToOne(mappedBy: 'Reservation', cascade: ['persist', 'remove'])]
     private ?EntreeSortie $entreeSortie = null;
 
-    #[ORM\ManyToOne(inversedBy: 'Reservation')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Client $client = null;
-
     #[ORM\Column(length: 100)]
     private ?string $type_vehicule = null;
 
@@ -89,18 +85,6 @@ class Reservation
         }
 
         $this->entreeSortie = $entreeSortie;
-
-        return $this;
-    }
-
-    public function getClient(): ?Client
-    {
-        return $this->client;
-    }
-
-    public function setClient(?Client $client): self
-    {
-        $this->client = $client;
 
         return $this;
     }
