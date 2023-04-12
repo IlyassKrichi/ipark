@@ -33,7 +33,7 @@ class __TwigTemplate_47e413d1caebc12e64833b499f90d0ca extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "template.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -42,7 +42,7 @@ class __TwigTemplate_47e413d1caebc12e64833b499f90d0ca extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/edit.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "reservation/edit.html.twig", 1);
+        $this->parent = $this->loadTemplate("template.html.twig", "reservation/edit.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -109,7 +109,7 @@ class __TwigTemplate_47e413d1caebc12e64833b499f90d0ca extends Template
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'template.html.twig' %}
 
 {% block title %}Edit Reservation{% endblock %}
 
@@ -122,6 +122,6 @@ class __TwigTemplate_47e413d1caebc12e64833b499f90d0ca extends Template
 
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
-", "reservation/edit.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\reservation\\edit.html.twig");
+", "reservation/edit.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\edit.html.twig");
     }
 }

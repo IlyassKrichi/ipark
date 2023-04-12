@@ -75,10 +75,14 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
                 <li class=\"nav-item dropdown\">
                     <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i></a>
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
-                        <li><a class=\"dropdown-item\" href=\"#!\">Settings</a></li>
-                        <li><a class=\"dropdown-item\" href=\"#!\">Activity Log</a></li>
-                        <li><hr class=\"dropdown-divider\" /></li>
-                        <li><a class=\"dropdown-item\" href=\"#!\">Logout</a></li>
+                        <li><a class=\"dropdown-item\" href=";
+        // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo ">Login</a></li>
+                        <li><a class=\"dropdown-item\" href=";
+        // line 34
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo ">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -158,16 +162,16 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
                     <div class=\"container-fluid px-4\">
                         <h1 class=\"mt-4\">
                             ";
-        // line 115
+        // line 113
         $this->displayBlock('PageTitle', $context, $blocks);
-        // line 118
+        // line 116
         echo "                        </h1>
                         <div class=\"card mb-4\">
                             <div class=\"card-body\">
                                 ";
-        // line 121
+        // line 119
         $this->displayBlock('body', $context, $blocks);
-        // line 124
+        // line 122
         echo "                            </div>
                         </div>
                         <div style=\"height: 100vh\"></div>
@@ -190,7 +194,7 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
         </div>
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 145
+        // line 143
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scripts.js"), "html", null, true);
         echo "></script>
     </body>
@@ -216,14 +220,14 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
 
     }
 
-    // line 115
+    // line 113
     public function block_PageTitle($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "PageTitle"));
 
-        // line 116
+        // line 114
         echo "                                Template
                             ";
         
@@ -231,14 +235,14 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
 
     }
 
-    // line 121
+    // line 119
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 122
+        // line 120
         echo "                                    Template Body
                                 ";
         
@@ -258,7 +262,7 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
 
     public function getDebugInfo()
     {
-        return array (  242 => 122,  235 => 121,  227 => 116,  220 => 115,  212 => 10,  205 => 9,  194 => 145,  171 => 124,  169 => 121,  164 => 118,  162 => 115,  55 => 12,  53 => 9,  43 => 1,);
+        return array (  246 => 120,  239 => 119,  231 => 114,  224 => 113,  216 => 10,  209 => 9,  198 => 143,  175 => 122,  173 => 119,  168 => 116,  166 => 113,  84 => 34,  80 => 33,  55 => 12,  53 => 9,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -295,10 +299,8 @@ class __TwigTemplate_aa3c01de7ace911d00cb2b2f3c51f979 extends Template
                 <li class=\"nav-item dropdown\">
                     <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i></a>
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
-                        <li><a class=\"dropdown-item\" href=\"#!\">Settings</a></li>
-                        <li><a class=\"dropdown-item\" href=\"#!\">Activity Log</a></li>
-                        <li><hr class=\"dropdown-divider\" /></li>
-                        <li><a class=\"dropdown-item\" href=\"#!\">Logout</a></li>
+                        <li><a class=\"dropdown-item\" href={{ path('app_login') }}>Login</a></li>
+                        <li><a class=\"dropdown-item\" href={{ path('app_logout') }}>Logout</a></li>
                     </ul>
                 </li>
             </ul>
