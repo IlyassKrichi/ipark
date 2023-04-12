@@ -31,6 +31,10 @@ class Reservation
     #[ORM\Column(length: 100)]
     private ?string $type_vehicule = null;
 
+    #[ORM\ManyToOne(inversedBy: 'Reservation')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Client $client = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -97,6 +101,18 @@ class Reservation
     public function setTypeVehicule(string $type_vehicule): self
     {
         $this->type_vehicule = $type_vehicule;
+
+        return $this;
+    }
+
+    public function getClient(): ?Client
+    {
+        return $this->client;
+    }
+
+    public function setClient(?Client $client): self
+    {
+        $this->client = $client;
 
         return $this;
     }

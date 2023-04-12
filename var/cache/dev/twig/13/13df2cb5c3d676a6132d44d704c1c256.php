@@ -73,6 +73,6 @@ class __TwigTemplate_89612491629885dad471b406e6f52f02 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "reservation/_delete_form.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\_delete_form.html.twig");
+", "reservation/_delete_form.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\reservation\\_delete_form.html.twig");
     }
 }
