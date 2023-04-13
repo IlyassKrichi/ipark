@@ -126,8 +126,7 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
            value=\"";
         // line 24
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        echo "\"
-    >
+        echo "\">
 
         <div class=\"checkbox mb-3\">
             <label>
@@ -188,8 +187,7 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
+           value=\"{{ csrf_token('authenticate') }}\">
 
         <div class=\"checkbox mb-3\">
             <label>

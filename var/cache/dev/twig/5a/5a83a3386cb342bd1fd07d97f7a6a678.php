@@ -85,7 +85,27 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Reservation index</h1>
+        echo "
+    ";
+        // line 7
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 7, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 7));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 8
+            echo "        <div class=\"alert alert-success\">
+            ";
+            // line 9
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+        </div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 12
+        echo "
+    <h1>Reservation index</h1>
 
     <table class=\"table\">
         <thead>
@@ -98,33 +118,33 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 25, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["reservation"]) {
-            // line 19
+            // line 26
             echo "            <tr>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 20), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 27), "html", null, true);
             echo "</td>
                 <td>";
-            // line 21
-            ((twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 21)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 21), "Y-m-d"), "html", null, true))) : (print ("")));
+            // line 28
+            ((twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "typeVehicule", [], "any", false, false, false, 22), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "typeVehicule", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_show", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_show", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 25)]), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -132,7 +152,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
+            // line 36
             echo "            <tr>
                 <td colspan=\"4\">no records found</td>
             </tr>
@@ -141,12 +161,12 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reservation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 40
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 36
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new");
         echo "\">Create new</a>
 ";
@@ -170,7 +190,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
 
     public function getDebugInfo()
     {
-        return array (  150 => 36,  145 => 33,  136 => 29,  127 => 25,  123 => 24,  118 => 22,  114 => 21,  110 => 20,  107 => 19,  102 => 18,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  170 => 43,  165 => 40,  156 => 36,  147 => 32,  143 => 31,  138 => 29,  134 => 28,  130 => 27,  127 => 26,  122 => 25,  107 => 12,  98 => 9,  95 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -180,6 +200,13 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
 {% block title %}Reservation index{% endblock %}
 
 {% block body %}
+
+    {% for message in app.flashes('success') %}
+        <div class=\"alert alert-success\">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <h1>Reservation index</h1>
 
     <table class=\"table\">

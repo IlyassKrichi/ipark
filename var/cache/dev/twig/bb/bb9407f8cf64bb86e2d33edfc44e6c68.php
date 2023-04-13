@@ -80,10 +80,14 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
                         <li><a class=\"dropdown-item\" href=";
         // line 33
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo ">Register</a></li>
+                        <li><a class=\"dropdown-item\" href=";
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo ">Login</a></li>
                         <li><a class=\"dropdown-item\" href=";
-        // line 34
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo ">Logout</a></li>
                     </ul>
@@ -165,16 +169,16 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                     <div class=\"container-fluid px-4\">
                         <h1 class=\"mt-4\">
                             ";
-        // line 113
+        // line 114
         $this->displayBlock('PageTitle', $context, $blocks);
-        // line 116
+        // line 117
         echo "                        </h1>
                         <div class=\"card mb-4\">
                             <div class=\"card-body\">
                                 ";
-        // line 119
+        // line 120
         $this->displayBlock('body', $context, $blocks);
-        // line 122
+        // line 123
         echo "                            </div>
                         </div>
                         <div style=\"height: 100vh\"></div>
@@ -195,9 +199,9 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                 </footer>
             </div>
         </div>
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 143
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scripts.js"), "html", null, true);
         echo "></script>
     </body>
@@ -232,7 +236,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
 
     }
 
-    // line 113
+    // line 114
     public function block_PageTitle($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -242,7 +246,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "PageTitle"));
 
-        // line 114
+        // line 115
         echo "                                Template
                             ";
         
@@ -253,7 +257,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
 
     }
 
-    // line 119
+    // line 120
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -263,7 +267,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 120
+        // line 121
         echo "                                    Template Body
                                 ";
         
@@ -286,7 +290,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
 
     public function getDebugInfo()
     {
-        return array (  267 => 120,  257 => 119,  246 => 114,  236 => 113,  225 => 10,  215 => 9,  201 => 143,  178 => 122,  176 => 119,  171 => 116,  169 => 113,  87 => 34,  83 => 33,  58 => 12,  56 => 9,  46 => 1,);
+        return array (  271 => 121,  261 => 120,  250 => 115,  240 => 114,  229 => 10,  219 => 9,  205 => 144,  182 => 123,  180 => 120,  175 => 117,  173 => 114,  91 => 35,  87 => 34,  83 => 33,  58 => 12,  56 => 9,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -323,6 +327,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                 <li class=\"nav-item dropdown\">
                     <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i></a>
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
+                        <li><a class=\"dropdown-item\" href={{ path('app_register') }}>Register</a></li>
                         <li><a class=\"dropdown-item\" href={{ path('app_login') }}>Login</a></li>
                         <li><a class=\"dropdown-item\" href={{ path('app_logout') }}>Logout</a></li>
                     </ul>
@@ -432,7 +437,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                 </footer>
             </div>
         </div>
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" crossorigin=\"anonymous\"></script>
         <script src={{ asset('assets/js/scripts.js') }}></script>
     </body>
 </html>
