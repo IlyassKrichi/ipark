@@ -75,6 +75,6 @@ class __TwigTemplate_4cf2e9ee3d80bc320b9843cef9164919 extends Template
   <path d=\"M18 20l3 -3l-3 -3\"></path>
   <line x1=\"21\" y1=\"7\" x2=\"3\" y2=\"7\"></line>
 </svg>
-", "@WebProfiler/Icon/serializer.svg", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\serializer.svg");
+", "@WebProfiler/Icon/serializer.svg", "C:\\xampp\\htdocs\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\serializer.svg");
     }
 }

@@ -71,6 +71,6 @@ class __TwigTemplate_829e6c7109c3f191525a80d78c4522e4 extends Template
     <circle cx=\"10\" cy=\"10\" r=\"7\"></circle>
     <line x1=\"21\" y1=\"21\" x2=\"15\" y2=\"15\"></line>
 </svg>
-", "@WebProfiler/Icon/search.svg", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\search.svg");
+", "@WebProfiler/Icon/search.svg", "C:\\xampp\\htdocs\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\search.svg");
     }
 }

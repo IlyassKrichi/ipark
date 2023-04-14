@@ -71,6 +71,6 @@ class __TwigTemplate_c4f144fc4ed3ff1aafbc330bd66fcd26 extends Template
     <line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line>
     <line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line>
 </svg>
-", "@WebProfiler/Icon/close.svg", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\close.svg");
+", "@WebProfiler/Icon/close.svg", "C:\\xampp\\htdocs\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\close.svg");
     }
 }
