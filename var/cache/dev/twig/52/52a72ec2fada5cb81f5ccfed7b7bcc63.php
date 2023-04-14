@@ -48,7 +48,7 @@ class __TwigTemplate_1ac9c0276d7c32939bf48177a603a2cb extends Template
 </head>
 <body>
 <div class=\"visit-counter\">
-    <i class=\"fas fa-eye\"></i>
+    
     <span>votre nombre de visite est : ";
         // line 10
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "session", [], "any", false, false, false, 10), "get", [0 => "nbVisite"], "method", false, false, false, 10), "html", null, true);
@@ -91,7 +91,7 @@ class __TwigTemplate_1ac9c0276d7c32939bf48177a603a2cb extends Template
 </head>
 <body>
 <div class=\"visit-counter\">
-    <i class=\"fas fa-eye\"></i>
+    
     <span>votre nombre de visite est : {{ app.session.get('nbVisite') }}</span>
 </div>
 

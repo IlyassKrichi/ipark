@@ -111,6 +111,7 @@
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
+      <parameter key="cookie_lifetime">1800</parameter>
       <parameter key="cookie_secure">auto</parameter>
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="cookie_samesite">lax</parameter>

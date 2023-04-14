@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>nbre de visite</title>
+<title>votre session</title>
 <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
@@ -9,6 +9,8 @@
     
     <span>votre nombre de visite est : {{ app.session.get('nbVisite') }}</span>
 </div>
+{{if app.session.get('session_expired') 
+    <div class="alert alert-danger">Votre session a expiré. Veuillez vous connecter à nouveau pour continuer.</div>}}
 
 </body>
 
