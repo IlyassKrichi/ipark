@@ -63,7 +63,10 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
     <body>
         <nav class=\"sb-topnav navbar navbar-expand navbar-dark bg-dark\">
             <!-- Navbar Brand-->
-            <a class=\"navbar-brand ps-3\" href=\"index.html\">iPark</a>
+            <a class=\"navbar-brand ps-3\" href=";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
+        echo ">iPark</a>
             <!-- Sidebar Toggle-->
             <button class=\"btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0\" id=\"sidebarToggle\" href=\"#!\"><i class=\"fas fa-bars\"></i></button>
             <!-- Navbar Search-->
@@ -100,7 +103,10 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                     <div class=\"sb-sidenav-menu\">
                         <div class=\"nav\">
                             <div class=\"sb-sidenav-menu-heading\">Core</div>
-                            <a class=\"nav-link\" href=\"index.html\">
+                            <a class=\"nav-link\" href=";
+        // line 46
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
+        echo ">
                                 <div class=\"sb-nav-link-icon\"><i class=\"fas fa-tachometer-alt\"></i></div>
                                 Dashboard
                             </a>
@@ -290,7 +296,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
 
     public function getDebugInfo()
     {
-        return array (  271 => 121,  261 => 120,  250 => 115,  240 => 114,  229 => 10,  219 => 9,  205 => 144,  182 => 123,  180 => 120,  175 => 117,  173 => 114,  91 => 35,  87 => 34,  83 => 33,  58 => 12,  56 => 9,  46 => 1,);
+        return array (  277 => 121,  267 => 120,  256 => 115,  246 => 114,  235 => 10,  225 => 9,  211 => 144,  188 => 123,  186 => 120,  181 => 117,  179 => 114,  108 => 46,  94 => 35,  90 => 34,  86 => 33,  68 => 18,  58 => 12,  56 => 9,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -312,7 +318,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
     <body>
         <nav class=\"sb-topnav navbar navbar-expand navbar-dark bg-dark\">
             <!-- Navbar Brand-->
-            <a class=\"navbar-brand ps-3\" href=\"index.html\">iPark</a>
+            <a class=\"navbar-brand ps-3\" href={{ path('app_reservation_index') }}>iPark</a>
             <!-- Sidebar Toggle-->
             <button class=\"btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0\" id=\"sidebarToggle\" href=\"#!\"><i class=\"fas fa-bars\"></i></button>
             <!-- Navbar Search-->
@@ -340,7 +346,7 @@ class __TwigTemplate_afc7fb89c2c42e7f6e74d53babef90df extends Template
                     <div class=\"sb-sidenav-menu\">
                         <div class=\"nav\">
                             <div class=\"sb-sidenav-menu-heading\">Core</div>
-                            <a class=\"nav-link\" href=\"index.html\">
+                            <a class=\"nav-link\" href={{ path('app_reservation_index') }}>
                                 <div class=\"sb-nav-link-icon\"><i class=\"fas fa-tachometer-alt\"></i></div>
                                 Dashboard
                             </a>

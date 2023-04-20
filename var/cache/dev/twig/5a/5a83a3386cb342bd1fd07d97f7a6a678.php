@@ -144,7 +144,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
             echo "\">show</a>
                     <a href=\"";
             // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit_step1", ["id" => twig_get_attribute($this->env, $this->source, $context["reservation"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -167,7 +167,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
 
     <a href=\"";
         // line 43
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
         echo "\">Create new</a>
 ";
         
@@ -226,7 +226,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
                 <td>{{ reservation.typeVehicule }}</td>
                 <td>
                     <a href=\"{{ path('app_reservation_show', {'id': reservation.id}) }}\">show</a>
-                    <a href=\"{{ path('app_reservation_edit', {'id': reservation.id}) }}\">edit</a>
+                    <a href=\"{{ path('app_reservation_edit_step1', {'id': reservation.id}) }}\">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -237,7 +237,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_reservation_new') }}\">Create new</a>
+    <a href=\"{{ path('app_reservation_new_step1') }}\">Create new</a>
 {% endblock %}
 ", "reservation/index.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\index.html.twig");
     }
