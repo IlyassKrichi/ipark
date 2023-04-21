@@ -31,10 +31,6 @@ class ReservationStep2Type extends AbstractType
                 'class' => Place::class,
                 'choice_label' => 'id'
             ])
-            ->add('paiement', EntityType::class, [
-                'class' => Paiement::class,
-                'choice_label' => 'mode_paiement'
-            ])
         ;
     }
 

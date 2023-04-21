@@ -87,10 +87,11 @@ class ReservationController extends AbstractController
             $request->getSession()->set('adresse', $form->get('adresse')->getData());
             $request->getSession()->set('date_reservation', $form->get('date_reservation')->getData());
             $request->getSession()->set('type_vehicule', $form->get('type_vehicule')->getData());
-            return $this->redirectToRoute('app_reservation_new_step2', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_reservation_edit_step2', ['id' => $reservation->getId()], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('reservation/edit.html.twig', [
+        return $this->render('reservation/edit1.html.twig', [
+            'reservation' => $reservation,
             'form' => $form,
         ]);
     }
@@ -115,7 +116,7 @@ class ReservationController extends AbstractController
             return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('reservation/edit.html.twig', [
+        return $this->render('reservation/edit2.html.twig', [
             'reservation' => $reservation,
             'form' => $form,
         ]);

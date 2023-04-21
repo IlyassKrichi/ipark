@@ -47,7 +47,7 @@ class __TwigTemplate_b15f3866bf56f50d2547d2d0d8f3ea86 extends Template
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-lg btn-primary mt-2\">Delete</button>
 </form>
 ";
         
@@ -77,7 +77,7 @@ class __TwigTemplate_b15f3866bf56f50d2547d2d0d8f3ea86 extends Template
     {
         return new Source("<form method=\"post\" action=\"{{ path('app_reservation_delete', {'id': reservation.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-lg btn-primary mt-2\">Delete</button>
 </form>
 ", "reservation/_delete_form.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\_delete_form.html.twig");
     }
