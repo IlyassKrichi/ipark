@@ -128,11 +128,12 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
-        <div class=\"checkbox mb-3\">
-            <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-            </label>
-        </div>
+    <div class=\"form-check\">
+        <input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\"> 
+        <label class=\"form-check-label\" for=\"flexCheckDefault\">
+            Remember me
+        </label>
+    </div>
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in
@@ -189,11 +190,12 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"{{ csrf_token('authenticate') }}\">
 
-        <div class=\"checkbox mb-3\">
-            <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-            </label>
-        </div>
+    <div class=\"form-check\">
+        <input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\"> 
+        <label class=\"form-check-label\" for=\"flexCheckDefault\">
+            Remember me
+        </label>
+    </div>
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in

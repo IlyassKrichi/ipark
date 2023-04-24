@@ -18,7 +18,8 @@ return [
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'app_reservation_index', '_controller' => 'App\\Controller\\ReservationController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/reservation/new' => [[['_route' => 'app_reservation_new', '_controller' => 'App\\Controller\\ReservationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/reservation/step1new' => [[['_route' => 'app_reservation_new_step1', '_controller' => 'App\\Controller\\ReservationController::step1new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/reservation/step2new' => [[['_route' => 'app_reservation_new_step2', '_controller' => 'App\\Controller\\ReservationController::step2new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/session' => [[['_route' => 'app_session', '_controller' => 'App\\Controller\\SessionController::index'], null, null, null, false, false, null]],
@@ -42,8 +43,11 @@ return [
                 .')'
                 .'|/reservation/([^/]++)(?'
                     .'|(*:193)'
-                    .'|/edit(*:206)'
-                    .'|(*:214)'
+                    .'|/step(?'
+                        .'|1edit(*:214)'
+                        .'|2edit(*:227)'
+                    .')'
+                    .'|(*:236)'
                 .')'
             .')/?$}sDu',
     ],
@@ -56,8 +60,9 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         193 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        206 => [[['_route' => 'app_reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        214 => [
+        214 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        227 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        236 => [
             [['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

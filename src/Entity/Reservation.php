@@ -5,10 +5,14 @@ namespace App\Entity;
 use App\Repository\ReservationRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Entity;
 
 #[ORM\Entity(repositoryClass: ReservationRepository::class)]
 class Reservation
 {
+    private ?string $adresse;
+    private ?Parking $parking;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -34,6 +38,26 @@ class Reservation
     #[ORM\ManyToOne(inversedBy: 'Reservation')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Client $client = null;
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): void
+    {
+        $this->adresse = $adresse;
+    }
+
+    public function getParking(): ?Parking
+    {
+        return $this->parking;
+    }
+
+    public function setParking(?Parking $parking): void
+    {
+        $this->parking = $parking;
+    }
 
     public function getId(): ?int
     {

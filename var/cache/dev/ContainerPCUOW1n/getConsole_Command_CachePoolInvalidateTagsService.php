@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:var/cache/dev/ContainerPCUOW1n/getConsole_Command_CachePoolInvalidateTagsService.php
 namespace ContainerPCUOW1n;
 
+========
+namespace ContainerPdUOnCs;
+>>>>>>>> 4e6b7b2fd64ebad93ea245379d93b8ad6abb4679:var/cache/dev/ContainerPdUOnCs/getConsole_Command_CachePoolInvalidateTagsService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;

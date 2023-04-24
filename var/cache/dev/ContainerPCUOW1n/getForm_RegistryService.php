@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<<< HEAD:var/cache/dev/ContainerPCUOW1n/getForm_RegistryService.php
 namespace ContainerPCUOW1n;
 
+========
+namespace ContainerPdUOnCs;
+>>>>>>>> 4e6b7b2fd64ebad93ea245379d93b8ad6abb4679:var/cache/dev/ContainerPdUOnCs/getForm_RegistryService.php
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
@@ -28,7 +32,8 @@ class getForm_RegistryService extends App_KernelDevDebugContainer
 
         return $container->privates['form.registry'] = new \Symfony\Component\Form\FormRegistry([0 => new \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($container->getService, [
             'App\\Form\\RegistrationFormType' => ['privates', 'App\\Form\\RegistrationFormType', 'getRegistrationFormTypeService', true],
-            'App\\Form\\ReservationType' => ['privates', 'App\\Form\\ReservationType', 'getReservationTypeService', true],
+            'App\\Form\\ReservationStep1Type' => ['privates', 'App\\Form\\ReservationStep1Type', 'getReservationStep1TypeService', true],
+            'App\\Form\\ReservationStep2Type' => ['privates', 'App\\Form\\ReservationStep2Type', 'getReservationStep2TypeService', true],
             'Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType' => ['privates', 'form.type.entity', 'getForm_Type_EntityService', true],
             'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType' => ['privates', 'form.type.choice', 'getForm_Type_ChoiceService', true],
             'Symfony\\Component\\Form\\Extension\\Core\\Type\\ColorType' => ['privates', 'form.type.color', 'getForm_Type_ColorService', true],
@@ -36,7 +41,8 @@ class getForm_RegistryService extends App_KernelDevDebugContainer
             'Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType' => ['privates', 'form.type.form', 'getForm_Type_FormService', true],
         ], [
             'App\\Form\\RegistrationFormType' => '?',
-            'App\\Form\\ReservationType' => '?',
+            'App\\Form\\ReservationStep1Type' => '?',
+            'App\\Form\\ReservationStep2Type' => '?',
             'Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType' => '?',
             'Symfony\\Component\\Form\\Extension\\Core\\Type\\ChoiceType' => '?',
             'Symfony\\Component\\Form\\Extension\\Core\\Type\\ColorType' => '?',

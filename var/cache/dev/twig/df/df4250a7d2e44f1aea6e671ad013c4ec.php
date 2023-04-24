@@ -94,6 +94,6 @@ class __TwigTemplate_f343e9683891c69ffad9c7c06d55de02 extends Template
 <p>
     Cheers!
 </p>
-", "registration/confirmation_email.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\registration\\confirmation_email.html.twig");
+", "registration/confirmation_email.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\registration\\confirmation_email.html.twig");
     }
 }

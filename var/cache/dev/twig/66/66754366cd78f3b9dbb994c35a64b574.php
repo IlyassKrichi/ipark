@@ -120,7 +120,7 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 
     <a href=\"";
         // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit_step1", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
         echo "\">edit</a>
 
     ";
@@ -179,7 +179,7 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 
     <a href=\"{{ path('app_reservation_index') }}\">back to list</a>
 
-    <a href=\"{{ path('app_reservation_edit', {'id': reservation.id}) }}\">edit</a>
+    <a href=\"{{ path('app_reservation_edit_step1', {'id': reservation.id}) }}\">edit</a>
 
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
