@@ -3,7 +3,11 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
+<<<<<<< HEAD
         'reference' => '60dc00ff5963e2f0688e625ec5e6197489eceb4d',
+=======
+        'reference' => 'edde53bccb9633142709d402c30f9ffdef456fbb',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +17,11 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
+<<<<<<< HEAD
             'reference' => '60dc00ff5963e2f0688e625ec5e6197489eceb4d',
+=======
+            'reference' => 'edde53bccb9633142709d402c30f9ffdef456fbb',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -199,6 +207,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
         'geocoder-php/free-geoip-provider' => array(
             'pretty_version' => '4.5.0',
             'version' => '4.5.0.0',
@@ -208,6 +217,8 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'geocoder-php/google-maps-provider' => array(
             'pretty_version' => '4.7.1',
             'version' => '4.7.1.0',
@@ -223,6 +234,7 @@
                 0 => '1.0',
             ),
         ),
+<<<<<<< HEAD
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '7.5.1',
             'version' => '7.5.1.0',
@@ -250,6 +262,8 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.15.4',
             'version' => '4.15.4.0',
@@ -259,6 +273,18 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+<<<<<<< HEAD
+=======
+        'nyholm/psr7' => array(
+            'pretty_version' => '1.7.0',
+            'version' => '1.7.0.0',
+            'reference' => 'ed7cf98f6562831dbc3c962406b5e49dc8179c8c',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nyholm/psr7',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
@@ -298,6 +324,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
+=======
+        'php-http/message-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'php-http/promise' => array(
             'pretty_version' => '1.1.0',
             'version' => '1.1.0.0',
@@ -364,8 +399,13 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
+<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
+=======
+                0 => '*',
+                1 => '1.0',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/http-factory' => array(
@@ -380,8 +420,13 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
+<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
+=======
+                0 => '*',
+                1 => '1.0',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/http-message' => array(
@@ -396,8 +441,13 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
+<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
+=======
+                0 => '*',
+                1 => '1.0',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/log' => array(

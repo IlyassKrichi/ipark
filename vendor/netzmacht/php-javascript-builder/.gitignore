@@ -1,0 +1,8 @@
+/vendor/
+/bin/
+/demo/
+/.idea/
+
+coverage.xml
+
+composer.lock

@@ -10,9 +10,14 @@
         "doctrine/doctrine-bundle": "^2.9",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.14",
+<<<<<<< HEAD
         "geocoder-php/free-geoip-provider": "^4.5",
         "geocoder-php/google-maps-provider": "^4.7",
         "guzzlehttp/guzzle": "^7.5",
+=======
+        "geocoder-php/google-maps-provider": "^4.7",
+        "nyholm/psr7": "^1.7",
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         "sensio/framework-extra-bundle": "^6.2",
         "symfony/asset": "6.2.*",
         "symfony/console": "6.2.*",
@@ -22,7 +27,10 @@
         "symfony/framework-bundle": "6.2.*",
         "symfony/google-mailer": "6.2.*",
         "symfony/http-client": "^6.2",
+<<<<<<< HEAD
         "symfony/http-foundation": "6.2.*",
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         "symfony/mailer": "6.2.*",
         "symfony/runtime": "6.2.*",
         "symfony/security-bundle": "6.2.*",

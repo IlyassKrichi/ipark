@@ -92,15 +92,15 @@ class __TwigTemplate_e6d97eead8f762e9f783b3d692dd4d8f extends Template
         echo twig_include($this->env, $context, "reservation/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
-        echo "\">back to list</a>
-
     ";
-        // line 12
+        // line 10
         echo twig_include($this->env, $context, "reservation/_delete_form.html.twig");
         echo "
+
+    <a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
+        echo "\">back to list</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -136,9 +136,9 @@ class __TwigTemplate_e6d97eead8f762e9f783b3d692dd4d8f extends Template
 
     {{ include('reservation/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('app_reservation_index') }}\">back to list</a>
-
     {{ include('reservation/_delete_form.html.twig') }}
+
+    <a href=\"{{ path('app_reservation_index') }}\">back to list</a>
 {% endblock %}
 ", "reservation/edit2.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\edit2.html.twig");
     }

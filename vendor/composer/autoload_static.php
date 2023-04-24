@@ -91,6 +91,13 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Psr\\Cache\\' => 10,
             'PhpParser\\' => 10,
         ),
+<<<<<<< HEAD
+=======
+        'N' => 
+        array (
+            'Nyholm\\Psr7\\' => 12,
+        ),
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'H' => 
         array (
             'Http\\Promise\\' => 13,
@@ -100,11 +107,15 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         ),
         'G' => 
         array (
+<<<<<<< HEAD
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
             'Geocoder\\Provider\\GoogleMaps\\' => 29,
             'Geocoder\\Provider\\FreeGeoIp\\' => 28,
+=======
+            'Geocoder\\Provider\\GoogleMaps\\' => 29,
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             'Geocoder\\Http\\' => 14,
             'Geocoder\\' => 9,
         ),
@@ -362,8 +373,13 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         ),
         'Psr\\Http\\Message\\' => 
         array (
+<<<<<<< HEAD
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
+=======
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -385,6 +401,13 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+<<<<<<< HEAD
+=======
+        'Nyholm\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nyholm/psr7/src',
+        ),
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'Http\\Promise\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/promise/src',
@@ -401,6 +424,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/php-http/httplug/src',
         ),
+<<<<<<< HEAD
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -413,14 +437,19 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'Geocoder\\Provider\\GoogleMaps\\' => 
         array (
             0 => __DIR__ . '/..' . '/geocoder-php/google-maps-provider',
         ),
+<<<<<<< HEAD
         'Geocoder\\Provider\\FreeGeoIp\\' => 
         array (
             0 => __DIR__ . '/..' . '/geocoder-php/free-geoip-provider',
         ),
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'Geocoder\\Http\\' => 
         array (
             0 => __DIR__ . '/..' . '/geocoder-php/common-http',

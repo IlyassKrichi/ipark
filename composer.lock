@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "bab6c09362a909580755bab98a7aca5e",
+=======
+    "content-hash": "9260084d2eff9bb4f5b71473c5d1c5ff",
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1524,6 +1528,7 @@
             "time": "2022-07-30T12:09:30+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "geocoder-php/free-geoip-provider",
             "version": "4.5.0",
             "source": {
@@ -1583,6 +1588,8 @@
             "time": "2022-07-30T12:09:30+00:00"
         },
         {
+=======
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             "name": "geocoder-php/google-maps-provider",
             "version": "4.7.1",
             "source": {
@@ -1642,6 +1649,7 @@
             "time": "2023-04-14T11:13:20+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "guzzlehttp/guzzle",
             "version": "7.5.1",
             "source": {
@@ -1874,10 +1882,34 @@
                 "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
+=======
+            "name": "nyholm/psr7",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/psr7.git",
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "php-http/message-factory": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "provide": {
+                "php-http/message-factory-implementation": "1.0",
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
                 "phpunit/phpunit": "^8.5.29 || ^9.5.23"
@@ -1890,11 +1922,26 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
+=======
+                "http-interop/http-factory-tests": "^0.9",
+                "php-http/psr7-integration-tests": "^1.0@dev",
+                "phpunit/phpunit": "^7.5 || 8.5 || 9.4",
+                "symfony/error-handler": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7-dev"
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
                     "GuzzleHttp\\Psr7\\": "src/"
+=======
+                    "Nyholm\\Psr7\\": "src/"
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1903,6 +1950,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -1968,6 +2016,37 @@
                 }
             ],
             "time": "2023-04-17T16:11:26+00:00"
+=======
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com"
+                },
+                {
+                    "name": "Martijn van der Ven",
+                    "email": "martijn@vanderven.se"
+                }
+            ],
+            "description": "A fast PHP7 implementation of PSR-7",
+            "homepage": "https://tnyholm.se",
+            "keywords": [
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/Nyholm/psr7/issues",
+                "source": "https://github.com/Nyholm/psr7/tree/1.7.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Zegnat",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nyholm",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-04-20T08:38:48+00:00"
+>>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         },
         {
             "name": "php-http/discovery",
