@@ -13,6 +13,7 @@ use App\Form\ReservationStep1Type;
 use App\Form\ReservationStep2Type;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use GuzzleHttp\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -138,10 +139,10 @@ class ReservationController extends AbstractController
         return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
     }
 
-    public function searchDistance(Request $request, string $startAddress, EntityManagerInterface $em)
-{
+    public function searchDistance(Request $request, string $startAddress, EntityManagerInterface $em): array
+    {
         $parkingRepo = $em->getRepository(Parking::class);
-        $httpClient = new \GuzzleHttp\Client();
+        $httpClient = new Client();
         $geocoder = new FreeGeoIp($httpClient);
         $startResult = $geocoder->geocodeQuery(GeocodeQuery::create($startAddress))->first();
         $distances= array();
@@ -151,30 +152,30 @@ class ReservationController extends AbstractController
             $endAddress = $parking->getAdresse();
             $endResult = $geocoder->geocodeQuery(GeocodeQuery::create($endAddress))->first();
             $endCoordinates = $endResult->getCoordinates();
-            if ($startCoordinates && $endCoordinates) { // Check for null
+            if ($startCoordinates && $endCoordinates) {
                 $distance = $this->calculateDistance($startCoordinates, $endCoordinates);
                 $distances[$parking->getId()] = $distance;
             }
         }
         return $distances;
-}
+    }
 
-private function calculateDistance(Coordinates $start, Coordinates $end)
-{
-    $lat1 = $start->getLatitude();
-    $lon1 = $start->getLongitude();
-    $lat2 = $end->getLatitude();
-    $lon2 = $end->getLongitude();
+    private function calculateDistance(Coordinates $start, Coordinates $end)
+    {
+        $lat1 = $start->getLatitude();
+        $lon1 = $start->getLongitude();
+        $lat2 = $end->getLatitude();
+        $lon2 = $end->getLongitude();
 
-    $theta = $lon1 - $lon2;
-    $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-    $dist = acos($dist);
-    $dist = rad2deg($dist);
-    $miles = $dist * 60 * 1.1515;
-    $kilometers = $miles * 1.609344;
+        $theta = $lon1 - $lon2;
+        $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+        $dist = acos($dist);
+        $dist = rad2deg($dist);
+        $miles = $dist * 60 * 1.1515;
+        $kilometers = $miles * 1.609344;
 
-    return $kilometers;
-}
+        return $kilometers;
+    }
 }
 
 
