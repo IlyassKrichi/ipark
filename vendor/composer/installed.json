@@ -1346,17 +1346,17 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.14.2",
-            "version_normalized": "2.14.2.0",
+            "version": "2.14.3",
+            "version_normalized": "2.14.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52"
+                "reference": "a64f315dfeae5e50b17f132626fd9e9b4ec8985d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52",
-                "reference": "e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/a64f315dfeae5e50b17f132626fd9e9b4ec8985d",
+                "reference": "a64f315dfeae5e50b17f132626fd9e9b4ec8985d",
                 "shasum": ""
             },
             "require": {
@@ -1399,7 +1399,7 @@
                 "symfony/cache": "Provides cache support for Setup Tool with doctrine/cache 2.0",
                 "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
             },
-            "time": "2023-03-30T15:18:54+00:00",
+            "time": "2023-04-20T09:46:32+00:00",
             "bin": [
                 "bin/doctrine"
             ],
@@ -1444,7 +1444,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.14.2"
+                "source": "https://github.com/doctrine/orm/tree/2.14.3"
             },
             "install-path": "../doctrine/orm"
         },
@@ -1743,7 +1743,6 @@
             "install-path": "../geocoder-php/common-http"
         },
         {
-<<<<<<< HEAD
             "name": "geocoder-php/free-geoip-provider",
             "version": "4.5.0",
             "version_normalized": "4.5.0.0",
@@ -1806,8 +1805,6 @@
             "install-path": "../geocoder-php/free-geoip-provider"
         },
         {
-=======
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             "name": "geocoder-php/google-maps-provider",
             "version": "4.7.1",
             "version_normalized": "4.7.1.0",
@@ -1870,7 +1867,6 @@
             "install-path": "../geocoder-php/google-maps-provider"
         },
         {
-<<<<<<< HEAD
             "name": "guzzlehttp/guzzle",
             "version": "7.5.1",
             "version_normalized": "7.5.1.0",
@@ -2208,8 +2204,6 @@
             "install-path": "../guzzlehttp/psr7"
         },
         {
-=======
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             "name": "nikic/php-parser",
             "version": "v4.15.4",
             "version_normalized": "4.15.4.0",
@@ -2269,8 +2263,6 @@
             "install-path": "../nikic/php-parser"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "nyholm/psr7",
             "version": "1.7.0",
             "version_normalized": "1.7.0.0",
@@ -2352,19 +2344,18 @@
             "install-path": "../nyholm/psr7"
         },
         {
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             "name": "php-http/discovery",
-            "version": "1.15.3",
-            "version_normalized": "1.15.3.0",
+            "version": "1.17.0",
+            "version_normalized": "1.17.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "3ccd28dd9fb34b52db946abea1b538568e34eae8"
+                "reference": "bd810d15957cf165230e65d9e1a130793265e3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/3ccd28dd9fb34b52db946abea1b538568e34eae8",
-                "reference": "3ccd28dd9fb34b52db946abea1b538568e34eae8",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/bd810d15957cf165230e65d9e1a130793265e3b7",
+                "reference": "bd810d15957cf165230e65d9e1a130793265e3b7",
                 "shasum": ""
             },
             "require": {
@@ -2372,7 +2363,8 @@
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "nyholm/psr7": "<1.0"
+                "nyholm/psr7": "<1.0",
+                "zendframework/zend-diactoros": "*"
             },
             "provide": {
                 "php-http/async-client-implementation": "*",
@@ -2389,7 +2381,7 @@
                 "phpspec/phpspec": "^5.1 || ^6.1 || ^7.3",
                 "symfony/phpunit-bridge": "^6.2"
             },
-            "time": "2023-03-31T14:40:37+00:00",
+            "time": "2023-04-26T15:39:13+00:00",
             "type": "composer-plugin",
             "extra": {
                 "class": "Http\\Discovery\\Composer\\Plugin",
@@ -2399,7 +2391,10 @@
             "autoload": {
                 "psr-4": {
                     "Http\\Discovery\\": "src/"
-                }
+                },
+                "exclude-from-classmap": [
+                    "src/Composer/Plugin.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2425,7 +2420,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.15.3"
+                "source": "https://github.com/php-http/discovery/tree/1.17.0"
             },
             "install-path": "../php-http/discovery"
         },

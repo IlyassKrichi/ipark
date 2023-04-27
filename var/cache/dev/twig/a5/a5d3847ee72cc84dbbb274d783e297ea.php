@@ -85,6 +85,6 @@ class __TwigTemplate_31f91587a2c93ccf7179fa51b9a9f193 extends Template
     <path d=\"M20 12h2\" />
     <path d=\"M12 20v2\" />
 </svg>
-", "@WebProfiler/Icon/settings-theme-light.svg", "C:\\xampp\\htdocs\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\settings-theme-light.svg");
+", "@WebProfiler/Icon/settings-theme-light.svg", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Icon\\settings-theme-light.svg");
     }
 }

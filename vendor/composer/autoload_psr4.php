@@ -61,33 +61,22 @@ return array(
     'SymfonyCasts\\Bundle\\VerifyEmail\\' => array($vendorDir . '/symfonycasts/verify-email-bundle/src'),
     'Sensio\\Bundle\\FrameworkExtraBundle\\' => array($vendorDir . '/sensio/framework-extra-bundle/src'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
-<<<<<<< HEAD
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
-=======
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
     'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
-<<<<<<< HEAD
-=======
     'Nyholm\\Psr7\\' => array($vendorDir . '/nyholm/psr7/src'),
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
     'Http\\Promise\\' => array($vendorDir . '/php-http/promise/src'),
     'Http\\Message\\' => array($vendorDir . '/php-http/message-factory/src'),
     'Http\\Discovery\\' => array($vendorDir . '/php-http/discovery/src'),
     'Http\\Client\\' => array($vendorDir . '/php-http/httplug/src'),
-<<<<<<< HEAD
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Geocoder\\Provider\\GoogleMaps\\' => array($vendorDir . '/geocoder-php/google-maps-provider'),
     'Geocoder\\Provider\\FreeGeoIp\\' => array($vendorDir . '/geocoder-php/free-geoip-provider'),
-=======
-    'Geocoder\\Provider\\GoogleMaps\\' => array($vendorDir . '/geocoder-php/google-maps-provider'),
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
     'Geocoder\\Http\\' => array($vendorDir . '/geocoder-php/common-http'),
     'Geocoder\\' => array($vendorDir . '/willdurand/geocoder'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),

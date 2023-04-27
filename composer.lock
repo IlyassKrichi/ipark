@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "bab6c09362a909580755bab98a7aca5e",
-=======
-    "content-hash": "9260084d2eff9bb4f5b71473c5d1c5ff",
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
+    "content-hash": "f8e637595f62941c3749ffbf32e00a0a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1146,16 +1142,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.14.2",
+            "version": "2.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52"
+                "reference": "a64f315dfeae5e50b17f132626fd9e9b4ec8985d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52",
-                "reference": "e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/a64f315dfeae5e50b17f132626fd9e9b4ec8985d",
+                "reference": "a64f315dfeae5e50b17f132626fd9e9b4ec8985d",
                 "shasum": ""
             },
             "require": {
@@ -1241,9 +1237,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.14.2"
+                "source": "https://github.com/doctrine/orm/tree/2.14.3"
             },
-            "time": "2023-03-30T15:18:54+00:00"
+            "time": "2023-04-20T09:46:32+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -1528,7 +1524,6 @@
             "time": "2022-07-30T12:09:30+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "geocoder-php/free-geoip-provider",
             "version": "4.5.0",
             "source": {
@@ -1588,8 +1583,6 @@
             "time": "2022-07-30T12:09:30+00:00"
         },
         {
-=======
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             "name": "geocoder-php/google-maps-provider",
             "version": "4.7.1",
             "source": {
@@ -1649,7 +1642,6 @@
             "time": "2023-04-14T11:13:20+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "guzzlehttp/guzzle",
             "version": "7.5.1",
             "source": {
@@ -1882,34 +1874,10 @@
                 "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
-=======
-            "name": "nyholm/psr7",
-            "version": "1.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
-                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "php-http/message-factory": "^1.0",
-                "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.1 || ^2.0"
-            },
-            "provide": {
-                "php-http/message-factory-implementation": "1.0",
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-<<<<<<< HEAD
                 "bamarni/composer-bin-plugin": "^1.8.1",
                 "http-interop/http-factory-tests": "^0.9",
                 "phpunit/phpunit": "^8.5.29 || ^9.5.23"
@@ -1922,26 +1890,11 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
-=======
-                "http-interop/http-factory-tests": "^0.9",
-                "php-http/psr7-integration-tests": "^1.0@dev",
-                "phpunit/phpunit": "^7.5 || 8.5 || 9.4",
-                "symfony/error-handler": "^4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.7-dev"
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 }
             },
             "autoload": {
                 "psr-4": {
-<<<<<<< HEAD
                     "GuzzleHttp\\Psr7\\": "src/"
-=======
-                    "Nyholm\\Psr7\\": "src/"
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1950,7 +1903,6 @@
             ],
             "authors": [
                 {
-<<<<<<< HEAD
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -2016,7 +1968,55 @@
                 }
             ],
             "time": "2023-04-17T16:11:26+00:00"
-=======
+        },
+        {
+            "name": "nyholm/psr7",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nyholm/psr7.git",
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
+                "reference": "ed7cf98f6562831dbc3c962406b5e49dc8179c8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "php-http/message-factory": "^1.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "provide": {
+                "php-http/message-factory-implementation": "1.0",
+                "psr/http-factory-implementation": "1.0",
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "http-interop/http-factory-tests": "^0.9",
+                "php-http/psr7-integration-tests": "^1.0@dev",
+                "phpunit/phpunit": "^7.5 || 8.5 || 9.4",
+                "symfony/error-handler": "^4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nyholm\\Psr7\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
                     "name": "Tobias Nyholm",
                     "email": "tobias.nyholm@gmail.com"
                 },
@@ -2046,20 +2046,19 @@
                 }
             ],
             "time": "2023-04-20T08:38:48+00:00"
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         },
         {
             "name": "php-http/discovery",
-            "version": "1.15.3",
+            "version": "1.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-http/discovery.git",
-                "reference": "3ccd28dd9fb34b52db946abea1b538568e34eae8"
+                "reference": "bd810d15957cf165230e65d9e1a130793265e3b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-http/discovery/zipball/3ccd28dd9fb34b52db946abea1b538568e34eae8",
-                "reference": "3ccd28dd9fb34b52db946abea1b538568e34eae8",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/bd810d15957cf165230e65d9e1a130793265e3b7",
+                "reference": "bd810d15957cf165230e65d9e1a130793265e3b7",
                 "shasum": ""
             },
             "require": {
@@ -2067,7 +2066,8 @@
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "nyholm/psr7": "<1.0"
+                "nyholm/psr7": "<1.0",
+                "zendframework/zend-diactoros": "*"
             },
             "provide": {
                 "php-http/async-client-implementation": "*",
@@ -2092,7 +2092,10 @@
             "autoload": {
                 "psr-4": {
                     "Http\\Discovery\\": "src/"
-                }
+                },
+                "exclude-from-classmap": [
+                    "src/Composer/Plugin.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2118,9 +2121,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-http/discovery/issues",
-                "source": "https://github.com/php-http/discovery/tree/1.15.3"
+                "source": "https://github.com/php-http/discovery/tree/1.17.0"
             },
-            "time": "2023-03-31T14:40:37+00:00"
+            "time": "2023-04-26T15:39:13+00:00"
         },
         {
             "name": "php-http/httplug",

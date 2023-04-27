@@ -3,11 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-<<<<<<< HEAD
-        'reference' => '60dc00ff5963e2f0688e625ec5e6197489eceb4d',
-=======
-        'reference' => 'edde53bccb9633142709d402c30f9ffdef456fbb',
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
+        'reference' => '3692a76435cdc9159af079bdef8c7202ac9af0ed',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -17,11 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-<<<<<<< HEAD
-            'reference' => '60dc00ff5963e2f0688e625ec5e6197489eceb4d',
-=======
-            'reference' => 'edde53bccb9633142709d402c30f9ffdef456fbb',
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
+            'reference' => '3692a76435cdc9159af079bdef8c7202ac9af0ed',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -163,9 +155,9 @@
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(
-            'pretty_version' => '2.14.2',
-            'version' => '2.14.2.0',
-            'reference' => 'e5fb1a4a8f5aa4e37612f66a22aac10291bcbb52',
+            'pretty_version' => '2.14.3',
+            'version' => '2.14.3.0',
+            'reference' => 'a64f315dfeae5e50b17f132626fd9e9b4ec8985d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/orm',
             'aliases' => array(),
@@ -207,7 +199,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-<<<<<<< HEAD
         'geocoder-php/free-geoip-provider' => array(
             'pretty_version' => '4.5.0',
             'version' => '4.5.0.0',
@@ -217,8 +208,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-=======
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'geocoder-php/google-maps-provider' => array(
             'pretty_version' => '4.7.1',
             'version' => '4.7.1.0',
@@ -234,7 +223,6 @@
                 0 => '1.0',
             ),
         ),
-<<<<<<< HEAD
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '7.5.1',
             'version' => '7.5.1.0',
@@ -262,8 +250,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-=======
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.15.4',
             'version' => '4.15.4.0',
@@ -273,8 +259,6 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
-<<<<<<< HEAD
-=======
         'nyholm/psr7' => array(
             'pretty_version' => '1.7.0',
             'version' => '1.7.0.0',
@@ -284,7 +268,6 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
@@ -298,9 +281,9 @@
             ),
         ),
         'php-http/discovery' => array(
-            'pretty_version' => '1.15.3',
-            'version' => '1.15.3.0',
-            'reference' => '3ccd28dd9fb34b52db946abea1b538568e34eae8',
+            'pretty_version' => '1.17.0',
+            'version' => '1.17.0.0',
+            'reference' => 'bd810d15957cf165230e65d9e1a130793265e3b7',
             'type' => 'composer-plugin',
             'install_path' => __DIR__ . '/../php-http/discovery',
             'aliases' => array(),
@@ -324,15 +307,12 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-<<<<<<< HEAD
-=======
         'php-http/message-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0',
             ),
         ),
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
         'php-http/promise' => array(
             'pretty_version' => '1.1.0',
             'version' => '1.1.0.0',
@@ -399,13 +379,8 @@
         'psr/http-client-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
-=======
-                0 => '*',
-                1 => '1.0',
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/http-factory' => array(
@@ -420,13 +395,8 @@
         'psr/http-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
-=======
-                0 => '*',
-                1 => '1.0',
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/http-message' => array(
@@ -441,13 +411,8 @@
         'psr/http-message-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-<<<<<<< HEAD
                 0 => '1.0',
                 1 => '*',
-=======
-                0 => '*',
-                1 => '1.0',
->>>>>>> 22706224e6831c1c2fb6365639649c394e2f61b7
             ),
         ),
         'psr/log' => array(
