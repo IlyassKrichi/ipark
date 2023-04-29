@@ -10,10 +10,18 @@
     "doctrine/doctrine-bundle": "^2.9",
     "doctrine/doctrine-migrations-bundle": "^3.2",
     "doctrine/orm": "^2.14",
+    "geocoder-php/common-http": "^4.5",
     "geocoder-php/free-geoip-provider": "^4.5",
     "geocoder-php/google-maps-provider": "^4.7",
-    "guzzlehttp/guzzle": "^7.5",
+    "geocoder-php/mapquest-provider": "^4.3",
+    "geocoder-php/nominatim-provider": "^5.7",
+    "geocoder-php/provider-integration-tests": "^1.6",
+    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/psr7": "^1.9",
     "nyholm/psr7": "^1.7",
+    "php-http/curl-client": "^2.2",
+    "php-http/guzzle6-adapter": "^2.0",
+    "php-http/message": "^1.14",
     "sensio/framework-extra-bundle": "^6.2",
     "symfony/asset": "6.2.*",
     "symfony/console": "6.2.*",
@@ -31,10 +39,12 @@
     "symfony/twig-bundle": "6.2.*",
     "symfony/validator": "6.2.*",
     "symfony/yaml": "6.2.*",
-    "symfonycasts/verify-email-bundle": "^1.13"
+    "symfonycasts/verify-email-bundle": "^1.13",
+    "willdurand/geocoder": "^4.6"
   },
   "require-dev": {
     "doctrine/doctrine-fixtures-bundle": "^3.4",
+    "phpunit/phpunit": "^9.6",
     "symfony/maker-bundle": "^1.48",
     "symfony/stopwatch": "6.2.*",
     "symfony/web-profiler-bundle": "6.2.*"
