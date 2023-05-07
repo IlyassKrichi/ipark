@@ -53,7 +53,7 @@ class ReservationController extends AbstractController
                 $endCoordinates = $endResult->getCoordinates();
                 if ($startCoordinates && $endCoordinates) {
                     $distance = $this->calculateDistance($startCoordinates, $endCoordinates);
-                    $distances[$parking->getNom()] = $distance;
+                    $distances[$distance] = $parking->getNom();
                 }
             }
         }
@@ -75,28 +75,6 @@ class ReservationController extends AbstractController
         $kilometers = $miles * 1.609344;
 
         return $kilometers;
-    }
-
-    private function quicksort(array $arr): array
-    {
-        $stack = array(array(0, count($arr) - 1));
-        while ($stack) {
-            list($left, $right) = array_pop($stack);
-            if ($left < $right) {
-                $pivot = $arr[$right];
-                $i = $left - 1;
-                for ($j = $left; $j < $right; $j++) {
-                    if ($arr[$j] <= $pivot) {
-                        $i++;
-                        list($arr[$i], $arr[$j]) = array($arr[$j], $arr[$i]);
-                    }
-                }
-                list($arr[$i+1], $arr[$right]) = array($arr[$right], $arr[$i+1]);
-                $stack[] = array($left, $i);
-                $stack[] = array($i+2, $right);
-            }
-        }
-        return $arr;
     }
 
     #[Route('/step1new', name: 'app_reservation_new_step1', methods: ['GET', 'POST'])]

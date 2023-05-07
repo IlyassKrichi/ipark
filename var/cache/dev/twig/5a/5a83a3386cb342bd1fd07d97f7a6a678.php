@@ -33,7 +33,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "template.html.twig";
+        return "template2.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("template.html.twig", "reservation/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("template2.html.twig", "reservation/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -195,7 +195,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'template.html.twig' %}
+        return new Source("{% extends 'template2.html.twig' %}
 
 {% block title %}Reservation index{% endblock %}
 
