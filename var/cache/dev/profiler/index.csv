@@ -339,3 +339,9 @@ f252d4,127.0.0.1,GET,http://127.0.0.1:8000/reservation/assets/img/hero-img.svg,1
 31ec89,127.0.0.1,GET,http://127.0.0.1:8000/reservation/assets/img/hero-img.svg,1683497374,,404
 1cb542,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683497429,,200
 ea1971,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683497604,,200
+adbd7c,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683566141,,200
+fa9089,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683566239,,200
+0d5f44,127.0.0.1,GET,http://127.0.0.1:8000/Voyage-Agadir-Casablanca/1-15,1683570592,275741,404
+275741,127.0.0.1,GET,http://127.0.0.1:8000/Voyage-Agadir-Casablanca/1-15,1683570592,,404
+6c029e,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683570602,,200
+4430cc,127.0.0.1,GET,http://127.0.0.1:8000/reservation/,1683570651,,200
