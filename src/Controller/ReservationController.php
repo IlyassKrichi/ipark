@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 use App\Entity\Parking;
+use App\Service\PdfService;
 use Geocoder\Model\Coordinates;
 use Geocoder\Query\GeocodeQuery;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
@@ -186,6 +187,12 @@ class ReservationController extends AbstractController
 
         return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
     }
+    #[Route('/pdf/{id}', name: 'reservation.pdf')]
+public function generatePdfReservation(Reservation $reservation=null,PdfService $pdf){
+    $html=$this->render(view: 'templates\reservation\index.html.twig',['reservation'=>$reservation]);
+    $pdf->showPdf($html);
 }
 
 
+
+}
