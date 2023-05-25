@@ -2,7 +2,9 @@
 
 
 namespace App\Controller;
+use App\Service\PdfGenerator;
 use App\Entity\Parking;
+use App\Entity\Paiement;
 use App\Service\PdfService;
 use Geocoder\Model\Coordinates;
 use Geocoder\Query\GeocodeQuery;
@@ -17,6 +19,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Geocoder\Provider\Nominatim\Nominatim;
 use Geocoder\StatefulGeocoder;
 use GuzzleHttp\Client;
+use App\Entity\Client as EntityClient;
+use App\Repository\ClientRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -126,11 +130,15 @@ class ReservationController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_reservation_show', methods: ['GET'])]
+    
     public function show(Reservation $reservation): Response
     {
+        $paiement = $reservation->getPaiement();
         return $this->render('reservation/show.html.twig', [
             'reservation' => $reservation,
+            'paiement' => $paiement,
         ]);
+        
     }
 
     #[Route('/{id}/step1edit', name: 'app_reservation_edit_step1', methods: ['GET', 'POST'])]
@@ -189,9 +197,20 @@ class ReservationController extends AbstractController
     }
     #[Route('/pdf/{id}', name: 'reservation.pdf')]
 public function generatePdfReservation(Reservation $reservation=null,PdfService $pdf){
-    $html=$this->render(view: 'templates\reservation\index.html.twig',['reservation'=>$reservation]);
+
+    $html = $this->render('reservation\show.html.twig', [
+        'reservation' => $reservation
+    ]);
+    
+
     $pdf->showPdf($html);
 }
+
+
+
+
+
+
 
 
 

@@ -84,7 +84,9 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Symfony\\Bridge\\Twig\\' => 20,
             'Symfony\\Bridge\\Doctrine\\' => 24,
             'SymfonyCasts\\Bundle\\VerifyEmail\\' => 32,
+            'Svg\\' => 4,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'P' => 
         array (
@@ -99,6 +101,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'N' => 
         array (
             'Nyholm\\Psr7\\' => 12,
+        ),
+        'M' => 
+        array (
+            'Masterminds\\' => 12,
         ),
         'H' => 
         array (
@@ -124,12 +130,17 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Geocoder\\Http\\' => 14,
             'Geocoder\\' => 9,
         ),
+        'F' => 
+        array (
+            'FontLib\\' => 8,
+        ),
         'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
         array (
+            'Dompdf\\' => 7,
             'Doctrine\\SqlFormatter\\' => 22,
             'Doctrine\\Persistence\\' => 21,
             'Doctrine\\ORM\\' => 13,
@@ -373,9 +384,17 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/symfonycasts/verify-email-bundle/src',
         ),
+        'Svg\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
+        ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
+        ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
         'Psr\\Log\\' => 
         array (
@@ -409,6 +428,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'Nyholm\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/nyholm/psr7/src',
+        ),
+        'Masterminds\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
         'Http\\Promise\\' => 
         array (
@@ -483,9 +506,17 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/willdurand/geocoder',
         ),
+        'FontLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
+        ),
+        'Dompdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dompdf/dompdf/src',
         ),
         'Doctrine\\SqlFormatter\\' => 
         array (
@@ -577,6 +608,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
     public static $classMap = array (
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
         'Locale' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Locale.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',

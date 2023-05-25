@@ -15,6 +15,8 @@ return [
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/ipark' => [[['_route' => 'app_i_park', '_controller' => 'App\\Controller\\IParkController::index'], null, null, null, false, false, null]],
+        '/paiement' => [[['_route' => 'app_paiement_index', '_controller' => 'App\\Controller\\PaiementController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/paiement/new' => [[['_route' => 'app_paiement_new', '_controller' => 'App\\Controller\\PaiementController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'app_reservation_index', '_controller' => 'App\\Controller\\ReservationController::index'], null, ['GET' => 0], null, true, false, null]],
@@ -41,13 +43,21 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/reservation/([^/]++)(?'
-                    .'|(*:193)'
-                    .'|/step(?'
-                        .'|1edit(*:214)'
-                        .'|2edit(*:227)'
+                .'|/paiement/([^/]++)(?'
+                    .'|(*:190)'
+                    .'|/edit(*:203)'
+                    .'|(*:211)'
+                .')'
+                .'|/reservation/(?'
+                    .'|([^/]++)(?'
+                        .'|(*:247)'
+                        .'|/step(?'
+                            .'|1edit(*:268)'
+                            .'|2edit(*:281)'
+                        .')'
+                        .'|(*:290)'
                     .')'
-                    .'|(*:236)'
+                    .'|pdf/([^/]++)(*:311)'
                 .')'
             .')/?$}sDu',
     ],
@@ -59,11 +69,15 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        193 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        214 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        227 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        236 => [
-            [['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        190 => [[['_route' => 'app_paiement_show', '_controller' => 'App\\Controller\\PaiementController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        203 => [[['_route' => 'app_paiement_edit', '_controller' => 'App\\Controller\\PaiementController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        211 => [[['_route' => 'app_paiement_delete', '_controller' => 'App\\Controller\\PaiementController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        247 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        268 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        281 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        290 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        311 => [
+            [['_route' => 'reservation.pdf', '_controller' => 'App\\Controller\\ReservationController::generatePdfReservation'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
