@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* reservation/show.html.twig */
+/* reservation\show.html.twig */
 class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 {
     private $source;
@@ -33,19 +33,19 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "template.html.twig";
+        return "template2.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/show.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation\\show.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/show.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation\\show.html.twig"));
 
-        $this->parent = $this->loadTemplate("template.html.twig", "reservation/show.html.twig", 1);
+        $this->parent = $this->loadTemplate("template2.html.twig", "reservation\\show.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -110,21 +110,22 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 20, $this->source); })()), "typeVehicule", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
             </tr>
+            
         </tbody>
     </table>
 
     <a href=\"";
-        // line 25
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit_step1", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit_step1", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["reservation"]) || array_key_exists("reservation", $context) ? $context["reservation"] : (function () { throw new RuntimeError('Variable "reservation" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 29
+        // line 30
         echo twig_include($this->env, $context, "reservation/_delete_form.html.twig");
         echo "
 ";
@@ -138,7 +139,7 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 
     public function getTemplateName()
     {
-        return "reservation/show.html.twig";
+        return "reservation\\show.html.twig";
     }
 
     public function isTraitable()
@@ -148,12 +149,12 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  128 => 29,  123 => 27,  118 => 25,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  129 => 30,  124 => 28,  119 => 26,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'template.html.twig' %}
+        return new Source("{% extends 'template2.html.twig' %}
 
 {% block title %}Reservation{% endblock %}
 
@@ -174,6 +175,7 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
                 <th>Type_vehicule</th>
                 <td>{{ reservation.typeVehicule }}</td>
             </tr>
+            
         </tbody>
     </table>
 
@@ -183,6 +185,6 @@ class __TwigTemplate_2c52bab167dacf590fb5c3907edd34b9 extends Template
 
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
-", "reservation/show.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\show.html.twig");
+", "reservation\\show.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\reservation\\show.html.twig");
     }
 }

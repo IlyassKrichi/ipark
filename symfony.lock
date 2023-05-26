@@ -47,6 +47,9 @@
             "./migrations/.gitignore"
         ]
     },
+    "endroid/qrcode-bundle": {
+        "version": "4.3.1"
+    },
     "nyholm/psr7": {
         "version": "1.7",
         "recipe": {

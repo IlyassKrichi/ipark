@@ -131,7 +131,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
             echo "</td>
                 <td>";
             // line 28
-            ((twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28), "Y-m-d"), "html", null, true))) : (print ("")));
+            ((twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "dateReservation", [], "any", false, false, false, 28), "Y-m-d H:i"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
             // line 29
@@ -222,7 +222,7 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
         {% for reservation in reservations %}
             <tr>
                 <td>{{ reservation.id }}</td>
-                <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
+                <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d H:i') : '' }}</td>
                 <td>{{ reservation.typeVehicule }}</td>
                 <td>
                     <a href=\"{{ path('app_reservation_show', {'id': reservation.id}) }}\">show</a>
@@ -239,6 +239,6 @@ class __TwigTemplate_130c5135660503cd741335e337dd029f extends Template
 
     <a href=\"{{ path('app_reservation_new_step1') }}\">Create new</a>
 {% endblock %}
-", "reservation/index.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\index.html.twig");
+", "reservation/index.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\reservation\\index.html.twig");
     }
 }

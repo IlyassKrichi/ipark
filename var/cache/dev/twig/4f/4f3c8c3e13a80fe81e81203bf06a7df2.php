@@ -114,6 +114,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t</head>
 
 \t<body>
+\t
 
 \t\t<!-- ======= Header ======= -->
 \t\t<header id=\"header\" class=\"header d-flex align-items-center fixed-top\">
@@ -123,7 +124,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
 \t\t\t\t\t\t<h1>
-\t\t\t\t\tLogis
+\t\t\t\t\tIpark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
 \t\t\t\t<i class=\"mobile-nav-toggle mobile-nav-hide d-none bi bi-x\"></i>
@@ -194,13 +195,13 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
-\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center style=\"text-align: center\"\">
+\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Parking Partner</h2>
+\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Welcome to our parking website!</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t\t\t<img src=";
-        // line 132
+        // line 133
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/hero-img.svg"), "html", null, true);
         echo " class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
 \t\t\t\t\t\t</div>
@@ -218,41 +219,8 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
 \t\t\t\t\t\t\t</form>
 
-\t\t\t\t\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -262,9 +230,9 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t<section class=\"sample-page\">
 \t\t\t\t<div class=\"container\" data-aos=\"fade-up\">
 \t\t\t\t\t";
-        // line 191
+        // line 159
         $this->displayBlock('body', $context, $blocks);
-        // line 194
+        // line 162
         echo "\t\t\t\t</div>
 \t\t\t</section>
 
@@ -278,9 +246,9 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
-\t\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t\t<span>Ipark</span>
 \t\t\t\t\t\t</a>
-\t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+\t\t\t\t\t\t<p> We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure. </p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"twitter\">
 \t\t\t\t\t\t\t\t<i class=\"bi bi-twitter\"></i>
@@ -311,26 +279,25 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<div class=\"col-lg-2 col-6 footer-links\">
 \t\t\t\t\t\t<h4>Our Services</h4>
 \t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Design</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Development</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Product Management</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Marketing</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Graphic Design</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">flexible reservation</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Car Wash and Detailing</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Electric Vehicle Charging</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Security</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Monthly Parking</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
-\t\t\t\t\t\t\tA108 Adam Street
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<br>
-\t\t\t\t\t\t\tNew York, NY 535022<br>
-\t\t\t\t\t\t\tUnited States
+\t\t\t\t\t\t\tRabat,Agdal Morocco.
 \t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
 \t\t\t\t\t\t\t+1 5589 55488 55<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
-\t\t\t\t\t\t\tinfo@example.com<br>
+\t\t\t\t\t\t\tcontact.ipark.info@gmaim.com<br>
 \t\t\t\t\t\t</p>
 
 \t\t\t\t\t</div>
@@ -342,7 +309,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t<div class=\"copyright\">
 \t\t\t\t\t&copy; Copyright
 \t\t\t\t\t<strong>
-\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t<span>Ipark</span>
 \t\t\t\t\t</strong>. All Rights Reserved
 \t\t\t\t</div>
 \t\t\t\t<div class=\"credits\">
@@ -350,8 +317,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<!-- You can delete the links only if you purchased the pro version. -->
 \t\t\t\t\t<!-- Licensing information: https://bootstrapmade.com/license/ -->
 \t\t\t\t\t<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-\t\t\t\t\tDesigned by
-\t\t\t\t\t\t<a href=\"https://bootstrapmade.com/\"> BootstrapMade</a>
+\t\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 
@@ -367,27 +333,27 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 295
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 296
+        // line 262
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 297
+        // line 263
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 298
+        // line 264
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 299
+        // line 265
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 300
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
 \t\t<script type=\"text/javascript\">
@@ -398,7 +364,7 @@ dateReservation.valueAsDate = new Date();
 
 \t\t<!-- Template Main JS File -->
 \t\t<script src=";
-        // line 308
+        // line 274
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
 
@@ -414,7 +380,7 @@ dateReservation.valueAsDate = new Date();
 
     }
 
-    // line 191
+    // line 159
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -424,7 +390,7 @@ dateReservation.valueAsDate = new Date();
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 192
+        // line 160
         echo "\t\t\t\t\t\tTemplate Body
 \t\t\t\t\t";
         
@@ -447,7 +413,7 @@ dateReservation.valueAsDate = new Date();
 
     public function getDebugInfo()
     {
-        return array (  428 => 192,  418 => 191,  402 => 308,  391 => 300,  387 => 299,  383 => 298,  379 => 297,  375 => 296,  371 => 295,  268 => 194,  266 => 191,  204 => 132,  104 => 35,  97 => 31,  92 => 29,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  394 => 160,  384 => 159,  368 => 274,  357 => 266,  353 => 265,  349 => 264,  345 => 263,  341 => 262,  337 => 261,  236 => 162,  234 => 159,  205 => 133,  104 => 35,  97 => 31,  92 => 29,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -498,6 +464,7 @@ dateReservation.valueAsDate = new Date();
 \t</head>
 
 \t<body>
+\t
 
 \t\t<!-- ======= Header ======= -->
 \t\t<header id=\"header\" class=\"header d-flex align-items-center fixed-top\">
@@ -507,7 +474,7 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
 \t\t\t\t\t\t<h1>
-\t\t\t\t\tLogis
+\t\t\t\t\tIpark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
 \t\t\t\t<i class=\"mobile-nav-toggle mobile-nav-hide d-none bi bi-x\"></i>
@@ -578,9 +545,9 @@ dateReservation.valueAsDate = new Date();
 \t\t\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
-\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center style=\"text-align: center\"\">
+\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Parking Partner</h2>
+\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Welcome to our parking website!</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t\t\t<img src={{ asset('assets/img/hero-img.svg') }} class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
@@ -599,41 +566,8 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
 \t\t\t\t\t\t\t</form>
 
-\t\t\t\t\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t
+\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -658,9 +592,9 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
-\t\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t\t<span>Ipark</span>
 \t\t\t\t\t\t</a>
-\t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+\t\t\t\t\t\t<p> We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure. </p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"twitter\">
 \t\t\t\t\t\t\t\t<i class=\"bi bi-twitter\"></i>
@@ -691,26 +625,25 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t\t<div class=\"col-lg-2 col-6 footer-links\">
 \t\t\t\t\t\t<h4>Our Services</h4>
 \t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Design</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Development</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Product Management</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Marketing</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Graphic Design</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">flexible reservation</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Car Wash and Detailing</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Electric Vehicle Charging</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Security</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Monthly Parking</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
-\t\t\t\t\t\t\tA108 Adam Street
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<br>
-\t\t\t\t\t\t\tNew York, NY 535022<br>
-\t\t\t\t\t\t\tUnited States
+\t\t\t\t\t\t\tRabat,Agdal Morocco.
 \t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
 \t\t\t\t\t\t\t+1 5589 55488 55<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
-\t\t\t\t\t\t\tinfo@example.com<br>
+\t\t\t\t\t\t\tcontact.ipark.info@gmaim.com<br>
 \t\t\t\t\t\t</p>
 
 \t\t\t\t\t</div>
@@ -722,7 +655,7 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t<div class=\"copyright\">
 \t\t\t\t\t&copy; Copyright
 \t\t\t\t\t<strong>
-\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t<span>Ipark</span>
 \t\t\t\t\t</strong>. All Rights Reserved
 \t\t\t\t</div>
 \t\t\t\t<div class=\"credits\">
@@ -730,8 +663,7 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t\t<!-- You can delete the links only if you purchased the pro version. -->
 \t\t\t\t\t<!-- Licensing information: https://bootstrapmade.com/license/ -->
 \t\t\t\t\t<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-\t\t\t\t\tDesigned by
-\t\t\t\t\t\t<a href=\"https://bootstrapmade.com/\"> BootstrapMade</a>
+\t\t\t\t\t
 \t\t\t\t</div>
 \t\t\t</div>
 

@@ -19,12 +19,13 @@ use Doctrine\ORM\EntityManagerInterface;
 use Geocoder\Provider\Nominatim\Nominatim;
 use Geocoder\StatefulGeocoder;
 use GuzzleHttp\Client;
-use App\Entity\Client as EntityClient;
 use App\Repository\ClientRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Endroid\QrCodeBundle\QrCodeFactoryInterface;
+use Endroid\QrCode\QrCode;
 
 #[Route('/reservation')]
 class ReservationController extends AbstractController
@@ -197,21 +198,27 @@ class ReservationController extends AbstractController
     }
     #[Route('/pdf/{id}', name: 'reservation.pdf')]
 public function generatePdfReservation(Reservation $reservation=null,PdfService $pdf){
+    $client = $reservation->getClient();
+    $clientName = $client->getNom();
+    $clientEmail = $client->getEmail();
+    $clientId = $client->getId();
+    $clientPrenom = $client->getPrenom();
+    $clientGsm = $client->getGsm();
+    
 
-    $html = $this->render('reservation\show.html.twig', [
-        'reservation' => $reservation
+
+    $html = $this->render('reservation\resevationPdf.html.twig', [
+        'reservation' => $reservation,
+        'clientNom' => $clientName,
+        'clientEmail' => $clientEmail,
+        'clientPrenom' => $clientPrenom,
+        'clientId' => $clientId,
+        'clientGsm' => $clientGsm
     ]);
     
 
     $pdf->showPdf($html);
 }
-
-
-
-
-
-
-
 
 
 }

@@ -1,4 +1,4 @@
-{% extends 'template2.html.twig' %}
+{% extends 'template3.html.twig' %}
 
 {% block title %}Reservation{% endblock %}
 
@@ -6,26 +6,43 @@
     <h1>Reservation</h1>
 
     <table class="table">
+    
         <tbody>
-                <th>Id</th>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Numero de reservation</span></th>
                 <td>{{ reservation.id }}</td>
             </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue; text-align: left;">Id Client</span></th>
+                <td>{{ clientId }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Nom</span></th>
+                <td>{{ clientNom }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Prenom</span></th>
+                <td>{{ clientPrenom }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Email</span></th>
+                <td>{{ clientEmail }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">GSM</span></th>
+                <td>{{ clientGsm }}</td>
+            </tr>
+            
 
             <tr>
-                <th>Date_reservation</th>
+                <th class="text-left"><span style="color: blue;">Date_reservation</span></th>
                 <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
             </tr>
             <tr>
-                <th>Type_vehicule</th>
+                <th class="text-left"><span style="color: blue;">Type_vehicule</th>
                 <td>{{ reservation.typeVehicule }}</td>
             </tr>
             
         </tbody>
     </table>
-
-    <a href="{{ path('app_reservation_index') }}">back to list</a>
-
-    <a href="{{ path('app_reservation_edit_step1', {'id': reservation.id}) }}">edit</a>
-
-    {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
