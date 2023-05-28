@@ -123,7 +123,7 @@ class __TwigTemplate_cf174c9825d2f5c43c65939e4a1b37df extends Template
 \t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center justify-content-center\">
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
-\t\t\t\t\t\t<h1 class=\"mx-auto text-center background: linear-gradient(to right, #007bff, #00bcd4);\">
+\t\t\t\t\t\t<h1 class=\"mx-auto text-center \">
 \t\t\t\t\tIpark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
@@ -155,13 +155,14 @@ class __TwigTemplate_cf174c9825d2f5c43c65939e4a1b37df extends Template
 \t\t\t\t</div>
 \t\t\t</section>
 \t\t\t<!-- End Hero Section -->
-
+\t\t\t
 \t\t\t<section class=\"sample-page\">
+\t\t\t
 \t\t\t\t<div class=\"container\" data-aos=\"fade-up\" style=\"background: linear-gradient(to right, #007bff, #00bcd4);\">
 \t\t\t\t\t";
-        // line 88
+        // line 89
         $this->displayBlock('body', $context, $blocks);
-        // line 91
+        // line 92
         echo "\t\t\t\t</div>
 \t\t\t</section>
 
@@ -251,27 +252,27 @@ class __TwigTemplate_cf174c9825d2f5c43c65939e4a1b37df extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 179
+        // line 180
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 180
+        // line 181
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 181
+        // line 182
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 182
+        // line 183
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 183
+        // line 184
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 184
+        // line 185
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
 \t\t<script type=\"text/javascript\">
@@ -282,7 +283,7 @@ dateReservation.valueAsDate = new Date();
 
 \t\t<!-- Template Main JS File -->
 \t\t<script src=";
-        // line 192
+        // line 193
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
 
@@ -297,7 +298,7 @@ dateReservation.valueAsDate = new Date();
 
     }
 
-    // line 88
+    // line 89
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -307,7 +308,7 @@ dateReservation.valueAsDate = new Date();
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 89
+        // line 90
         echo "\t\t\t\t\t\tTemplate Body
 \t\t\t\t\t";
         
@@ -330,7 +331,7 @@ dateReservation.valueAsDate = new Date();
 
     public function getDebugInfo()
     {
-        return array (  311 => 89,  301 => 88,  286 => 192,  275 => 184,  271 => 183,  267 => 182,  263 => 181,  259 => 180,  255 => 179,  165 => 91,  163 => 88,  151 => 79,  104 => 35,  97 => 31,  92 => 29,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  312 => 90,  302 => 89,  287 => 193,  276 => 185,  272 => 184,  268 => 183,  264 => 182,  260 => 181,  256 => 180,  166 => 92,  164 => 89,  151 => 79,  104 => 35,  97 => 31,  92 => 29,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -390,7 +391,7 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center justify-content-center\">
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
-\t\t\t\t\t\t<h1 class=\"mx-auto text-center background: linear-gradient(to right, #007bff, #00bcd4);\">
+\t\t\t\t\t\t<h1 class=\"mx-auto text-center \">
 \t\t\t\t\tIpark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
@@ -419,8 +420,9 @@ dateReservation.valueAsDate = new Date();
 \t\t\t\t</div>
 \t\t\t</section>
 \t\t\t<!-- End Hero Section -->
-
+\t\t\t
 \t\t\t<section class=\"sample-page\">
+\t\t\t
 \t\t\t\t<div class=\"container\" data-aos=\"fade-up\" style=\"background: linear-gradient(to right, #007bff, #00bcd4);\">
 \t\t\t\t\t{% block body %}
 \t\t\t\t\t\tTemplate Body

@@ -33,7 +33,7 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "template3.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "paiement/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "paiement/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("template3.html.twig", "paiement/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -85,7 +85,7 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Paiement index</h1>
+        echo "    <h1>liste de paiements</h1>
 
     <table class=\"table\">
         <thead>
@@ -123,37 +123,109 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["paiement"], "modePaiement", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>
-                    <a href=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_paiement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["paiement"], "id", [], "any", false, false, false, 26)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_paiement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["paiement"], "id", [], "any", false, false, false, 27)]), "html", null, true);
-            echo "\">edit</a>
+                    <style>
+.button {
+  
+  display: inline-block;
+  vertical-align: middle;
+  margin: px 0;
+  min-height: 40px;
+  padding: 5px 20px;
+  font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-position: top center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transition-property: background, color;
+}
+
+.button1 {
+  position: relative;
+  color: #00008B;
+  border-radius: 26px;
+  background-image: linear-gradient(90deg, #E0FFFF, #87CEEB);
+  background-size: 400%;
+  background-position: 0% 0%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+    background-size: 500%;
+    background-position: 0% 0%;
+    filter: blur(10px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  
+  &:hover {
+    animation: gradientRotate 2s infinite;
+    &::before {
+      opacity: 1;
+      animation: gradientRotate 2s infinite;
+    }
+  }
+  
+  &:active {
+    color: #c3c4d5;
+  }
+  
+  &:focus {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+
+</style>
+
+                    <button class=\"button button1\" onclick=\"window.location.href='";
+            // line 98
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_paiement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["paiement"], "id", [], "any", false, false, false, 98)]), "html", null, true);
+            echo "'\">Show</button>
+                    <button class=\"button button1\" onclick=\"window.location.href=\"";
+            // line 99
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_paiement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["paiement"], "id", [], "any", false, false, false, 99)]), "html", null, true);
+            echo " >edit</button>
                 </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 31
+            // line 103
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
-            </tr>
+            </tr>                   
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['paiement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 107
         echo "        </tbody>
     </table>
-
-    <a href=\"";
-        // line 38
+    
+    <button class=\"button button1\" onclick=\"window.location.href=\"";
+        // line 110
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_paiement_new");
-        echo "\">Create new</a>
+        echo ">Create new</button>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -175,17 +247,17 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
 
     public function getDebugInfo()
     {
-        return array (  155 => 38,  150 => 35,  141 => 31,  132 => 27,  128 => 26,  123 => 24,  119 => 23,  115 => 22,  111 => 21,  108 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  227 => 110,  222 => 107,  213 => 103,  204 => 99,  200 => 98,  123 => 24,  119 => 23,  115 => 22,  111 => 21,  108 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'template3.html.twig' %}
 
 {% block title %}Paiement index{% endblock %}
 
 {% block body %}
-    <h1>Paiement index</h1>
+    <h1>liste de paiements</h1>
 
     <table class=\"table\">
         <thead>
@@ -205,19 +277,91 @@ class __TwigTemplate_322b09a41f96677a4893285924001e6d extends Template
                 <td>{{ paiement.datePaiement ? paiement.datePaiement|date('Y-m-d') : '' }}</td>
                 <td>{{ paiement.modePaiement }}</td>
                 <td>
-                    <a href=\"{{ path('app_paiement_show', {'id': paiement.id}) }}\">show</a>
-                    <a href=\"{{ path('app_paiement_edit', {'id': paiement.id}) }}\">edit</a>
+                    <style>
+.button {
+  
+  display: inline-block;
+  vertical-align: middle;
+  margin: px 0;
+  min-height: 40px;
+  padding: 5px 20px;
+  font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-position: top center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transition-property: background, color;
+}
+
+.button1 {
+  position: relative;
+  color: #00008B;
+  border-radius: 26px;
+  background-image: linear-gradient(90deg, #E0FFFF, #87CEEB);
+  background-size: 400%;
+  background-position: 0% 0%;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 26px;
+    background-image: linear-gradient(90deg, #0065ff, #6942ef, #6554c0, #008cff, #0065ff, #6942ef);
+    background-size: 500%;
+    background-position: 0% 0%;
+    filter: blur(10px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.2s;
+  }
+  
+  &:hover {
+    animation: gradientRotate 2s infinite;
+    &::before {
+      opacity: 1;
+      animation: gradientRotate 2s infinite;
+    }
+  }
+  
+  &:active {
+    color: #c3c4d5;
+  }
+  
+  &:focus {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+
+</style>
+
+                    <button class=\"button button1\" onclick=\"window.location.href='{{ path('app_paiement_show', {'id': paiement.id}) }}'\">Show</button>
+                    <button class=\"button button1\" onclick=\"window.location.href=\"{{ path('app_paiement_edit', {'id': paiement.id}) }} >edit</button>
                 </td>
             </tr>
         {% else %}
             <tr>
                 <td colspan=\"5\">no records found</td>
-            </tr>
+            </tr>                   
         {% endfor %}
         </tbody>
     </table>
-
-    <a href=\"{{ path('app_paiement_new') }}\">Create new</a>
+    
+    <button class=\"button button1\" onclick=\"window.location.href=\"{{ path('app_paiement_new') }}>Create new</button>
 {% endblock %}
 ", "paiement/index.html.twig", "C:\\xampp\\htdocs\\ipark\\templates\\paiement\\index.html.twig");
     }
