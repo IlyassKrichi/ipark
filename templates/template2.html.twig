@@ -24,23 +24,17 @@
 		<!-- Vendor CSS Files -->
 		<link href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
 		<link href={{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }} rel="stylesheet">
-		<link href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
 		<link href={{ asset('assets/vendor/glightbox/css/glightbox.min.css') }} rel="stylesheet">
 		<link href={{ asset('assets/vendor/swiper/swiper-bundle.min.css') }} rel="stylesheet">
 		<link
 		href={{ asset('assets/vendor/aos/aos.css') }} rel="stylesheet">
 
 		<!-- Template Main CSS File -->
-		<link
-		href={{ asset('assets/css/main.css') }} rel="stylesheet">
-
-	<!-- =======================================================
-																																																																					  * Template Name: Logis
-																																																																					  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-																																																																					  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-																																																																					  * Author: BootstrapMade.com
-																																																																					  * License: https://bootstrapmade.com/license/
-																																																																					  ======================================================== -->
+		<link href={{ asset('assets/css/main.css') }} rel="stylesheet">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88&libraries=places"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
@@ -121,77 +115,13 @@
 
 		<main id="main">
 
-			<section id="hero" class="hero d-flex align-items-center">
-				<div class="container">
-					<div class="row gy-4 d-flex justify-content-center">
-						<div class="col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center">
-							<h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
-							<p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
-						</div>
-						<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
-							<img src={{ asset('assets/img/hero-img.svg') }} class="img-fluid mb-3 mb-lg-0" alt="">
-						</div>
-						<div class="col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center">
-							<form action="#" class="form-search d-flex align-items-stretch mb-3 mt-3" data-aos="fade-up" data-aos-delay="200">
-								<input type="date" name="dateReservation" class="form-control" id="datepicker">
-								<select id="Vehicule" class="form-control" id="Vehicule" name="Vehicule" required="required">
-									<option value="">--- Vehicule ---</option>
-									<option value="1">Voiture</option>
-									<option value="2">Moto</option>
-									<option value="3">Vélo</option>
-									<option value="4">Camion</option>
-								</select>
-								<input type="text" name="adresse" class="form-control" id="adresse" placeholder="Adresse" autocomplete="off">
-								<button type="submit" class="btn btn-primary">Rechercher</button>
-							</form>
-
-							<div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
-
-								<div class="col-lg-3 col-md-3 col-6">
-									<div class="stats-item text-center w-100 h-100">
-										<span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-										<p>Clients</p>
-									</div>
-								</div>
-								<!-- End Stats Item -->
-
-								<div class="col-lg-3 col-6">
-									<div class="stats-item text-center w-100 h-100">
-										<span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-										<p>Projects</p>
-									</div>
-								</div>
-								<!-- End Stats Item -->
-
-								<div class="col-lg-3 col-6">
-									<div class="stats-item text-center w-100 h-100">
-										<span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-										<p>Support</p>
-									</div>
-								</div>
-								<!-- End Stats Item -->
-
-								<div class="col-lg-3 col-6">
-									<div class="stats-item text-center w-100 h-100">
-										<span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-										<p>Workers</p>
-									</div>
-								</div>
-								<!-- End Stats Item -->
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			{% block body %}
+				Template Body
+			{% endblock %}
 			<!-- End Hero Section -->
 
 			<section class="sample-page">
-				<div class="container" data-aos="fade-up">
-					{% block body %}
-						Template Body
-					{% endblock %}
-				</div>
+				<div class="container" data-aos="fade-up"></div>
 			</section>
 
 		</main>
@@ -298,15 +228,8 @@
 		<script src={{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}></script>
 		<script src={{ asset('assets/vendor/aos/aos.js') }}></script>
 		<script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
-		<script type="text/javascript">
-			var dateReservation = document.querySelector('[name="dateReservation"]');
-dateReservation.min = new Date().toISOString().split("T")[0];
-dateReservation.valueAsDate = new Date();
-		</script>
-
-		<!-- Template Main JS File -->
 		<script src={{ asset('assets/js/main.js') }}></script>
-
+		<script src={{ asset('assets/js/scripts.js') }}></script>
 	</body>
 
 </html>

@@ -6,6 +6,7 @@
   "require": {
     "php": ">=8.1",
     "ext-ctype": "*",
+    "ext-gd": "*",
     "ext-iconv": "*",
     "doctrine/doctrine-bundle": "^2.9",
     "doctrine/doctrine-migrations-bundle": "^3.2",
@@ -15,6 +16,7 @@
     "geocoder-php/google-maps-provider": "^4.7",
     "geocoder-php/mapquest-provider": "^4.3",
     "geocoder-php/nominatim-provider": "^5.7",
+    "geocoder-php/photon-provider": "^0.5.0",
     "geocoder-php/provider-integration-tests": "^1.6",
     "guzzlehttp/guzzle": "^6.5",
     "guzzlehttp/psr7": "^1.9",

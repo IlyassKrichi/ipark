@@ -2089,6 +2089,8 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
+  color: #212529;
+  background-color: #fff;
   border-color: #86b7fe;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
@@ -2097,13 +2099,6 @@ textarea.form-control-lg {
 .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
   background-image: none;
-}
-.form-select:disabled {
-  background-color: #e9ecef;
-}
-.form-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #212529;
 }
 .form-select-sm {
   padding-top: 0.25rem;
@@ -2118,6 +2113,13 @@ textarea.form-control-lg {
   padding-left: 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
+}
+.form-select option {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.form-select option:focus {
+  color: rgba(13, 110, 253, 0.25);
 }
 .form-check {
   display: block;

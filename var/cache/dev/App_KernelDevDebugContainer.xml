@@ -384,6 +384,7 @@
     <service id="App\Service\MailerService" class="App\Service\MailerService" autowire="true" autoconfigure="true">
       <argument type="service" id="mailer.mailer"/>
     </service>
+    <service id="App\Service\PdfReservation" class="App\Service\PdfReservation" autowire="true" autoconfigure="true"/>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
       <tag name="kernel.event_subscriber"/>
@@ -5326,12 +5327,6 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator.caJHb8S" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="reservationRepository" type="service_closure" id="App\Repository\ReservationRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.9kKwU2t" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5364,12 +5359,11 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.nG4lp3W" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator._Cmt6jx" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.v.Ev_hT"/>
         <argument key="App\Controller\ReservationController::delete" type="service_closure" id=".service_locator.doLz9ae"/>
-        <argument key="App\Controller\ReservationController::index" type="service_closure" id=".service_locator.caJHb8S"/>
         <argument key="App\Controller\ReservationController::show" type="service_closure" id=".service_locator.h9c0uBq"/>
         <argument key="App\Controller\ReservationController::step1edit" type="service_closure" id=".service_locator.h9c0uBq"/>
         <argument key="App\Controller\ReservationController::step2edit" type="service_closure" id=".service_locator.rNyJSA0"/>
@@ -5381,7 +5375,6 @@
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.v.Ev_hT"/>
         <argument key="App\Controller\ReservationController:delete" type="service_closure" id=".service_locator.doLz9ae"/>
-        <argument key="App\Controller\ReservationController:index" type="service_closure" id=".service_locator.caJHb8S"/>
         <argument key="App\Controller\ReservationController:show" type="service_closure" id=".service_locator.h9c0uBq"/>
         <argument key="App\Controller\ReservationController:step1edit" type="service_closure" id=".service_locator.h9c0uBq"/>
         <argument key="App\Controller\ReservationController:step2edit" type="service_closure" id=".service_locator.rNyJSA0"/>
@@ -5766,12 +5759,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.nG4lp3W"/>
+      <argument type="service" id=".service_locator._Cmt6jx"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.nG4lp3W"/>
+      <argument type="service" id=".service_locator._Cmt6jx"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6575,14 +6568,14 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.nG4lp3W"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator._Cmt6jx"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.TFYbZQh" alias=".service_locator.v.Ev_hT"/>
     <service id=".service_locator.cGKPhEE" alias=".service_locator.rNyJSA0"/>
-    <service id=".service_locator.wy46gnH" alias=".service_locator.nG4lp3W"/>
+    <service id=".service_locator.5fhoecB" alias=".service_locator._Cmt6jx"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.pautlbF" alias=".service_locator.jU8AGaW"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -6610,7 +6603,6 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
     <service id=".service_locator.5UN.R0P" alias=".service_locator.v.Ev_hT"/>
-    <service id=".service_locator.LuS44bc" alias=".service_locator.caJHb8S"/>
     <service id=".service_locator.gaTSUXr" alias=".service_locator.9kKwU2t"/>
     <service id=".service_locator.bRbdH2p" alias=".service_locator.h9c0uBq"/>
     <service id=".service_locator.h3OjTvL" alias=".service_locator.rNyJSA0"/>

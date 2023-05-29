@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "263074dfaf4c626cf777d6e3c5e07d46",
+    "content-hash": "9ad28c0042e358c47d96b962ae928dd5",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -1824,6 +1824,59 @@
                 "source": "https://github.com/geocoder-php/nominatim-provider/tree/5.7.0"
             },
             "time": "2023-03-01T10:18:27+00:00"
+        },
+        {
+            "name": "geocoder-php/photon-provider",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/geocoder-php/photon-provider.git",
+                "reference": "fa0c5c141cf9c4ad7a1222596f667b8fdfcf3782"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/geocoder-php/photon-provider/zipball/fa0c5c141cf9c4ad7a1222596f667b8fdfcf3782",
+                "reference": "fa0c5c141cf9c4ad7a1222596f667b8fdfcf3782",
+                "shasum": ""
+            },
+            "require": {
+                "geocoder-php/common-http": "^4.1",
+                "php": "^7.4 || ^8.0",
+                "willdurand/geocoder": "^4.0"
+            },
+            "provide": {
+                "geocoder-php/provider-implementation": "1.0"
+            },
+            "require-dev": {
+                "geocoder-php/provider-integration-tests": "^1.0",
+                "php-http/curl-client": "^2.2",
+                "php-http/message": "^1.0",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Geocoder\\Provider\\Photon\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Beliën"
+                }
+            ],
+            "description": "Geocoder Photon adapter",
+            "homepage": "http://geocoder-php.org/Geocoder/",
+            "support": {
+                "source": "https://github.com/geocoder-php/photon-provider/tree/0.5.0"
+            },
+            "time": "2022-07-30T12:09:30+00:00"
         },
         {
             "name": "geocoder-php/provider-integration-tests",
@@ -9666,6 +9719,7 @@
     "platform": {
         "php": ">=8.1",
         "ext-ctype": "*",
+        "ext-gd": "*",
         "ext-iconv": "*"
     },
     "platform-dev": [],

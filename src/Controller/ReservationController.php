@@ -3,18 +3,16 @@
 
 namespace App\Controller;
 use App\Entity\Parking;
-use App\Service\PdfService;
+use App\Entity\Place;
 use Geocoder\Model\Coordinates;
 use Geocoder\Query\GeocodeQuery;
-use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
-use Http\Client\Common\HttpMethodsClient;
-use Psr\Http\Client\ClientInterface;
 use App\Entity\Reservation;
+use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use App\Form\ReservationStep1Type;
 use App\Form\ReservationStep2Type;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Geocoder\Provider\Nominatim\Nominatim;
+use Geocoder\Provider\GoogleMaps\GoogleMaps;
 use Geocoder\StatefulGeocoder;
 use GuzzleHttp\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,24 +20,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/reservation')]
+#[Route('/')]
 class ReservationController extends AbstractController
 {
-    #[Route('/', name: 'app_reservation_index', methods: ['GET'])]
-    public function index(ReservationRepository $reservationRepository): Response
-    {
-        return $this->render('reservation/index.html.twig', [
-            'reservations' => $reservationRepository->findAll(),
-        ]);
-    }
-
     private function searchDistance(string $startAddress, EntityManagerInterface $em): array
     {
         $parkingRepo = $em->getRepository(Parking::class);
         $client = new GuzzleAdapter(new Client());
-        $rootUrl = 'https://nominatim.openstreetmap.org/';
-        $userAgent = 'iPark/1.0';
-        $provider = new Nominatim($client, $rootUrl, $userAgent);
+        $provider = new GoogleMaps($client, null, 'AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88');
         $geocoder = new StatefulGeocoder($provider);
         $startResult = $geocoder->geocodeQuery(GeocodeQuery::create($startAddress))->first();
         $distances= array();
@@ -54,7 +42,7 @@ class ReservationController extends AbstractController
                 $endCoordinates = $endResult->getCoordinates();
                 if ($startCoordinates && $endCoordinates) {
                     $distance = $this->calculateDistance($startCoordinates, $endCoordinates);
-                    $distances[$distance] = $parking->getNom();
+                    $distances[$parking->getNom()] = $distance;
                 }
             }
         }
@@ -78,7 +66,7 @@ class ReservationController extends AbstractController
         return $kilometers;
     }
 
-    #[Route('/step1new', name: 'app_reservation_new_step1', methods: ['GET', 'POST'])]
+    #[Route('/dashboard', name: 'app_reservation_new_step1', methods: ['GET', 'POST'])]
     public function step1new(Request $request): Response
     {
         $reservation = new Reservation();
@@ -97,7 +85,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/step2new', name: 'app_reservation_new_step2', methods: ['GET', 'POST'])]
+    #[Route('/parkings', name: 'app_reservation_new_step2', methods: ['GET', 'POST'])]
     public function step2new(Request $request, EntityManagerInterface $em): Response
     {
         $adresse = $request->getSession()->get('adresse');
@@ -107,6 +95,8 @@ class ReservationController extends AbstractController
         $distances = $this->searchDistance($adresse, $em);
         $form = $this->createForm(ReservationStep2Type::class, $reservation , ['keys' => array_keys($distances)]);
         $form->handleRequest($request);
+        $parkings = $em->getRepository(Parking::class)->findAll();
+        $places = $em->getRepository(Place::class)->findAll();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $request->getSession()->remove('adresse');
@@ -116,12 +106,14 @@ class ReservationController extends AbstractController
             $em->persist($reservation);
             $em->flush();
 
-            return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('reservation/step2.html.twig', [
             'reservation' => $reservation,
             'form' => $form,
+            'parkings' => $parkings,
+            'places' => $places,
         ]);
     }
 
@@ -187,12 +179,4 @@ class ReservationController extends AbstractController
 
         return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
     }
-    #[Route('/pdf/{id}', name: 'reservation.pdf')]
-public function generatePdfReservation(Reservation $reservation=null,PdfService $pdf){
-    $html=$this->render(view: 'templates\reservation\index.html.twig',['reservation'=>$reservation]);
-    $pdf->showPdf($html);
-}
-
-
-
 }

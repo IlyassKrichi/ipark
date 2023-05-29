@@ -81,36 +81,27 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
         echo " rel=\"stylesheet\">
 \t\t<link href=";
         // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
-        echo " rel=\"stylesheet\">
-\t\t<link href=";
-        // line 28
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/css/glightbox.min.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link href=";
-        // line 29
+        // line 28
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link
 \t\thref=";
-        // line 31
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 
 \t\t<!-- Template Main CSS File -->
-\t\t<link
-\t\thref=";
-        // line 35
+\t\t<link href=";
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/main.css"), "html", null, true);
         echo " rel=\"stylesheet\">
-
-\t<!-- =======================================================
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Template Name: Logis
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Author: BootstrapMade.com
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * License: https://bootstrapmade.com/license/
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  ======================================================== -->
+\t\t<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88&libraries=places\"></script>
+\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
+\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
+\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
 \t</head>
 
 \t<body>
@@ -191,81 +182,14 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<main id=\"main\">
 
-\t\t\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
-\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
-\t\t\t\t\t\t\t<img src=";
-        // line 132
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/hero-img.svg"), "html", null, true);
-        echo " class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center\">
-\t\t\t\t\t\t\t<form action=\"#\" class=\"form-search d-flex align-items-stretch mb-3 mt-3\" data-aos=\"fade-up\" data-aos-delay=\"200\">
-\t\t\t\t\t\t\t\t<input type=\"date\" name=\"dateReservation\" class=\"form-control\" id=\"datepicker\">
-\t\t\t\t\t\t\t\t<select id=\"Vehicule\" class=\"form-control\" data-done-button=\"true\" data-done-button-text=\"OK\" data-dropup-auto=\"false\" data-live-search=\"true\" data-live-search-normalize=\"true\" data-live-search-placeholder=\"Recherche\" data-size=\"7\" id=\"Vehicule\" name=\"Vehicule\" required=\"required\">
-\t\t\t\t\t\t\t\t\t<option value=\"\">--- Vehicule ---</option>
-\t\t\t\t\t\t\t\t\t<option value=\"1\">Voiture</option>
-\t\t\t\t\t\t\t\t\t<option value=\"2\">Moto</option>
-\t\t\t\t\t\t\t\t\t<option value=\"3\">Vélo</option>
-\t\t\t\t\t\t\t\t\t<option value=\"4\">Camion</option>
-\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t\t<input type=\"text\" name=\"adresse\" class=\"form-control\" id=\"adresse\" placeholder=\"Adresse\" autocomplete=\"off\">
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
-\t\t\t\t\t\t\t</form>
-
-\t\t\t\t\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</section>
-\t\t\t<!-- End Hero Section -->
+\t\t\t";
+        // line 118
+        $this->displayBlock('body', $context, $blocks);
+        // line 121
+        echo "\t\t\t<!-- End Hero Section -->
 
 \t\t\t<section class=\"sample-page\">
-\t\t\t\t<div class=\"container\" data-aos=\"fade-up\">
-\t\t\t\t\t";
-        // line 191
-        $this->displayBlock('body', $context, $blocks);
-        // line 194
-        echo "\t\t\t\t</div>
+\t\t\t\t<div class=\"container\" data-aos=\"fade-up\"></div>
 \t\t\t</section>
 
 \t\t</main>
@@ -367,41 +291,37 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 295
+        // line 225
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 296
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 297
+        // line 227
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 298
+        // line 228
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 299
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 300
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
-\t\t<script type=\"text/javascript\">
-\t\t\tvar dateReservation = document.querySelector('[name=\"dateReservation\"]');
-dateReservation.min = new Date().toISOString().split(\"T\")[0];
-dateReservation.valueAsDate = new Date();
-\t\t</script>
-
-\t\t<!-- Template Main JS File -->
 \t\t<script src=";
-        // line 308
+        // line 231
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
-
+\t\t<script src=";
+        // line 232
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scripts.js"), "html", null, true);
+        echo "></script>
 \t</body>
 
 </html>
@@ -414,7 +334,7 @@ dateReservation.valueAsDate = new Date();
 
     }
 
-    // line 191
+    // line 118
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -424,9 +344,9 @@ dateReservation.valueAsDate = new Date();
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 192
-        echo "\t\t\t\t\t\tTemplate Body
-\t\t\t\t\t";
+        // line 119
+        echo "\t\t\t\tTemplate Body
+\t\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -447,7 +367,7 @@ dateReservation.valueAsDate = new Date();
 
     public function getDebugInfo()
     {
-        return array (  428 => 192,  418 => 191,  402 => 308,  391 => 300,  387 => 299,  383 => 298,  379 => 297,  375 => 296,  371 => 295,  268 => 194,  266 => 191,  204 => 132,  104 => 35,  97 => 31,  92 => 29,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  348 => 119,  338 => 118,  323 => 232,  319 => 231,  315 => 230,  311 => 229,  307 => 228,  303 => 227,  299 => 226,  295 => 225,  189 => 121,  187 => 118,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -478,23 +398,17 @@ dateReservation.valueAsDate = new Date();
 \t\t<!-- Vendor CSS Files -->
 \t\t<link href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }} rel=\"stylesheet\">
 \t\t<link href={{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }} rel=\"stylesheet\">
-\t\t<link href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }} rel=\"stylesheet\">
 \t\t<link href={{ asset('assets/vendor/glightbox/css/glightbox.min.css') }} rel=\"stylesheet\">
 \t\t<link href={{ asset('assets/vendor/swiper/swiper-bundle.min.css') }} rel=\"stylesheet\">
 \t\t<link
 \t\thref={{ asset('assets/vendor/aos/aos.css') }} rel=\"stylesheet\">
 
 \t\t<!-- Template Main CSS File -->
-\t\t<link
-\t\thref={{ asset('assets/css/main.css') }} rel=\"stylesheet\">
-
-\t<!-- =======================================================
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Template Name: Logis
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Updated: Mar 10 2023 with Bootstrap v5.2.3
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * Author: BootstrapMade.com
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  * License: https://bootstrapmade.com/license/
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  ======================================================== -->
+\t\t<link href={{ asset('assets/css/main.css') }} rel=\"stylesheet\">
+\t\t<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88&libraries=places\"></script>
+\t\t<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"></script>
+\t\t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\"></script>
+\t\t<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\"></script>
 \t</head>
 
 \t<body>
@@ -575,77 +489,13 @@ dateReservation.valueAsDate = new Date();
 
 \t\t<main id=\"main\">
 
-\t\t\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
-\t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
-\t\t\t\t\t\t\t<img src={{ asset('assets/img/hero-img.svg') }} class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center\">
-\t\t\t\t\t\t\t<form action=\"#\" class=\"form-search d-flex align-items-stretch mb-3 mt-3\" data-aos=\"fade-up\" data-aos-delay=\"200\">
-\t\t\t\t\t\t\t\t<input type=\"date\" name=\"dateReservation\" class=\"form-control\" id=\"datepicker\">
-\t\t\t\t\t\t\t\t<select id=\"Vehicule\" class=\"form-control\" data-done-button=\"true\" data-done-button-text=\"OK\" data-dropup-auto=\"false\" data-live-search=\"true\" data-live-search-normalize=\"true\" data-live-search-placeholder=\"Recherche\" data-size=\"7\" id=\"Vehicule\" name=\"Vehicule\" required=\"required\">
-\t\t\t\t\t\t\t\t\t<option value=\"\">--- Vehicule ---</option>
-\t\t\t\t\t\t\t\t\t<option value=\"1\">Voiture</option>
-\t\t\t\t\t\t\t\t\t<option value=\"2\">Moto</option>
-\t\t\t\t\t\t\t\t\t<option value=\"3\">Vélo</option>
-\t\t\t\t\t\t\t\t\t<option value=\"4\">Camion</option>
-\t\t\t\t\t\t\t\t</select>
-\t\t\t\t\t\t\t\t<input type=\"text\" name=\"adresse\" class=\"form-control\" id=\"adresse\" placeholder=\"Adresse\" autocomplete=\"off\">
-\t\t\t\t\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">Rechercher</button>
-\t\t\t\t\t\t\t</form>
-
-\t\t\t\t\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<!-- End Stats Item -->
-
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</section>
+\t\t\t{% block body %}
+\t\t\t\tTemplate Body
+\t\t\t{% endblock %}
 \t\t\t<!-- End Hero Section -->
 
 \t\t\t<section class=\"sample-page\">
-\t\t\t\t<div class=\"container\" data-aos=\"fade-up\">
-\t\t\t\t\t{% block body %}
-\t\t\t\t\t\tTemplate Body
-\t\t\t\t\t{% endblock %}
-\t\t\t\t</div>
+\t\t\t\t<div class=\"container\" data-aos=\"fade-up\"></div>
 \t\t\t</section>
 
 \t\t</main>
@@ -752,15 +602,8 @@ dateReservation.valueAsDate = new Date();
 \t\t<script src={{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}></script>
 \t\t<script src={{ asset('assets/vendor/aos/aos.js') }}></script>
 \t\t<script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
-\t\t<script type=\"text/javascript\">
-\t\t\tvar dateReservation = document.querySelector('[name=\"dateReservation\"]');
-dateReservation.min = new Date().toISOString().split(\"T\")[0];
-dateReservation.valueAsDate = new Date();
-\t\t</script>
-
-\t\t<!-- Template Main JS File -->
 \t\t<script src={{ asset('assets/js/main.js') }}></script>
-
+\t\t<script src={{ asset('assets/js/scripts.js') }}></script>
 \t</body>
 
 </html>

@@ -79,6 +79,7 @@ return array(
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
+    'Geocoder\\Provider\\Photon\\' => array($vendorDir . '/geocoder-php/photon-provider'),
     'Geocoder\\Provider\\Nominatim\\' => array($vendorDir . '/geocoder-php/nominatim-provider'),
     'Geocoder\\Provider\\MapQuest\\' => array($vendorDir . '/geocoder-php/mapquest-provider'),
     'Geocoder\\Provider\\GoogleMaps\\' => array($vendorDir . '/geocoder-php/google-maps-provider'),

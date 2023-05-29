@@ -1748,10 +1748,8 @@ section {
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 20px;
-  border: none;
   margin-right: 10px;
-  border: 1px !important;
-  background: none !important;
+  margin-left: 10px;
 }
 
 .hero form .form-control:hover,

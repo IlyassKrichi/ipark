@@ -1,11 +1,44 @@
 {% extends 'template2.html.twig' %}
 
-{% block title %}New Reservation{% endblock %}
+{% block title %}New Reservation
+{% endblock %}
 
 {% block body %}
-    <h1>Create new Reservation</h1>
+	<section id="hero" class="hero d-flex align-items-center"></section>
+	<div class="container">
+		{% for parking in parkings %}
+			<div class="d-flex flex-column justify-content-center border rounded-4 p-3 bg-secondary">
+				<p>
+					Nom :
+					{{ parking.nom }}
+				</p>
+				<p>
+					Adresse :
+					{{ parking.adresse }}
+				</p>
+				<p>
+					Capacité :
+					{{ parking.capacite }}
+				</p>
+				<p>
+					Places disponibles:
+					{% for place in places %}
+						{% if parking.id == place.parking.id %}
+							{{ place.id }}
+						{% endif %}
+					{% endfor %}
+				</p>
+				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapseExample">
+					Réserver
+				</button>
+				<div class="collapse" id="collapse{{ parking.id }}" style="">
+					<div class="card card-body">
+						Hi!
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
 
-    {{ include('reservation/_form.html.twig') }}
 
-    <a href="{{ path('app_reservation_index') }}">back to list</a>
 {% endblock %}

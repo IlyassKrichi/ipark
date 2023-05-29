@@ -116,6 +116,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Geocoder\\Provider\\Photon\\' => 25,
             'Geocoder\\Provider\\Nominatim\\' => 28,
             'Geocoder\\Provider\\MapQuest\\' => 27,
             'Geocoder\\Provider\\GoogleMaps\\' => 29,
@@ -454,6 +455,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Geocoder\\Provider\\Photon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/geocoder-php/photon-provider',
         ),
         'Geocoder\\Provider\\Nominatim\\' => 
         array (
