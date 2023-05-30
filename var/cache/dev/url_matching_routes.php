@@ -19,6 +19,9 @@ return [
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/dashboard' => [[['_route' => 'app_reservation_new_step1', '_controller' => 'App\\Controller\\ReservationController::step1new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/parkings' => [[['_route' => 'app_reservation_new_step2', '_controller' => 'App\\Controller\\ReservationController::step2new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/session' => [[['_route' => 'app_session', '_controller' => 'App\\Controller\\SessionController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -37,19 +40,14 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/([^/]++)(?'
-                    .'|(*:181)'
-                    .'|/step(?'
-                        .'|1edit(*:202)'
-                        .'|2edit(*:215)'
+                .'|/s(?'
+                    .'|how/([^/]++)(*:186)'
+                    .'|tep(?'
+                        .'|1edit/([^/]++)(*:214)'
+                        .'|2edit/([^/]++)(*:236)'
                     .')'
-                    .'|(*:224)'
                 .')'
-                .'|/log(?'
-                    .'|in(*:242)'
-                    .'|out(*:253)'
-                .')'
-                .'|/session(*:270)'
+                .'|/delete/([^/]++)(*:262)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -60,14 +58,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        181 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        202 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        215 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        224 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        242 => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], [], null, null, false, false, null]],
-        253 => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], [], null, null, false, false, null]],
-        270 => [
-            [['_route' => 'app_session', '_controller' => 'App\\Controller\\SessionController::index'], [], null, null, false, false, null],
+        186 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        214 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        236 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        262 => [
+            [['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

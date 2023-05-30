@@ -1,33 +1,34 @@
-{% extends 'template.html.twig' %}
+{% extends 'template2.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Register
+{% endblock %}
 
 {% block body %}
-    {% for flash_error in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
-    {% endfor %}
+	{% for flash_error in app.flashes('verify_email_error') %}
+		<div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+	{% endfor %}
 
-    <h1>Register</h1>
+	<h1>Register</h1>
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.nom, {
+	{{ form_start(registrationForm) }}
+	{{ form_row(registrationForm.nom, {
             label: 'Nom'
         }) }}
-        {{ form_row(registrationForm.prenom, {
+	{{ form_row(registrationForm.prenom, {
             label: 'Prénom'
         }) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
+	{{ form_row(registrationForm.email) }}
+	{{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
-        {{ form_row(registrationForm.genre, {
+	{{ form_row(registrationForm.genre, {
             label: 'Genre'
         }) }}
-        {{ form_row(registrationForm.gsm, {
+	{{ form_row(registrationForm.gsm, {
             label: 'GSM'
         }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+	{{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn btn-lg btn-primary">Register</button>
-    {{ form_end(registrationForm) }}
+	<button type="submit" class="btn btn-lg btn-primary">Register</button>
+	{{ form_end(registrationForm) }}
 {% endblock %}

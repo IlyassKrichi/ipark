@@ -20,20 +20,20 @@
 					Capacité :
 					{{ parking.capacite }}
 				</p>
-				<p>
-					Places disponibles:
-					{% for place in places %}
-						{% if parking.id == place.parking.id %}
-							{{ place.id }}
-						{% endif %}
-					{% endfor %}
-				</p>
 				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapseExample">
-					Réserver
+					Séléctionner
 				</button>
 				<div class="collapse" id="collapse{{ parking.id }}" style="">
 					<div class="card card-body">
-						Hi!
+						Places disponibles:
+						<select type="choice" class="form-select">
+							{% for place in places %}
+								{% if parking.id == place.parking.id %}
+									<option value="{{ place.id }}">{{ place.id }}</option>
+								{% endif %}
+							{% endfor %}
+						</select>
+						<button class="btn btn-primary" type="submit">Réserver</button>
 					</div>
 				</div>
 			</div>

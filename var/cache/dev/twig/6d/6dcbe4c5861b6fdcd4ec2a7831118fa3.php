@@ -116,7 +116,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         echo "
 \t\t\t\t\t";
         // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "adresse", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Adresse", "autocomplete" => "off"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "adresse", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Adresse", "autocomplete" => "on"]]);
         echo "
 \t\t\t\t\t";
         // line 23
@@ -180,23 +180,13 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 61
-        echo "\t<script>
-\t\tfunction initAutocomplete() { // Get the address input element
-var addressInput = document.getElementById('adresse');
-
-// Create a new autocomplete object
-var autocomplete = new google.maps.places.Autocomplete(addressInput);
-
-// Set the types option to 'address' to restrict the suggestions to addresses only
-autocomplete.setTypes(['address']);
-
-// Add an event listener to update the form field value with the selected address
-autocomplete.addListener('place_changed', function () {
-var place = autocomplete.getPlace();
-document.getElementById('adresse').value = place.formatted_address;
-});
-}
-\t</script>
+        echo "\t";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+\t<script src=";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/sss.js"), "html", null, true);
+        echo "></script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -218,7 +208,7 @@ document.getElementById('adresse').value = place.formatted_address;
 
     public function getDebugInfo()
     {
-        return array (  183 => 61,  173 => 60,  127 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  107 => 19,  101 => 16,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  188 => 62,  183 => 61,  173 => 60,  127 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  107 => 19,  101 => 16,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -244,7 +234,7 @@ document.getElementById('adresse').value = place.formatted_address;
 \t\t\t\t\t{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
 \t\t\t\t\t{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation', 'min': date().format('Y-m-d'), 'value': date().format('Y-m-d')}}) }}
 \t\t\t\t\t{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
-\t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'off'}}) }}
+\t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'on'}}) }}
 \t\t\t\t\t{{ include('reservation/_form.html.twig') }}
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
@@ -283,23 +273,8 @@ document.getElementById('adresse').value = place.formatted_address;
 \t</section>
 {% endblock %}
 {% block javascripts %}
-\t<script>
-\t\tfunction initAutocomplete() { // Get the address input element
-var addressInput = document.getElementById('adresse');
-
-// Create a new autocomplete object
-var autocomplete = new google.maps.places.Autocomplete(addressInput);
-
-// Set the types option to 'address' to restrict the suggestions to addresses only
-autocomplete.setTypes(['address']);
-
-// Add an event listener to update the form field value with the selected address
-autocomplete.addListener('place_changed', function () {
-var place = autocomplete.getPlace();
-document.getElementById('adresse').value = place.formatted_address;
-});
-}
-\t</script>
+\t{{ parent() }}
+\t<script src={{ asset('assets/js/sss.js') }}></script>
 {% endblock %}
 ", "reservation/step1.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\step1.html.twig");
     }

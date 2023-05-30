@@ -116,42 +116,44 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "capacite", [], "any", false, false, false, 21), "html", null, true);
             echo "
 \t\t\t\t</p>
-\t\t\t\t<p>
-\t\t\t\t\tPlaces disponibles:
-\t\t\t\t\t";
-            // line 25
+\t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 23), "html", null, true);
+            echo "\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
+\t\t\t\t\tSéléctionner
+\t\t\t\t</button>
+\t\t\t\t<div class=\"collapse\" id=\"collapse";
+            // line 26
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 26), "html", null, true);
+            echo "\" style=\"\">
+\t\t\t\t\t<div class=\"card card-body\">
+\t\t\t\t\t\tPlaces disponibles:
+\t\t\t\t\t\t<select type=\"choice\" class=\"form-select\">
+\t\t\t\t\t\t\t";
+            // line 30
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["places"]) || array_key_exists("places", $context) ? $context["places"] : (function () { throw new RuntimeError('Variable "places" does not exist.', 25, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["places"]) || array_key_exists("places", $context) ? $context["places"] : (function () { throw new RuntimeError('Variable "places" does not exist.', 30, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["place"]) {
-                // line 26
-                echo "\t\t\t\t\t\t";
-                if ((twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 26) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["place"], "parking", [], "any", false, false, false, 26), "id", [], "any", false, false, false, 26))) {
-                    // line 27
-                    echo "\t\t\t\t\t\t\t";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 27), "html", null, true);
-                    echo "
-\t\t\t\t\t\t";
+                // line 31
+                echo "\t\t\t\t\t\t\t\t";
+                if ((twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 31) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["place"], "parking", [], "any", false, false, false, 31), "id", [], "any", false, false, false, 31))) {
+                    // line 32
+                    echo "\t\t\t\t\t\t\t\t\t<option value=\"";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 32), "html", null, true);
+                    echo "\">";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 32), "html", null, true);
+                    echo "</option>
+\t\t\t\t\t\t\t\t";
                 }
-                // line 29
-                echo "\t\t\t\t\t";
+                // line 34
+                echo "\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['place'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 30
-            echo "\t\t\t\t</p>
-\t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 31), "html", null, true);
-            echo "\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
-\t\t\t\t\tRéserver
-\t\t\t\t</button>
-\t\t\t\t<div class=\"collapse\" id=\"collapse";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 34), "html", null, true);
-            echo "\" style=\"\">
-\t\t\t\t\t<div class=\"card card-body\">
-\t\t\t\t\t\tHi!
+            // line 35
+            echo "\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\">Réserver</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -185,7 +187,7 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
 
     public function getDebugInfo()
     {
-        return array (  164 => 41,  151 => 34,  145 => 31,  142 => 30,  136 => 29,  130 => 27,  127 => 26,  123 => 25,  116 => 21,  109 => 17,  102 => 13,  97 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  166 => 41,  155 => 35,  149 => 34,  141 => 32,  138 => 31,  134 => 30,  127 => 26,  121 => 23,  116 => 21,  109 => 17,  102 => 13,  97 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -212,20 +214,20 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
 \t\t\t\t\tCapacité :
 \t\t\t\t\t{{ parking.capacite }}
 \t\t\t\t</p>
-\t\t\t\t<p>
-\t\t\t\t\tPlaces disponibles:
-\t\t\t\t\t{% for place in places %}
-\t\t\t\t\t\t{% if parking.id == place.parking.id %}
-\t\t\t\t\t\t\t{{ place.id }}
-\t\t\t\t\t\t{% endif %}
-\t\t\t\t\t{% endfor %}
-\t\t\t\t</p>
 \t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse{{ parking.id }}\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
-\t\t\t\t\tRéserver
+\t\t\t\t\tSéléctionner
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse\" id=\"collapse{{ parking.id }}\" style=\"\">
 \t\t\t\t\t<div class=\"card card-body\">
-\t\t\t\t\t\tHi!
+\t\t\t\t\t\tPlaces disponibles:
+\t\t\t\t\t\t<select type=\"choice\" class=\"form-select\">
+\t\t\t\t\t\t\t{% for place in places %}
+\t\t\t\t\t\t\t\t{% if parking.id == place.parking.id %}
+\t\t\t\t\t\t\t\t\t<option value=\"{{ place.id }}\">{{ place.id }}</option>
+\t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t{% endfor %}
+\t\t\t\t\t\t</select>
+\t\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\">Réserver</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>

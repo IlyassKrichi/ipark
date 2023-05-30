@@ -117,7 +117,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_reservation_show', methods: ['GET'])]
+    #[Route('/show/{id}', name: 'app_reservation_show', methods: ['GET'])]
     public function show(Reservation $reservation): Response
     {
         return $this->render('reservation/show.html.twig', [
@@ -125,7 +125,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/step1edit', name: 'app_reservation_edit_step1', methods: ['GET', 'POST'])]
+    #[Route('/step1edit/{id}', name: 'app_reservation_edit_step1', methods: ['GET', 'POST'])]
     public function step1edit(Request $request, Reservation $reservation): Response
     {
         $form = $this->createForm(ReservationStep1Type::class, $reservation);
@@ -144,7 +144,7 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/step2edit', name: 'app_reservation_edit_step2', methods: ['GET', 'POST'])]
+    #[Route('/step2edit/{id}', name: 'app_reservation_edit_step2', methods: ['GET', 'POST'])]
     public function step2edit(Request $request, Reservation $reservation, EntityManagerInterface $em): Response
     {
         $adresse = $request->getSession()->get('adresse');
@@ -170,13 +170,13 @@ class ReservationController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_reservation_delete', methods: ['POST'])]
+    #[Route('/delete/{id}', name: 'app_reservation_delete', methods: ['POST'])]
     public function delete(Request $request, Reservation $reservation, ReservationRepository $reservationRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$reservation->getId(), $request->request->get('_token'))) {
             $reservationRepository->remove($reservation, true);
         }
 
-        return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
     }
 }

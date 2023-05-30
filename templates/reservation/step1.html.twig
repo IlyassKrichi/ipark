@@ -19,7 +19,7 @@
 					{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
 					{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation', 'min': date().format('Y-m-d'), 'value': date().format('Y-m-d')}}) }}
 					{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
-					{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'off'}}) }}
+					{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'on'}}) }}
 					{{ include('reservation/_form.html.twig') }}
 					{{ form_end(form) }}
 				</div>
@@ -58,21 +58,6 @@
 	</section>
 {% endblock %}
 {% block javascripts %}
-	<script>
-		function initAutocomplete() { // Get the address input element
-var addressInput = document.getElementById('adresse');
-
-// Create a new autocomplete object
-var autocomplete = new google.maps.places.Autocomplete(addressInput);
-
-// Set the types option to 'address' to restrict the suggestions to addresses only
-autocomplete.setTypes(['address']);
-
-// Add an event listener to update the form field value with the selected address
-autocomplete.addListener('place_changed', function () {
-var place = autocomplete.getPlace();
-document.getElementById('adresse').value = place.formatted_address;
-});
-}
-	</script>
+	{{ parent() }}
+	<script src={{ asset('assets/js/sss.js') }}></script>
 {% endblock %}
