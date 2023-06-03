@@ -1,9 +1,11 @@
 $(document).ready(function () {
-  var dateReservation = document.getElementById("date_reservation");
+  var dateReservation = document.getElementById(
+    "reservation_step1_date_reservation"
+  );
   dateReservation.min = new Date().toISOString().split("T")[0];
   dateReservation.valueAsDate = new Date();
 
-  var input = document.getElementById("adresse");
+  var input = document.getElementById("reservation_step1_adresse");
   var autocomplete = new google.maps.places.Autocomplete(input);
   autocomplete.setOptions({
     componentRestrictions: {

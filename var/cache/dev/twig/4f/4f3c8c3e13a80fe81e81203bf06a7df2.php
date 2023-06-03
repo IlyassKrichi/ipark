@@ -110,18 +110,24 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t<header id=\"header\" class=\"header d-flex align-items-center fixed-top\">
 \t\t\t<div class=\"container-fluid container-xl d-flex align-items-center justify-content-between\">
 
-\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
+\t\t\t\t<a href=";
+        // line 46
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
+        echo " class=\"logo d-flex align-items-center\">
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
 \t\t\t\t\t\t<h1>
-\t\t\t\t\tLogis
+\t\t\t\t\tiPark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
 \t\t\t\t<i class=\"mobile-nav-toggle mobile-nav-hide d-none bi bi-x\"></i>
 \t\t\t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"index.html\" class=\"active\">Home</a>
+\t\t\t\t\t\t\t<a href=";
+        // line 57
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
+        echo " class=\"active\">Home</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"about.html\">About</a>
@@ -132,66 +138,118 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"pricing.html\">Pricing</a>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t";
+        // line 70
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 70, $this->source); })()), "user", [], "any", false, false, false, 70)) {
+            // line 71
+            echo "\t\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>Drop Down</span>
+\t\t\t\t\t\t\t\t<span>User</span>
 \t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
-\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
-\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Profile</a></li>
+\t\t\t\t\t\t\t\t<li><a href=";
+            // line 78
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo ">Register</a></li>
+\t\t\t\t\t\t\t\t<li><a href=";
+            // line 79
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo ">Logout</a></li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a class=\"get-a-quote\" href=\"get-a-quote.html\">Get a Quote</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</nav>
-\t\t\t\t<!-- .navbar -->
+\t\t\t\t\t\t";
+        } else {
+            // line 84
+            echo "\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" data-toggle=\"modal\" data-target=\"#modalLoginForm\">Sign in</button>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='";
+            // line 88
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+            echo "';\">Register</button>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t";
+        }
+        // line 91
+        echo "\t\t\t\t</ul>
+\t\t\t</nav>
+\t\t\t<!-- .navbar -->
 
-\t\t\t</div>
-\t\t</header>
-\t\t<!-- End Header -->
-\t\t<!-- End Header -->
+\t\t</div>
+\t</header>
+\t<!-- End Header -->
+\t<!-- End Header -->
 
-\t\t<main id=\"main\">
+\t<main id=\"main\">
 
-\t\t\t";
-        // line 118
+\t\t";
+        // line 102
         $this->displayBlock('body', $context, $blocks);
-        // line 121
-        echo "\t\t\t<!-- End Hero Section -->
+        // line 105
+        echo "\t\t<!-- End Hero Section -->
+\t\t";
+        // line 106
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 106, $this->source); })())) {
+            // line 107
+            echo "\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t\t\t\t<div class=\"alert alert-danger\">";
+            // line 109
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })()), "messageKey", [], "any", false, false, false, 109), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })()), "messageData", [], "any", false, false, false, 109), "security"), "html", null, true);
+            echo "</div> 
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t";
+        }
+        // line 113
+        echo "\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header text-center\">
+\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-body mx-3\">
+\t\t\t\t\t\t<form method=\"post\">
+\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
+\t\t\t\t\t\t\t<input type=\"email\" value=\"";
+        // line 124
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 124, $this->source); })()), "html", null, true);
+        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
+\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
+\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
 
-\t\t\t<section class=\"sample-page\">
-\t\t\t\t<div class=\"container\" data-aos=\"fade-up\"></div>
-\t\t\t</section>
+\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 128
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
+        echo "\">
 
+\t\t\t\t\t\t\t<div class=\"form-check my-2\">
+\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t\tRemember me
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"";
+        // line 135
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
+        echo "\">Forgot password?</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
+\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
+\t\t\t\t\t\t\t\t\tSign in
+\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</main>
 \t\t<!-- End #main -->
 
@@ -202,7 +260,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
-\t\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
@@ -246,15 +304,10 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
-\t\t\t\t\t\t\tA108 Adam Street
-\t\t\t\t\t\t\t<br>
-\t\t\t\t\t\t\tNew York, NY 535022<br>
-\t\t\t\t\t\t\tUnited States
-\t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
 \t\t\t\t\t\t\t+1 5589 55488 55<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
-\t\t\t\t\t\t\tinfo@example.com<br>
+\t\t\t\t\t\t\tcontact.ipark.info@gmail.com<br>
 \t\t\t\t\t\t</p>
 
 \t\t\t\t\t</div>
@@ -264,18 +317,15 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t\t<div class=\"container mt-4\">
 \t\t\t\t<div class=\"copyright\">
-\t\t\t\t\t&copy; Copyright
+\t\t\t\t\t&copy; 2023, Copyright
 \t\t\t\t\t<strong>
-\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t</strong>. All Rights Reserved
 \t\t\t\t</div>
-\t\t\t\t<div class=\"credits\">
-\t\t\t\t\t<!-- All the links in the footer should remain intact. -->
+\t\t\t\t<div class=\"credits\"><!-- All the links in the footer should remain intact. -->
 \t\t\t\t\t<!-- You can delete the links only if you purchased the pro version. -->
 \t\t\t\t\t<!-- Licensing information: https://bootstrapmade.com/license/ -->
 \t\t\t\t\t<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-\t\t\t\t\tDesigned by
-\t\t\t\t\t\t<a href=\"https://bootstrapmade.com/\"> BootstrapMade</a>
 \t\t\t\t</div>
 \t\t\t</div>
 
@@ -291,40 +341,44 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 225
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 226
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 227
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 228
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 229
+        // line 240
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 230
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 231
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 232
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/scripts.js"), "html", null, true);
+        // line 243
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/sss.js"), "html", null, true);
         echo "></script>
+\t\t<script>
+\t\t\t\$(document).ready(function(){
+\t\t\t\$(\"#modalerror\").modal('show');
+\t\t\t});
+\t\t</script>
 \t</body>
-
-</html>
+</body></html>
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -334,7 +388,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     }
 
-    // line 118
+    // line 102
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -344,9 +398,9 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 119
-        echo "\t\t\t\tTemplate Body
-\t\t\t";
+        // line 103
+        echo "\t\t\tTemplate Body
+\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -367,7 +421,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     public function getDebugInfo()
     {
-        return array (  348 => 119,  338 => 118,  323 => 232,  319 => 231,  315 => 230,  311 => 229,  307 => 228,  303 => 227,  299 => 226,  295 => 225,  189 => 121,  187 => 118,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  402 => 103,  392 => 102,  373 => 243,  369 => 242,  365 => 241,  361 => 240,  357 => 239,  353 => 238,  349 => 237,  345 => 236,  241 => 135,  231 => 128,  224 => 124,  211 => 113,  204 => 109,  200 => 107,  198 => 106,  195 => 105,  193 => 102,  180 => 91,  174 => 88,  168 => 84,  160 => 79,  156 => 78,  147 => 71,  145 => 70,  129 => 57,  115 => 46,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -417,18 +471,18 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t<header id=\"header\" class=\"header d-flex align-items-center fixed-top\">
 \t\t\t<div class=\"container-fluid container-xl d-flex align-items-center justify-content-between\">
 
-\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
+\t\t\t\t<a href={{ path(\"app_reservation_new_step1\") }} class=\"logo d-flex align-items-center\">
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
 \t\t\t\t\t<!-- <img src=\"assets/img/logo.png\" alt=\"\"> -->
 \t\t\t\t\t\t<h1>
-\t\t\t\t\tLogis
+\t\t\t\t\tiPark
 \t\t\t\t</h1>
 \t\t\t\t</a><i class=\"mobile-nav-toggle mobile-nav-show bi bi-list\"> </i>
 \t\t\t\t<i class=\"mobile-nav-toggle mobile-nav-hide d-none bi bi-x\"></i>
 \t\t\t\t<nav id=\"navbar\" class=\"navbar\">
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"index.html\" class=\"active\">Home</a>
+\t\t\t\t\t\t\t<a href={{ path(\"app_reservation_new_step1\") }} class=\"active\">Home</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"about.html\">About</a>
@@ -439,65 +493,84 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"pricing.html\">Pricing</a>
 \t\t\t\t\t\t</li>
+\t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
+\t\t\t\t\t</li>
+\t\t\t\t\t{% if app.user %}
 \t\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>Drop Down</span>
+\t\t\t\t\t\t\t\t<span>User</span>
 \t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 1</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t\t<span>Deep Drop Down</span>
-\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 1</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 2</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 3</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 4</a></li>
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Deep Drop Down 5</a></li>
-\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 2</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 3</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a href=\"#\">Drop Down 4</a>
-\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li><a href=\"#\">Profile</a></li>
+\t\t\t\t\t\t\t\t<li><a href={{ path('app_register') }}>Register</a></li>
+\t\t\t\t\t\t\t\t<li><a href={{ path('app_logout') }}>Logout</a></li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a class=\"get-a-quote\" href=\"get-a-quote.html\">Get a Quote</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t</nav>
-\t\t\t\t<!-- .navbar -->
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" data-toggle=\"modal\" data-target=\"#modalLoginForm\">Sign in</button>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='{{ path('app_register') }}';\">Register</button>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t{% endif %}
+\t\t\t\t</ul>
+\t\t\t</nav>
+\t\t\t<!-- .navbar -->
 
+\t\t</div>
+\t</header>
+\t<!-- End Header -->
+\t<!-- End Header -->
+
+\t<main id=\"main\">
+
+\t\t{% block body %}
+\t\t\tTemplate Body
+\t\t{% endblock %}
+\t\t<!-- End Hero Section -->
+\t\t{% if error %}
+\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t\t\t\t<div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div> 
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t{% endif %}
+\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header text-center\">
+\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-body mx-3\">
+\t\t\t\t\t\t<form method=\"post\">
+\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
+\t\t\t\t\t\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
+\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
+\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
+
+\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
+
+\t\t\t\t\t\t\t<div class=\"form-check my-2\">
+\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t\tRemember me
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"{{ path('app_forgot_password_request') }}\">Forgot password?</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
+\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
+\t\t\t\t\t\t\t\t\tSign in
+\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 \t\t\t</div>
-\t\t</header>
-\t\t<!-- End Header -->
-\t\t<!-- End Header -->
-
-\t\t<main id=\"main\">
-
-\t\t\t{% block body %}
-\t\t\t\tTemplate Body
-\t\t\t{% endblock %}
-\t\t\t<!-- End Hero Section -->
-
-\t\t\t<section class=\"sample-page\">
-\t\t\t\t<div class=\"container\" data-aos=\"fade-up\"></div>
-\t\t\t</section>
-
 \t\t</main>
 \t\t<!-- End #main -->
 
@@ -508,7 +581,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
-\t\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
@@ -552,15 +625,10 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
-\t\t\t\t\t\t\tA108 Adam Street
-\t\t\t\t\t\t\t<br>
-\t\t\t\t\t\t\tNew York, NY 535022<br>
-\t\t\t\t\t\t\tUnited States
-\t\t\t\t\t\t\t<br><br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
 \t\t\t\t\t\t\t+1 5589 55488 55<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
-\t\t\t\t\t\t\tinfo@example.com<br>
+\t\t\t\t\t\t\tcontact.ipark.info@gmail.com<br>
 \t\t\t\t\t\t</p>
 
 \t\t\t\t\t</div>
@@ -570,18 +638,15 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t\t<div class=\"container mt-4\">
 \t\t\t\t<div class=\"copyright\">
-\t\t\t\t\t&copy; Copyright
+\t\t\t\t\t&copy; 2023, Copyright
 \t\t\t\t\t<strong>
-\t\t\t\t\t\t<span>Logis</span>
+\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t</strong>. All Rights Reserved
 \t\t\t\t</div>
-\t\t\t\t<div class=\"credits\">
-\t\t\t\t\t<!-- All the links in the footer should remain intact. -->
+\t\t\t\t<div class=\"credits\"><!-- All the links in the footer should remain intact. -->
 \t\t\t\t\t<!-- You can delete the links only if you purchased the pro version. -->
 \t\t\t\t\t<!-- Licensing information: https://bootstrapmade.com/license/ -->
 \t\t\t\t\t<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
-\t\t\t\t\tDesigned by
-\t\t\t\t\t\t<a href=\"https://bootstrapmade.com/\"> BootstrapMade</a>
 \t\t\t\t</div>
 \t\t\t</div>
 
@@ -603,10 +668,14 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t<script src={{ asset('assets/vendor/aos/aos.js') }}></script>
 \t\t<script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
 \t\t<script src={{ asset('assets/js/main.js') }}></script>
-\t\t<script src={{ asset('assets/js/scripts.js') }}></script>
+\t\t<script src={{ asset('assets/js/sss.js') }}></script>
+\t\t<script>
+\t\t\t\$(document).ready(function(){
+\t\t\t\$(\"#modalerror\").modal('show');
+\t\t\t});
+\t\t</script>
 \t</body>
-
-</html>
+</body></html>
 ", "template2.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\template2.html.twig");
     }
 }

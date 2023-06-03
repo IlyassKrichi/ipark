@@ -1,6 +1,6 @@
 {% extends 'template2.html.twig' %}
 
-{% block title %}New Reservation
+{% block title %}Step1
 {% endblock %}
 
 {% block body %}
@@ -17,7 +17,7 @@
 				</div>
 				<div class="col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center">
 					{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
-					{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation', 'min': date().format('Y-m-d'), 'value': date().format('Y-m-d')}}) }}
+					{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
 					{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
 					{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'on'}}) }}
 					{{ include('reservation/_form.html.twig') }}
@@ -56,8 +56,4 @@
 			</div>
 		</div>
 	</section>
-{% endblock %}
-{% block javascripts %}
-	{{ parent() }}
-	<script src={{ asset('assets/js/sss.js') }}></script>
 {% endblock %}

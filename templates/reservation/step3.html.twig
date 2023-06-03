@@ -1,0 +1,11 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Step3
+{% endblock %}
+
+{% block body %}
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<button class="btn btn-primary" type="submit">Save</button>
+	{{ form_end(form) }}
+{% endblock %}

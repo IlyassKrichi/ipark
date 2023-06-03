@@ -1,11 +1,12 @@
 {% extends 'template2.html.twig' %}
 
-{% block title %}New Reservation
+{% block title %}Step2
 {% endblock %}
 
 {% block body %}
 	<section id="hero" class="hero d-flex align-items-center"></section>
 	<div class="container">
+		{{ form_start(form) }}
 		{% for parking in parkings %}
 			<div class="d-flex flex-column justify-content-center border rounded-4 p-3 bg-secondary">
 				<p>
@@ -20,24 +21,26 @@
 					Capacité :
 					{{ parking.capacite }}
 				</p>
-				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapseExample">
+				<input type="hidden" id="parking_id" value="{{ parking.id }}" name="{{ field_name(form.parking) }}">
+				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapse{{ parking.id }}">
 					Séléctionner
 				</button>
 				<div class="collapse" id="collapse{{ parking.id }}" style="">
-					<div class="card card-body">
+					<div class="card card-body mt-2">
 						Places disponibles:
-						<select type="choice" class="form-select">
+						<select type="choice" class="form-select mt-1" id="place_id" name="{{ field_name(form.place) }}">
 							{% for place in places %}
 								{% if parking.id == place.parking.id %}
 									<option value="{{ place.id }}">{{ place.id }}</option>
 								{% endif %}
 							{% endfor %}
 						</select>
-						<button class="btn btn-primary" type="submit">Réserver</button>
+						<button class="btn btn-primary mt-3" type="submit">Réserver</button>
 					</div>
 				</div>
 			</div>
 		{% endfor %}
+		{{ form_end(form) }}
 	</div>
 
 

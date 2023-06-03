@@ -27,7 +27,6 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
-            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -66,7 +65,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Reservation
+        echo "Step1
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -108,7 +107,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         echo "
 \t\t\t\t\t";
         // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "date_reservation", [], "any", false, false, false, 20), 'widget', ["attr" => ["class" => "form-control", "id" => "date_reservation", "min" => twig_get_attribute($this->env, $this->source, twig_date_converter($this->env), "format", [0 => "Y-m-d"], "method", false, false, false, 20), "value" => twig_get_attribute($this->env, $this->source, twig_date_converter($this->env), "format", [0 => "Y-m-d"], "method", false, false, false, 20)]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "date_reservation", [], "any", false, false, false, 20), 'widget', ["attr" => ["class" => "form-control", "id" => "date_reservation"]]);
         echo "
 \t\t\t\t\t";
         // line 21
@@ -169,33 +168,6 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 
     }
 
-    // line 60
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 61
-        echo "\t";
-        $this->displayParentBlock("javascripts", $context, $blocks);
-        echo "
-\t<script src=";
-        // line 62
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/sss.js"), "html", null, true);
-        echo "></script>
-";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "reservation/step1.html.twig";
@@ -208,14 +180,14 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 
     public function getDebugInfo()
     {
-        return array (  188 => 62,  183 => 61,  173 => 60,  127 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  107 => 19,  101 => 16,  90 => 7,  80 => 6,  60 => 3,  37 => 1,);
+        return array (  126 => 24,  122 => 23,  118 => 22,  114 => 21,  110 => 20,  106 => 19,  100 => 16,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'template2.html.twig' %}
 
-{% block title %}New Reservation
+{% block title %}Step1
 {% endblock %}
 
 {% block body %}
@@ -232,7 +204,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center\">
 \t\t\t\t\t{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
-\t\t\t\t\t{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation', 'min': date().format('Y-m-d'), 'value': date().format('Y-m-d')}}) }}
+\t\t\t\t\t{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
 \t\t\t\t\t{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
 \t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'on'}}) }}
 \t\t\t\t\t{{ include('reservation/_form.html.twig') }}
@@ -271,10 +243,6 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t</div>
 \t\t</div>
 \t</section>
-{% endblock %}
-{% block javascripts %}
-\t{{ parent() }}
-\t<script src={{ asset('assets/js/sss.js') }}></script>
 {% endblock %}
 ", "reservation/step1.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\step1.html.twig");
     }

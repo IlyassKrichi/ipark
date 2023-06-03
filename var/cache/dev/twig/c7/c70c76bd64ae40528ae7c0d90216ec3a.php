@@ -65,7 +65,7 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Reservation
+        echo "Step2
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -90,70 +90,85 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
 \t<div class=\"container\">
 \t\t";
         // line 9
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), 'form_start');
+        echo "
+\t\t";
+        // line 10
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["parkings"]) || array_key_exists("parkings", $context) ? $context["parkings"] : (function () { throw new RuntimeError('Variable "parkings" does not exist.', 9, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["parkings"]) || array_key_exists("parkings", $context) ? $context["parkings"] : (function () { throw new RuntimeError('Variable "parkings" does not exist.', 10, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["parking"]) {
-            // line 10
+            // line 11
             echo "\t\t\t<div class=\"d-flex flex-column justify-content-center border rounded-4 p-3 bg-secondary\">
 \t\t\t\t<p>
 \t\t\t\t\tNom :
 \t\t\t\t\t";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "nom", [], "any", false, false, false, 13), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "nom", [], "any", false, false, false, 14), "html", null, true);
             echo "
 \t\t\t\t</p>
 \t\t\t\t<p>
 \t\t\t\t\tAdresse :
 \t\t\t\t\t";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "adresse", [], "any", false, false, false, 17), "html", null, true);
+            // line 18
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "adresse", [], "any", false, false, false, 18), "html", null, true);
             echo "
 \t\t\t\t</p>
 \t\t\t\t<p>
 \t\t\t\t\tCapacité :
 \t\t\t\t\t";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "capacite", [], "any", false, false, false, 21), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "capacite", [], "any", false, false, false, 22), "html", null, true);
             echo "
 \t\t\t\t</p>
+\t\t\t\t<input type=\"hidden\" id=\"parking_id\" value=\"";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 24), "html", null, true);
+            echo "\" name=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\FormExtension']->getFieldName(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "parking", [], "any", false, false, false, 24)), "html", null, true);
+            echo "\">
 \t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 23), "html", null, true);
-            echo "\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 25), "html", null, true);
+            echo "\" aria-expanded=\"false\" aria-controls=\"collapse";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 25), "html", null, true);
+            echo "\">
 \t\t\t\t\tSéléctionner
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse\" id=\"collapse";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 26), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 28), "html", null, true);
             echo "\" style=\"\">
-\t\t\t\t\t<div class=\"card card-body\">
+\t\t\t\t\t<div class=\"card card-body mt-2\">
 \t\t\t\t\t\tPlaces disponibles:
-\t\t\t\t\t\t<select type=\"choice\" class=\"form-select\">
+\t\t\t\t\t\t<select type=\"choice\" class=\"form-select mt-1\" id=\"place_id\" name=\"";
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\FormExtension']->getFieldName(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "place", [], "any", false, false, false, 31)), "html", null, true);
+            echo "\">
 \t\t\t\t\t\t\t";
-            // line 30
+            // line 32
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["places"]) || array_key_exists("places", $context) ? $context["places"] : (function () { throw new RuntimeError('Variable "places" does not exist.', 30, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["places"]) || array_key_exists("places", $context) ? $context["places"] : (function () { throw new RuntimeError('Variable "places" does not exist.', 32, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["place"]) {
-                // line 31
+                // line 33
                 echo "\t\t\t\t\t\t\t\t";
-                if ((twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 31) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["place"], "parking", [], "any", false, false, false, 31), "id", [], "any", false, false, false, 31))) {
-                    // line 32
+                if ((twig_get_attribute($this->env, $this->source, $context["parking"], "id", [], "any", false, false, false, 33) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["place"], "parking", [], "any", false, false, false, 33), "id", [], "any", false, false, false, 33))) {
+                    // line 34
                     echo "\t\t\t\t\t\t\t\t\t<option value=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 32), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 34), "html", null, true);
                     echo "\">";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 32), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["place"], "id", [], "any", false, false, false, 34), "html", null, true);
                     echo "</option>
 \t\t\t\t\t\t\t\t";
                 }
-                // line 34
+                // line 36
                 echo "\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['place'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 35
+            // line 37
             echo "\t\t\t\t\t\t</select>
-\t\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\">Réserver</button>
+\t\t\t\t\t\t<button class=\"btn btn-primary mt-3\" type=\"submit\">Réserver</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -162,8 +177,11 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['parking'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
-        echo "\t</div>
+        // line 43
+        echo "\t\t";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_end');
+        echo "
+\t</div>
 
 
 ";
@@ -187,19 +205,20 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
 
     public function getDebugInfo()
     {
-        return array (  166 => 41,  155 => 35,  149 => 34,  141 => 32,  138 => 31,  134 => 30,  127 => 26,  121 => 23,  116 => 21,  109 => 17,  102 => 13,  97 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  181 => 43,  170 => 37,  164 => 36,  156 => 34,  153 => 33,  149 => 32,  145 => 31,  139 => 28,  131 => 25,  125 => 24,  120 => 22,  113 => 18,  106 => 14,  101 => 11,  97 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'template2.html.twig' %}
 
-{% block title %}New Reservation
+{% block title %}Step2
 {% endblock %}
 
 {% block body %}
 \t<section id=\"hero\" class=\"hero d-flex align-items-center\"></section>
 \t<div class=\"container\">
+\t\t{{ form_start(form) }}
 \t\t{% for parking in parkings %}
 \t\t\t<div class=\"d-flex flex-column justify-content-center border rounded-4 p-3 bg-secondary\">
 \t\t\t\t<p>
@@ -214,24 +233,26 @@ class __TwigTemplate_1ab21af76102f8c839873db4d8b8b3db extends Template
 \t\t\t\t\tCapacité :
 \t\t\t\t\t{{ parking.capacite }}
 \t\t\t\t</p>
-\t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse{{ parking.id }}\" aria-expanded=\"false\" aria-controls=\"collapseExample\">
+\t\t\t\t<input type=\"hidden\" id=\"parking_id\" value=\"{{ parking.id }}\" name=\"{{ field_name(form.parking) }}\">
+\t\t\t\t<button class=\"btn btn-primary collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#collapse{{ parking.id }}\" aria-expanded=\"false\" aria-controls=\"collapse{{ parking.id }}\">
 \t\t\t\t\tSéléctionner
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse\" id=\"collapse{{ parking.id }}\" style=\"\">
-\t\t\t\t\t<div class=\"card card-body\">
+\t\t\t\t\t<div class=\"card card-body mt-2\">
 \t\t\t\t\t\tPlaces disponibles:
-\t\t\t\t\t\t<select type=\"choice\" class=\"form-select\">
+\t\t\t\t\t\t<select type=\"choice\" class=\"form-select mt-1\" id=\"place_id\" name=\"{{ field_name(form.place) }}\">
 \t\t\t\t\t\t\t{% for place in places %}
 \t\t\t\t\t\t\t\t{% if parking.id == place.parking.id %}
 \t\t\t\t\t\t\t\t\t<option value=\"{{ place.id }}\">{{ place.id }}</option>
 \t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t{% endfor %}
 \t\t\t\t\t\t</select>
-\t\t\t\t\t\t<button class=\"btn btn-primary\" type=\"submit\">Réserver</button>
+\t\t\t\t\t\t<button class=\"btn btn-primary mt-3\" type=\"submit\">Réserver</button>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t{% endfor %}
+\t\t{{ form_end(form) }}
 \t</div>
 
 

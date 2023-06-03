@@ -17,10 +17,11 @@ class ReservationStep2Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $parkings = $options['keys'];
-        $choices = array_flip($parkings);
         $builder
-            ->add('parking', ChoiceType::class, ['choices' => $choices])
+            ->add('parking', EntityType::class, [
+                'class' => Parking::class,
+                'choice_label' => 'nom'
+            ])
             ->add('place', EntityType::class, [
                 'class' => Place::class,
                 'choice_label' => 'id'
@@ -30,7 +31,6 @@ class ReservationStep2Type extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setRequired('keys');
         $resolver->setDefaults([
             'data_class' => Reservation::class,
         ]);

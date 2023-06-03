@@ -2,11 +2,14 @@
 
 
 namespace App\Controller;
+
+use App\Entity\Paiement;
 use App\Entity\Parking;
 use App\Entity\Place;
 use Geocoder\Model\Coordinates;
 use Geocoder\Query\GeocodeQuery;
 use App\Entity\Reservation;
+use App\Form\PaiementType;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use App\Form\ReservationStep1Type;
 use App\Form\ReservationStep2Type;
@@ -19,6 +22,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 #[Route('/')]
 class ReservationController extends AbstractController
@@ -67,11 +71,13 @@ class ReservationController extends AbstractController
     }
 
     #[Route('/dashboard', name: 'app_reservation_new_step1', methods: ['GET', 'POST'])]
-    public function step1new(Request $request): Response
+    public function step1new(Request $request, AuthenticationUtils $authenticationUtils): Response
     {
         $reservation = new Reservation();
         $form = $this->createForm(ReservationStep1Type::class, $reservation);
         $form->handleRequest($request);
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $request->getSession()->set('adresse', $form->get('adresse')->getData());
@@ -82,31 +88,32 @@ class ReservationController extends AbstractController
 
         return $this->render('reservation/step1.html.twig', [
             'form' => $form,
+            'last_username' => $lastUsername,
+            'error' => $error
         ]);
     }
 
     #[Route('/parkings', name: 'app_reservation_new_step2', methods: ['GET', 'POST'])]
-    public function step2new(Request $request, EntityManagerInterface $em): Response
+    public function step2new(Request $request, EntityManagerInterface $em, AuthenticationUtils $authenticationUtils): Response
     {
         $adresse = $request->getSession()->get('adresse');
         $date_reservation = $request->getSession()->get('date_reservation');
-        $type_vehicule = $request->getSession()->get('type_vehicule');
+        $type_vehicule = $request->getSession()->get('type_vehicule');  
         $reservation = new Reservation();
         $distances = $this->searchDistance($adresse, $em);
-        $form = $this->createForm(ReservationStep2Type::class, $reservation , ['keys' => array_keys($distances)]);
+        $form = $this->createForm(ReservationStep2Type::class, $reservation);
         $form->handleRequest($request);
         $parkings = $em->getRepository(Parking::class)->findAll();
         $places = $em->getRepository(Place::class)->findAll();
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $request->getSession()->remove('adresse');
-            $reservation->setDateReservation($date_reservation);
-            $reservation->setTypeVehicule($type_vehicule);
-            $reservation->setClient($this->getUser());
-            $em->persist($reservation);
-            $em->flush();
-
-            return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
+            $request->getSession()->set('date_reservation', $date_reservation);
+            $request->getSession()->set('type_vehicule', $type_vehicule);
+            $request->getSession()->set('place_id', $form->get('place')->getData());
+            return $this->redirectToRoute('app_reservation_new_step3', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('reservation/step2.html.twig', [
@@ -114,6 +121,46 @@ class ReservationController extends AbstractController
             'form' => $form,
             'parkings' => $parkings,
             'places' => $places,
+            'last_username' => $lastUsername,
+            'error' => $error
+        ]);
+    }
+
+    #[Route('/paiement', name: 'app_reservation_new_step3', methods: ['GET', 'POST'])]
+    public function step3new(Request $request, EntityManagerInterface $em, AuthenticationUtils $authenticationUtils): Response
+    {
+        $date_reservation = $request->getSession()->get('date_reservation');
+        $type_vehicule = $request->getSession()->get('type_vehicule');
+        $place = $request->getSession()->get('place_id');
+        $reservation = new Reservation();
+        $paiement = new Paiement();
+        $form = $this->createForm(PaiementType::class, $paiement);
+        $form->handleRequest($request);
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $reservation->setDateReservation($date_reservation);
+            $reservation->setTypeVehicule($type_vehicule);
+            $reservation->setClient($this->getUser());
+            $reservation->setPlace($place);
+            $reservation->setPaiement($paiement);
+            $request->getSession()->remove('adresse');
+            $request->getSession()->remove('type_vehicule');
+            $request->getSession()->remove('place_id');
+            $request->getSession()->remove('date_reservation');
+            $em->persist($reservation);
+            $em->persist($paiement);
+            $em->flush();
+
+            return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->render('reservation/step3.html.twig', [
+            'reservation' => $reservation,
+            'form' => $form,
+            'last_username' => $lastUsername,
+            'error' => $error
         ]);
     }
 
