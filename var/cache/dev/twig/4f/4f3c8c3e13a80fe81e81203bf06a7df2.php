@@ -132,18 +132,12 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"about.html\">About</a>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"services.html\">Services</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"pricing.html\">Pricing</a>
-\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t";
-        // line 70
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 70, $this->source); })()), "user", [], "any", false, false, false, 70)) {
-            // line 71
+        // line 64
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64)) {
+            // line 65
             echo "\t\t\t\t\t\t<li class=\"dropdown\">
 \t\t\t\t\t\t\t<a href=\"#\">
 \t\t\t\t\t\t\t\t<span>User</span>
@@ -152,11 +146,11 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t<li><a href=\"#\">Profile</a></li>
 \t\t\t\t\t\t\t\t<li><a href=";
-            // line 78
+            // line 72
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo ">Register</a></li>
 \t\t\t\t\t\t\t\t<li><a href=";
-            // line 79
+            // line 73
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo ">Logout</a></li>
 \t\t\t\t\t\t\t</ul>
@@ -164,19 +158,19 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t";
         } else {
-            // line 84
+            // line 78
             echo "\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" data-toggle=\"modal\" data-target=\"#modalLoginForm\">Sign in</button>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='";
-            // line 88
+            // line 82
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "';\">Register</button>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t";
         }
-        // line 91
+        // line 85
         echo "\t\t\t\t</ul>
 \t\t\t</nav>
 \t\t\t<!-- .navbar -->
@@ -189,25 +183,25 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t<main id=\"main\">
 
 \t\t";
-        // line 102
+        // line 96
         $this->displayBlock('body', $context, $blocks);
-        // line 105
+        // line 99
         echo "\t\t<!-- End Hero Section -->
 \t\t";
-        // line 106
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 106, $this->source); })())) {
-            // line 107
+        // line 100
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 100, $this->source); })())) {
+            // line 101
             echo "\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
 \t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
 \t\t\t\t\t\t\t<div class=\"alert alert-danger\">";
-            // line 109
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })()), "messageKey", [], "any", false, false, false, 109), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })()), "messageData", [], "any", false, false, false, 109), "security"), "html", null, true);
+            // line 103
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 103, $this->source); })()), "messageKey", [], "any", false, false, false, 103), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 103, $this->source); })()), "messageData", [], "any", false, false, false, 103), "security"), "html", null, true);
             echo "</div> 
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t";
         }
-        // line 113
+        // line 107
         echo "\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
 \t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
 \t\t\t\t<div class=\"modal-content\">
@@ -220,14 +214,14 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<form method=\"post\">
 \t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
 \t\t\t\t\t\t\t<input type=\"email\" value=\"";
-        // line 124
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 124, $this->source); })()), "html", null, true);
+        // line 118
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 118, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
 \t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
 \t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
 
 \t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 128
+        // line 122
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
@@ -237,7 +231,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t\t\t\tRemember me
 \t\t\t\t\t\t\t\t</label>
 \t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"";
-        // line 135
+        // line 129
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
         echo "\">Forgot password?</a>
 \t\t\t\t\t\t\t</div>
@@ -262,7 +256,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
 \t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
-\t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+\t\t\t\t\t\t<p>We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure.</p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"twitter\">
 \t\t\t\t\t\t\t\t<i class=\"bi bi-twitter\"></i>
@@ -293,19 +287,21 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<div class=\"col-lg-2 col-6 footer-links\">
 \t\t\t\t\t\t<h4>Our Services</h4>
 \t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Design</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Development</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Product Management</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Marketing</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Graphic Design</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Flexible Reservation</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Car Wash and Detailing</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Electric Vehicle Charging</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Security</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Monthly Parking</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<strong>Address:</strong>
+\t\t\t\t\t\t\tAgdal, Rabat, Morocco<br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
-\t\t\t\t\t\t\t+1 5589 55488 55<br>
+\t\t\t\t\t\t\t+212 565 789 058<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
 \t\t\t\t\t\t\tcontact.ipark.info@gmail.com<br>
 \t\t\t\t\t\t</p>
@@ -341,35 +337,35 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 236
+        // line 232
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 237
+        // line 233
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 238
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 239
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 240
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 241
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 242
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 243
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/sss.js"), "html", null, true);
         echo "></script>
 \t\t<script>
@@ -388,7 +384,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     }
 
-    // line 102
+    // line 96
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -398,7 +394,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 103
+        // line 97
         echo "\t\t\tTemplate Body
 \t\t";
         
@@ -421,7 +417,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     public function getDebugInfo()
     {
-        return array (  402 => 103,  392 => 102,  373 => 243,  369 => 242,  365 => 241,  361 => 240,  357 => 239,  353 => 238,  349 => 237,  345 => 236,  241 => 135,  231 => 128,  224 => 124,  211 => 113,  204 => 109,  200 => 107,  198 => 106,  195 => 105,  193 => 102,  180 => 91,  174 => 88,  168 => 84,  160 => 79,  156 => 78,  147 => 71,  145 => 70,  129 => 57,  115 => 46,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  398 => 97,  388 => 96,  369 => 239,  365 => 238,  361 => 237,  357 => 236,  353 => 235,  349 => 234,  345 => 233,  341 => 232,  235 => 129,  225 => 122,  218 => 118,  205 => 107,  198 => 103,  194 => 101,  192 => 100,  189 => 99,  187 => 96,  174 => 85,  168 => 82,  162 => 78,  154 => 73,  150 => 72,  141 => 65,  139 => 64,  129 => 57,  115 => 46,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -486,12 +482,6 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"about.html\">About</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"services.html\">Services</a>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t<a href=\"pricing.html\">Pricing</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
 \t\t\t\t\t</li>
@@ -583,7 +573,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
 \t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
-\t\t\t\t\t\t<p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+\t\t\t\t\t\t<p>We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure.</p>
 \t\t\t\t\t\t<div class=\"social-links d-flex mt-4\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"twitter\">
 \t\t\t\t\t\t\t\t<i class=\"bi bi-twitter\"></i>
@@ -614,19 +604,21 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<div class=\"col-lg-2 col-6 footer-links\">
 \t\t\t\t\t\t<h4>Our Services</h4>
 \t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Design</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Web Development</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Product Management</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Marketing</a></li>
-\t\t\t\t\t\t\t<li><a href=\"#\">Graphic Design</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Flexible Reservation</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Car Wash and Detailing</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Electric Vehicle Charging</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Security</a></li>
+\t\t\t\t\t\t\t<li><a href=\"#\">Monthly Parking</a></li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t</div>
 
 \t\t\t\t\t<div class=\"col-lg-3 col-md-12 footer-contact text-center text-md-start\">
 \t\t\t\t\t\t<h4>Contact Us</h4>
 \t\t\t\t\t\t<p>
+\t\t\t\t\t\t\t<strong>Address:</strong>
+\t\t\t\t\t\t\tAgdal, Rabat, Morocco<br>
 \t\t\t\t\t\t\t<strong>Phone:</strong>
-\t\t\t\t\t\t\t+1 5589 55488 55<br>
+\t\t\t\t\t\t\t+212 565 789 058<br>
 \t\t\t\t\t\t\t<strong>Email:</strong>
 \t\t\t\t\t\t\tcontact.ipark.info@gmail.com<br>
 \t\t\t\t\t\t</p>

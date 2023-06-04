@@ -14,6 +14,7 @@ use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use App\Form\ReservationStep1Type;
 use App\Form\ReservationStep2Type;
 use App\Repository\ReservationRepository;
+use App\Service\PdfService;
 use Doctrine\ORM\EntityManagerInterface;
 use Geocoder\Provider\GoogleMaps\GoogleMaps;
 use Geocoder\StatefulGeocoder;
@@ -34,14 +35,13 @@ class ReservationController extends AbstractController
         $provider = new GoogleMaps($client, null, 'AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88');
         $geocoder = new StatefulGeocoder($provider);
         $startResult = $geocoder->geocodeQuery(GeocodeQuery::create($startAddress))->first();
-        $distances= array();
+        $distances = array();
         $parkings = $parkingRepo->findAll();
         $startCoordinates = $startResult->getCoordinates();
         foreach ($parkings as $parking) {
             $endAddress = $parking->getAdresse();
             $endResult = $geocoder->geocodeQuery(GeocodeQuery::create($endAddress));
-            if ($endResult->count() > 0)
-            {
+            if ($endResult->count() > 0) {
                 $endResult = $endResult->first();
                 $endCoordinates = $endResult->getCoordinates();
                 if ($startCoordinates && $endCoordinates) {
@@ -98,7 +98,7 @@ class ReservationController extends AbstractController
     {
         $adresse = $request->getSession()->get('adresse');
         $date_reservation = $request->getSession()->get('date_reservation');
-        $type_vehicule = $request->getSession()->get('type_vehicule');  
+        $type_vehicule = $request->getSession()->get('type_vehicule');
         $reservation = new Reservation();
         $distances = $this->searchDistance($adresse, $em);
         $form = $this->createForm(ReservationStep2Type::class, $reservation);
@@ -197,7 +197,7 @@ class ReservationController extends AbstractController
         $adresse = $request->getSession()->get('adresse');
         $date_reservation = $request->getSession()->get('date_reservation');
         $type_vehicule = $request->getSession()->get('type_vehicule');
-        $form = $this->createForm(ReservationStep2Type::class, $reservation , ['adresse' => $adresse]);
+        $form = $this->createForm(ReservationStep2Type::class, $reservation, ['adresse' => $adresse]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -220,10 +220,34 @@ class ReservationController extends AbstractController
     #[Route('/delete/{id}', name: 'app_reservation_delete', methods: ['POST'])]
     public function delete(Request $request, Reservation $reservation, ReservationRepository $reservationRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$reservation->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $reservation->getId(), $request->request->get('_token'))) {
             $reservationRepository->remove($reservation, true);
         }
 
         return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
+    }
+    #[Route('/pdf/{id}', name: 'reservation.pdf')]
+    public function generatePdfReservation(Reservation $reservation = null, PdfService $pdf)
+    {
+        $client = $reservation->getClient();
+        $clientName = $client->getNom();
+        $clientEmail = $client->getEmail();
+        $clientId = $client->getId();
+        $clientPrenom = $client->getPrenom();
+        $clientGsm = $client->getGsm();
+
+
+
+        $html = $this->render('reservation\resevationPdf.html.twig', [
+            'reservation' => $reservation,
+            'clientNom' => $clientName,
+            'clientEmail' => $clientEmail,
+            'clientPrenom' => $clientPrenom,
+            'clientId' => $clientId,
+            'clientGsm' => $clientGsm
+        ]);
+
+
+        $pdf->showPdf($html);
     }
 }

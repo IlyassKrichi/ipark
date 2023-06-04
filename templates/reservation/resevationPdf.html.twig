@@ -1,0 +1,48 @@
+{% extends 'template3.html.twig' %}
+
+{% block title %}Reservation{% endblock %}
+
+{% block body %}
+    <h1>Reservation</h1>
+
+    <table class="table">
+    
+        <tbody>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Numero de reservation</span></th>
+                <td>{{ reservation.id }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue; text-align: left;">Id Client</span></th>
+                <td>{{ clientId }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Nom</span></th>
+                <td>{{ clientNom }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Prenom</span></th>
+                <td>{{ clientPrenom }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Email</span></th>
+                <td>{{ clientEmail }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">GSM</span></th>
+                <td>{{ clientGsm }}</td>
+            </tr>
+            
+
+            <tr>
+                <th class="text-left"><span style="color: blue;">Date_reservation</span></th>
+                <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="text-left"><span style="color: blue;">Type_vehicule</th>
+                <td>{{ reservation.typeVehicule }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+{% endblock %}

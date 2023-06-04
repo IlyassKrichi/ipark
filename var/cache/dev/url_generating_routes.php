@@ -26,6 +26,7 @@ return [
     'app_reservation_edit_step1' => [['id'], ['_controller' => 'App\\Controller\\ReservationController::step1edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/step1edit']], [], [], []],
     'app_reservation_edit_step2' => [['id'], ['_controller' => 'App\\Controller\\ReservationController::step2edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/step2edit']], [], [], []],
     'app_reservation_delete' => [['id'], ['_controller' => 'App\\Controller\\ReservationController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete']], [], [], []],
+    'reservation.pdf' => [['id'], ['_controller' => 'App\\Controller\\ReservationController::generatePdfReservation'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/pdf']], [], [], []],
     'app_forgot_password_request' => [[], ['_controller' => 'App\\Controller\\ResetPasswordController::request'], [], [['text', '/reset-password']], [], [], []],
     'app_check_email' => [[], ['_controller' => 'App\\Controller\\ResetPasswordController::checkEmail'], [], [['text', '/reset-password/check-email']], [], [], []],
     'app_reset_password' => [['token'], ['token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], [], [['variable', '/', '[^/]++', 'token', true], ['text', '/reset-password/reset']], [], [], []],

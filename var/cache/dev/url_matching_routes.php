@@ -51,7 +51,8 @@ return [
                     .')'
                 .')'
                 .'|/delete/([^/]++)(*:262)'
-                .'|/reset\\-password/reset(?:/([^/]++))?(*:306)'
+                .'|/pdf/([^/]++)(*:283)'
+                .'|/reset\\-password/reset(?:/([^/]++))?(*:327)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -66,7 +67,8 @@ return [
         214 => [[['_route' => 'app_reservation_edit_step1', '_controller' => 'App\\Controller\\ReservationController::step1edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         236 => [[['_route' => 'app_reservation_edit_step2', '_controller' => 'App\\Controller\\ReservationController::step2edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         262 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        306 => [
+        283 => [[['_route' => 'reservation.pdf', '_controller' => 'App\\Controller\\ReservationController::generatePdfReservation'], ['id'], null, null, false, true, null]],
+        327 => [
             [['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\ResetPasswordController::reset'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -91,8 +91,8 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
 \t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+\t\t\t\t\t<h2 data-aos=\"fade-up\" style=\"text-align:center\">Your Swift Parking Partner</h2>
+\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\" style=\"text-align:center\">Welcome to iPark. where finding a spot is a breeze! We're here to make your parking experience lightning fast and hassle-free.</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t<img src=\"";
@@ -115,7 +115,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         echo "
 \t\t\t\t\t";
         // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "adresse", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Adresse", "autocomplete" => "on"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "adresse", [], "any", false, false, false, 22), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Address", "autocomplete" => "on"]]);
         echo "
 \t\t\t\t\t";
         // line 23
@@ -126,36 +126,6 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), 'form_end');
         echo "
 \t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
 \t\t\t</div>
 \t\t</div>
 \t</section>
@@ -196,8 +166,8 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
 \t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\">
-\t\t\t\t\t<h2 data-aos=\"fade-up\">Your Lightning Fast Delivery Partner</h2>
-\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+\t\t\t\t\t<h2 data-aos=\"fade-up\" style=\"text-align:center\">Your Swift Parking Partner</h2>
+\t\t\t\t\t<p data-aos=\"fade-up\" data-aos-delay=\"100\" style=\"text-align:center\">Welcome to iPark. where finding a spot is a breeze! We're here to make your parking experience lightning fast and hassle-free.</p>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t<img src=\"{{ asset('assets/img/hero-img.svg') }}\" class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
@@ -206,40 +176,10 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t\t{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
 \t\t\t\t\t{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
 \t\t\t\t\t{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
-\t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Adresse', 'autocomplete': 'on'}}) }}
+\t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Address', 'autocomplete': 'on'}}) }}
 \t\t\t\t\t{{ include('reservation/_form.html.twig') }}
 \t\t\t\t\t{{ form_end(form) }}
 \t\t\t\t</div>
-\t\t\t</div>
-\t\t\t<div class=\"row gy-4\" data-aos=\"fade-up\" data-aos-delay=\"400\">
-\t\t\t\t<div class=\"col-lg-3 col-md-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"232\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Clients</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"521\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Projects</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"1453\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Support</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
-\t\t\t\t<div class=\"col-lg-3 col-6\">
-\t\t\t\t\t<div class=\"stats-item text-center w-100 h-100\">
-\t\t\t\t\t\t<span data-purecounter-start=\"0\" data-purecounter-end=\"32\" data-purecounter-duration=\"1\" class=\"purecounter\"></span>
-\t\t\t\t\t\t<p>Workers</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<!-- End Stats Item -->
 \t\t\t</div>
 \t\t</div>
 \t</section>

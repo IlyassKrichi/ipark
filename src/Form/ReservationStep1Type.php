@@ -17,13 +17,13 @@ class ReservationStep1Type extends AbstractType
         $builder
             ->add('date_reservation', DateType::class, [
                 'widget' => 'single_text'
-              ])
+            ])
             ->add('adresse', TextType::class)
             ->add('type_vehicule', ChoiceType::class, ['choices' => [
-                'Voiture'=>'Voiture',
-            'Moto'=>'Moto','Vélo'=>'Velo',
-            'Camion'=>'Camion']])
-        ;
+                'Car' => 'Car',
+                'Motorcyle' => 'Motorcyle', 'Bike' => 'Bike',
+                'Truck' => 'Truck'
+            ]]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

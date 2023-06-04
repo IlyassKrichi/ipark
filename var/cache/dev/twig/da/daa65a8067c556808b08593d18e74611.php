@@ -26,7 +26,7 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'modal' => [$this, 'block_modal'],
         ];
     }
 
@@ -76,72 +76,72 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
     }
 
     // line 6
-    public function block_body($context, array $blocks = [])
+    public function block_modal($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "modal"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "modal"));
 
         // line 7
-        echo "\t<form method=\"post\">
-\t\t";
-        // line 8
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })())) {
-            // line 9
-            echo "\t\t\t<div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 9, $this->source); })()), "messageKey", [], "any", false, false, false, 9), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 9, $this->source); })()), "messageData", [], "any", false, false, false, 9), "security"), "html", null, true);
-            echo "</div>
-\t\t";
-        }
-        // line 11
-        echo "
-\t\t";
-        // line 12
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12)) {
-            // line 13
-            echo "\t\t\t<div class=\"mb-3\">
-\t\t\t\tYou are logged in as
-\t\t\t\t";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "userIdentifier", [], "any", false, false, false, 15), "html", null, true);
-            echo ",
-\t\t\t\t<a href=\"";
-            // line 16
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
-\t\t\t</div>
+        echo "\t";
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
+            // line 8
+            echo "\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t\t\t\t<div class=\"alert alert-danger\">";
+            // line 10
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 10, $this->source); })()), "messageKey", [], "any", false, false, false, 10), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 10, $this->source); })()), "messageData", [], "any", false, false, false, 10), "security"), "html", null, true);
+            echo "</div> 
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 \t\t";
         }
-        // line 19
-        echo "
-\t\t<h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-\t\t<label for=\"inputEmail\">Email</label>
-\t\t<input type=\"email\" value=\"";
-        // line 22
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 22, $this->source); })()), "html", null, true);
-        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-\t\t<label for=\"inputPassword\">Password</label>
-\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+        // line 14
+        echo "\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header text-center\">
+\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-body mx-3\">
+\t\t\t\t\t\t<form method=\"post\">
+\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
+\t\t\t\t\t\t\t<input type=\"email\" value=\"";
+        // line 25
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 25, $this->source); })()), "html", null, true);
+        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
+\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
+\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
 
-\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 26
+\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
-\t\t<div class=\"form-check\">
-\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
-\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
-\t\t\t\tRemember me
-\t\t\t</label>
-\t\t</div>
-
-\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
-\t\t\tSign in
-\t\t</button>
-\t</form>
+\t\t\t\t\t\t\t<div class=\"form-check my-2\">
+\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t\tRemember me
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"";
+        // line 36
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
+        echo "\">Forgot password?</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
+\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
+\t\t\t\t\t\t\t\t\tSign in
+\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -163,7 +163,7 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
 
     public function getDebugInfo()
     {
-        return array (  131 => 26,  124 => 22,  119 => 19,  113 => 16,  109 => 15,  105 => 13,  103 => 12,  100 => 11,  94 => 9,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  133 => 36,  123 => 29,  116 => 25,  103 => 14,  96 => 10,  92 => 8,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,39 +173,47 @@ class __TwigTemplate_79dde4e9f786e54b8689902b9d75a543 extends Template
 {% block title %}Log in!
 {% endblock %}
 
-{% block body %}
-\t<form method=\"post\">
-\t\t{% if error %}
-\t\t\t<div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% block modal %}
+\t{% if error %}
+\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
+\t\t\t\t\t\t\t<div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div> 
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 \t\t{% endif %}
+\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
+\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
+\t\t\t\t<div class=\"modal-content\">
+\t\t\t\t\t<div class=\"modal-header text-center\">
+\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
+\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"modal-body mx-3\">
+\t\t\t\t\t\t<form method=\"post\">
+\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
+\t\t\t\t\t\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
+\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
+\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
 
-\t\t{% if app.user %}
-\t\t\t<div class=\"mb-3\">
-\t\t\t\tYou are logged in as
-\t\t\t\t{{ app.user.userIdentifier }},
-\t\t\t\t<a href=\"{{ path('app_logout') }}\">Logout</a>
+\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
+
+\t\t\t\t\t\t\t<div class=\"form-check my-2\">
+\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
+\t\t\t\t\t\t\t\t\tRemember me
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"{{ path('app_forgot_password_request') }}\">Forgot password?</a>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
+\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
+\t\t\t\t\t\t\t\t\tSign in
+\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 \t\t\t</div>
-\t\t{% endif %}
-
-\t\t<h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-\t\t<label for=\"inputEmail\">Email</label>
-\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-\t\t<label for=\"inputPassword\">Password</label>
-\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
-
-\t\t<div class=\"form-check\">
-\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
-\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
-\t\t\t\tRemember me
-\t\t\t</label>
-\t\t</div>
-
-\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
-\t\t\tSign in
-\t\t</button>
-\t</form>
 {% endblock %}
 ", "security/login.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\security\\login.html.twig");
     }

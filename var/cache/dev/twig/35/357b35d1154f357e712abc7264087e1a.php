@@ -115,12 +115,12 @@ class __TwigTemplate_d3bd6cd3843ce734bec431fd5ee34bf9 extends Template
         echo "
 \t\t\t\t\t\t\t";
         // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'row', ["label" => "Nom"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'row', ["label" => "Last Name"]);
         // line 21
         echo "
 \t\t\t\t\t\t\t";
         // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 22, $this->source); })()), "prenom", [], "any", false, false, false, 22), 'row', ["label" => "Prénom"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 22, $this->source); })()), "prenom", [], "any", false, false, false, 22), 'row', ["label" => "First Name"]);
         // line 24
         echo "
 \t\t\t\t\t\t\t";
@@ -134,12 +134,12 @@ class __TwigTemplate_d3bd6cd3843ce734bec431fd5ee34bf9 extends Template
         echo "
 \t\t\t\t\t\t\t";
         // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 29, $this->source); })()), "genre", [], "any", false, false, false, 29), 'row', ["label" => "Genre"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 29, $this->source); })()), "genre", [], "any", false, false, false, 29), 'row', ["label" => "Gender"]);
         // line 31
         echo "
 \t\t\t\t\t\t\t";
         // line 32
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 32, $this->source); })()), "gsm", [], "any", false, false, false, 32), 'row', ["label" => "GSM"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 32, $this->source); })()), "gsm", [], "any", false, false, false, 32), 'row', ["label" => "Phone"]);
         // line 34
         echo "
 \t\t\t\t\t\t\t";
@@ -207,20 +207,20 @@ class __TwigTemplate_d3bd6cd3843ce734bec431fd5ee34bf9 extends Template
 
 \t\t\t\t\t\t\t{{ form_start(registrationForm) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.nom, {
-            label: 'Nom'
+            label: 'Last Name'
           }) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.prenom, {
-            label: 'Prénom'
+            label: 'First Name'
           }) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.email) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.plainPassword, {
             label: 'Password'
           }) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.genre, {
-            label: 'Genre'
+            label: 'Gender'
           }) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.gsm, {
-            label: 'GSM'
+            label: 'Phone'
           }) }}
 \t\t\t\t\t\t\t{{ form_row(registrationForm.agreeTerms, { label: 'I agree to terms and conditions' }) }}
 \t\t\t\t\t\t\t<div class=\"card-footer d-flex justify-content-center bg-transparent\">

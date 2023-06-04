@@ -11,6 +11,7 @@
     "doctrine/doctrine-bundle": "^2.9",
     "doctrine/doctrine-migrations-bundle": "^3.2",
     "doctrine/orm": "^2.14",
+    "dompdf/dompdf": "^2.0",
     "geocoder-php/common-http": "^4.5",
     "geocoder-php/free-geoip-provider": "^4.5",
     "geocoder-php/google-maps-provider": "^4.7",
