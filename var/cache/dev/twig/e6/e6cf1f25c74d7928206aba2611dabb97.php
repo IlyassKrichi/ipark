@@ -65,7 +65,7 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Step3
+        echo "Payment
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -126,7 +126,7 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
     {
         return new Source("{% extends 'template.html.twig' %}
 
-{% block title %}Step3
+{% block title %}Payment
 {% endblock %}
 
 {% block body %}

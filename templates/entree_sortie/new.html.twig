@@ -1,0 +1,13 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}New Check in - out{% endblock %}
+{% block PageTitle %}
+    <h1>Create new Check in - out</h1>
+{% endblock %}
+{% block body %}
+    
+
+    {{ include('entree_sortie/_form.html.twig') }}
+
+    <a href="{{ path('app_entree_sortie_index') }}">back to list</a>
+{% endblock %}

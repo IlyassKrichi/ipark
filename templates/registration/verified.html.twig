@@ -1,0 +1,22 @@
+{% extends 'template2.html.twig' %}
+
+{% block title %}iPark - Parking Services
+{% endblock %}
+
+{% block body %}
+
+	<section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh;">
+		<div class="container">
+			<h1 class="text-center text-success" style="margin-bottom: 250px;">
+				<div>
+					<i class="bi bi-check2-circle" style="font-size: 300px;"></i>
+				</div>
+
+				<strong style="font-size: 50px;">Your email is verified</strong><br>
+				<strong style="font-size: 30px; color: white">Click
+					<a href="{{ path('app_reservation_new_step1') }}">here</a>
+					to continue</strong>
+			</h1>
+		</div>
+	</section>
+{% endblock %}

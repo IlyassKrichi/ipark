@@ -1,47 +1,80 @@
 {% extends 'template2.html.twig' %}
 
-{% block title %}Step2
+{% block title %}Available Parkings
 {% endblock %}
 
 {% block body %}
-	<section id="hero" class="hero d-flex align-items-center"></section>
-	<div class="container">
-		{{ form_start(form) }}
-		{% for parking in parkings %}
-			<div class="d-flex flex-column justify-content-center border rounded-4 p-3 bg-secondary">
-				<p>
-					Nom :
-					{{ parking.nom }}
-				</p>
-				<p>
-					Adresse :
-					{{ parking.adresse }}
-				</p>
-				<p>
-					Capacité :
-					{{ parking.capacite }}
-				</p>
-				<input type="hidden" id="parking_id" value="{{ parking.id }}" name="{{ field_name(form.parking) }}">
-				<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapse{{ parking.id }}">
-					Séléctionner
-				</button>
-				<div class="collapse" id="collapse{{ parking.id }}" style="">
-					<div class="card card-body mt-2">
-						Places disponibles:
-						<select type="choice" class="form-select mt-1" id="place_id" name="{{ field_name(form.place) }}">
-							{% for place in places %}
-								{% if parking.id == place.parking.id %}
-									<option value="{{ place.id }}">{{ place.id }}</option>
+
+	<section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh;">
+		<div class="container">
+			<h1 class="text-center color-black">Available Parkings</h1>
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="card rounded-3 border-3">
+						{% if not flag %}
+							<h3 style="color: black; text-align: center; font-size: 35px" class="my-4">No Parkings found.</h3>
+						{% else %}
+							{{ form_start(form) }}
+							{% for parking in parkings %}
+								{% if distances[parking.nom] <= 3 %}
+									<div class="container py-1">
+										<div class="card shadow-0 border rounded-3">
+											<div class="row">
+												<div class="col-md-6 col-lg-6 col-xl-5">
+													<div class="card-body" style="color: black;">
+														<h5 class="card-title">{{ parking.nom }}</h5>
+														<div class="mt-1 mb-0 text-muted small">
+															<span>Address:
+																{{ parking.adresse }}</span>
+														</div>
+														<div class="mb-2 text-muted small">
+															<span>Capacity:
+																{{ parking.capacite }}</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-4 border-sm-start-none border-start" style="margin-left: auto;">
+													<div class="card-body">
+														<h6 class="text-success">Distance to Parking:</h6>
+														{% if distances[parking.nom] < 1 %}
+															<h6 class="text-success mt-1">{{ distances[parking.nom] * 100 }}
+															m</h6>
+														{% else %}
+														<h6 class="text-success mt-1">{{ distances[parking.nom] }}
+															Km</h6>
+														{% endif %}
+														<div class="d-flex flex-column mt-2">
+															<input type="hidden" id="parking_id" value="{{ parking.id }}" name="{{ field_name(form.parking) }}">
+															<button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ parking.id }}" aria-expanded="false" aria-controls="collapse{{ parking.id }}">
+																Select
+															</button>
+														</div>
+													</div>
+												</div>
+												<div class="collapse" id="collapse{{ parking.id }}" style="">
+													<div class="card card-body rounded-0 border border-top-3">
+														<span style="color: black;">Available Places:</span>
+														<select type="choice" class="form-select mt-1" id="place_id" name="{{ field_name(form.place) }}">
+															{% for place in places %}
+																{% if parking.id == place.parking.id %}
+																	<option value="{{ place.id }}">{{ place.id }}</option>
+																{% endif %}
+															{% endfor %}
+														</select>
+														<button class="btn btn-primary mt-3" type="submit">Book</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								{% endif %}
+
 							{% endfor %}
-						</select>
-						<button class="btn btn-primary mt-3" type="submit">Réserver</button>
+							{{ form_end(form) }}
+						{% endif %}
 					</div>
 				</div>
 			</div>
-		{% endfor %}
-		{{ form_end(form) }}
-	</div>
+		</section>
 
-
-{% endblock %}
+	{% endblock %}

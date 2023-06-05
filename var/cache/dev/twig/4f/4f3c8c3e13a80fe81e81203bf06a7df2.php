@@ -27,6 +27,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
         $this->parent = false;
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -47,20 +48,25 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t<head>
 \t\t<meta charset=\"utf-8\">
 \t\t<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">
+\t\t<title>
+\t\t\t";
+        // line 8
+        $this->displayBlock('title', $context, $blocks);
+        // line 11
+        echo "\t\t</title>
 
-\t\t<title>Dashboard</title>
 \t\t<meta content=\"\" name=\"description\">
 \t\t<meta
 \t\tcontent=\"\" name=\"keywords\">
 
 \t\t<!-- Favicons -->
 \t\t<link href=";
-        // line 14
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/favicon.png"), "html", null, true);
         echo " rel=\"icon\">
 \t\t<link
 \t\thref=";
-        // line 16
+        // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/apple-touch-icon.png"), "html", null, true);
         echo " rel=\"apple-touch-icon\">
 
@@ -72,30 +78,30 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor CSS Files -->
 \t\t<link href=";
-        // line 25
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/css/bootstrap.min.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link href=";
-        // line 26
+        // line 30
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap-icons/bootstrap-icons.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link href=";
-        // line 27
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/css/glightbox.min.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link href=";
-        // line 28
+        // line 32
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<link
 \t\thref=";
-        // line 30
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 
 \t\t<!-- Template Main CSS File -->
 \t\t<link href=";
-        // line 33
+        // line 37
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/main.css"), "html", null, true);
         echo " rel=\"stylesheet\">
 \t\t<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyBn5ha5UvXZ3Fo5bb22RV59PuEE38TAt88&libraries=places\"></script>
@@ -111,7 +117,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t<div class=\"container-fluid container-xl d-flex align-items-center justify-content-between\">
 
 \t\t\t\t<a href=";
-        // line 46
+        // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
         echo " class=\"logo d-flex align-items-center\">
 \t\t\t\t\t<!-- Uncomment the line below if you also wish to use an image logo -->
@@ -125,7 +131,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=";
-        // line 57
+        // line 61
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
         echo " class=\"active\">Home</a>
 \t\t\t\t\t\t</li>
@@ -135,125 +141,121 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t";
-        // line 64
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64)) {
-            // line 65
-            echo "\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>User</span>
-\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Profile</a></li>
-\t\t\t\t\t\t\t\t<li><a href=";
-            // line 72
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo ">Register</a></li>
-\t\t\t\t\t\t\t\t<li><a href=";
-            // line 73
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo ">Logout</a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
+        // line 68
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 68, $this->source); })()), "user", [], "any", false, false, false, 68)) {
+            // line 69
+            echo "\t\t\t\t\t\t";
+            $context["roles"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 69, $this->source); })()), "user", [], "any", false, false, false, 69), "getRoles", [], "method", false, false, false, 69);
+            // line 70
+            echo "\t\t\t\t\t\t";
+            if (twig_in_filter("ROLE_ADMIN", (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 70, $this->source); })()))) {
+                // line 71
+                echo "\t\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t\t<a href=\"#\" style=\"pointer-events: none; cursor: default;\">
+\t\t\t\t\t\t\t\t\t<span>";
+                // line 73
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 73, $this->source); })()), "user", [], "any", false, false, false, 73), "prenom", [], "any", false, false, false, 73), "html", null, true);
+                echo "
+\t\t\t\t\t\t\t\t\t\t";
+                // line 74
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "user", [], "any", false, false, false, 74), "nom", [], "any", false, false, false, 74), "html", null, true);
+                echo "</span>
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t<li><a href=";
+                // line 78
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+                echo ">Register</a></li>
+\t\t\t\t\t\t\t\t\t<li><a href=";
+                // line 79
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+                echo ">Logout</a></li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px; margin-left : 20px\" onclick=\"window.location.href='";
+                // line 83
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
+                echo "';\">Admin Dashboard</button>
+\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
+            } else {
+                // line 86
+                echo "\t\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t<span>";
+                // line 88
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 88, $this->source); })()), "user", [], "any", false, false, false, 88), "prenom", [], "any", false, false, false, 88), "html", null, true);
+                echo "
+\t\t\t\t\t\t\t\t\t\t";
+                // line 89
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", [], "any", false, false, false, 89), "nom", [], "any", false, false, false, 89), "html", null, true);
+                echo "</span>
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t<li><a href=";
+                // line 93
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+                echo ">Register</a></li>
+\t\t\t\t\t\t\t\t\t<li><a href=";
+                // line 94
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+                echo ">Logout</a></li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t";
+            }
+            // line 99
+            echo "\t\t\t\t\t\t";
         } else {
-            // line 78
+            // line 100
             echo "\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" data-toggle=\"modal\" data-target=\"#modalLoginForm\">Sign in</button>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='";
+            // line 101
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "';\">Sign in</button>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='";
-            // line 82
+            // line 104
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "';\">Register</button>
 \t\t\t\t\t\t\t</li>
-\t\t\t\t\t";
-        }
-        // line 85
-        echo "\t\t\t\t</ul>
-\t\t\t</nav>
-\t\t\t<!-- .navbar -->
-
-\t\t</div>
-\t</header>
-\t<!-- End Header -->
-\t<!-- End Header -->
-
-\t<main id=\"main\">
-
-\t\t";
-        // line 96
-        $this->displayBlock('body', $context, $blocks);
-        // line 99
-        echo "\t\t<!-- End Hero Section -->
-\t\t";
-        // line 100
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 100, $this->source); })())) {
-            // line 101
-            echo "\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
-\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t\t\t\t<div class=\"alert alert-danger\">";
-            // line 103
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 103, $this->source); })()), "messageKey", [], "any", false, false, false, 103), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 103, $this->source); })()), "messageData", [], "any", false, false, false, 103), "security"), "html", null, true);
-            echo "</div> 
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t";
+\t\t\t\t\t\t";
         }
         // line 107
-        echo "\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
-\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header text-center\">
-\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
-\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body mx-3\">
-\t\t\t\t\t\t<form method=\"post\">
-\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
-\t\t\t\t\t\t\t<input type=\"email\" value=\"";
-        // line 118
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 118, $this->source); })()), "html", null, true);
-        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
-\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
-\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
+        echo "\t\t\t\t\t</ul>
+\t\t\t\t</nav>
+\t\t\t\t<!-- .navbar -->
 
-\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 122
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        echo "\">
-
-\t\t\t\t\t\t\t<div class=\"form-check my-2\">
-\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
-\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
-\t\t\t\t\t\t\t\t\tRemember me
-\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"";
-        // line 129
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
-        echo "\">Forgot password?</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
-\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
-\t\t\t\t\t\t\t\t\tSign in
-\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
 \t\t\t</div>
+\t\t</header>
+\t\t<!-- End Header -->
+\t\t<!-- End Header -->
+
+\t\t<main id=\"main\">
+
+\t\t\t";
+        // line 118
+        $this->displayBlock('body', $context, $blocks);
+        // line 121
+        echo "\t\t\t<!-- End Hero Section -->
 \t\t</main>
 \t\t<!-- End #main -->
 
 \t\t<!-- ======= Footer ======= -->
 \t\t<footer id=\"footer\" class=\"footer\">
 
-\t\t\t<div class=\"container\">
+\t\t\t<div class=\"container mt-100\">
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
-\t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
+\t\t\t\t\t\t<a href=";
+        // line 131
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new_step1");
+        echo " class=\"logo d-flex align-items-center\">
 \t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<p>We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure.</p>
@@ -337,44 +339,39 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
 \t\t<!-- Vendor JS Files -->
 \t\t<script src=";
-        // line 232
+        // line 214
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 233
+        // line 215
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/purecounter/purecounter_vanilla.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 234
+        // line 216
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 235
+        // line 217
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 236
+        // line 218
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/aos/aos.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 237
+        // line 219
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendor/php-email-form/validate.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 238
+        // line 220
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "></script>
 \t\t<script src=";
-        // line 239
+        // line 221
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/sss.js"), "html", null, true);
         echo "></script>
-\t\t<script>
-\t\t\t\$(document).ready(function(){
-\t\t\t\$(\"#modalerror\").modal('show');
-\t\t\t});
-\t\t</script>
 \t</body>
-</body></html>
+</html></body></html>
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -384,7 +381,28 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     }
 
-    // line 96
+    // line 8
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        // line 9
+        echo "\t\t\t\tTitle
+\t\t\t";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 118
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -394,9 +412,9 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 97
-        echo "\t\t\tTemplate Body
-\t\t";
+        // line 119
+        echo "\t\t\t\tTemplate Body
+\t\t\t";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -417,7 +435,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 
     public function getDebugInfo()
     {
-        return array (  398 => 97,  388 => 96,  369 => 239,  365 => 238,  361 => 237,  357 => 236,  353 => 235,  349 => 234,  345 => 233,  341 => 232,  235 => 129,  225 => 122,  218 => 118,  205 => 107,  198 => 103,  194 => 101,  192 => 100,  189 => 99,  187 => 96,  174 => 85,  168 => 82,  162 => 78,  154 => 73,  150 => 72,  141 => 65,  139 => 64,  129 => 57,  115 => 46,  99 => 33,  93 => 30,  88 => 28,  84 => 27,  80 => 26,  76 => 25,  64 => 16,  59 => 14,  44 => 1,);
+        return array (  416 => 119,  406 => 118,  395 => 9,  385 => 8,  371 => 221,  367 => 220,  363 => 219,  359 => 218,  355 => 217,  351 => 216,  347 => 215,  343 => 214,  257 => 131,  245 => 121,  243 => 118,  230 => 107,  224 => 104,  218 => 101,  215 => 100,  212 => 99,  204 => 94,  200 => 93,  193 => 89,  189 => 88,  185 => 86,  179 => 83,  172 => 79,  168 => 78,  161 => 74,  157 => 73,  153 => 71,  150 => 70,  147 => 69,  145 => 68,  135 => 61,  121 => 50,  105 => 37,  99 => 34,  94 => 32,  90 => 31,  86 => 30,  82 => 29,  70 => 20,  65 => 18,  56 => 11,  54 => 8,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -428,8 +446,12 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t<head>
 \t\t<meta charset=\"utf-8\">
 \t\t<meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">
+\t\t<title>
+\t\t\t{% block title %}
+\t\t\t\tTitle
+\t\t\t{% endblock %}
+\t\t</title>
 
-\t\t<title>Dashboard</title>
 \t\t<meta content=\"\" name=\"description\">
 \t\t<meta
 \t\tcontent=\"\" name=\"keywords\">
@@ -486,91 +508,69 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t<a href=\"contact.html\">Contact</a>
 \t\t\t\t\t</li>
 \t\t\t\t\t{% if app.user %}
-\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t<span>User</span>
-\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\">Profile</a></li>
-\t\t\t\t\t\t\t\t<li><a href={{ path('app_register') }}>Register</a></li>
-\t\t\t\t\t\t\t\t<li><a href={{ path('app_logout') }}>Logout</a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
-\t\t\t\t\t\t<li>
+\t\t\t\t\t\t{% set roles = app.user.getRoles() %}
+\t\t\t\t\t\t{% if 'ROLE_ADMIN' in roles %}
+\t\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t\t<a href=\"#\" style=\"pointer-events: none; cursor: default;\">
+\t\t\t\t\t\t\t\t\t<span>{{ app.user.prenom }}
+\t\t\t\t\t\t\t\t\t\t{{ app.user.nom }}</span>
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t<li><a href={{path('app_register')}}>Register</a></li>
+\t\t\t\t\t\t\t\t\t<li><a href={{path('app_logout')}}>Logout</a></li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px; margin-left : 20px\" onclick=\"window.location.href='{{ path('app_admin') }}';\">Admin Dashboard</button>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<li class=\"dropdown\">
+\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t\t<span>{{ app.user.prenom }}
+\t\t\t\t\t\t\t\t\t\t{{ app.user.nom }}</span>
+\t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t<li><a href={{path('app_register')}}>Register</a></li>
+\t\t\t\t\t\t\t\t\t<li><a href={{path('app_logout')}}>Logout</a></li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" data-toggle=\"modal\" data-target=\"#modalLoginForm\">Sign in</button>
+\t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"margin-right: 10px; margin-left: 20px; padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='{{ path('app_login') }}';\">Sign in</button>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t<button class=\"btn btn-primary rounded-1\" style=\"padding-left: 15px; padding-right: 15px; padding-top: 7px; padding-bottom: 7px;\" onclick=\"window.location.href='{{ path('app_register') }}';\">Register</button>
 \t\t\t\t\t\t\t</li>
-\t\t\t\t\t{% endif %}
-\t\t\t\t</ul>
-\t\t\t</nav>
-\t\t\t<!-- .navbar -->
+\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t</ul>
+\t\t\t\t</nav>
+\t\t\t\t<!-- .navbar -->
 
-\t\t</div>
-\t</header>
-\t<!-- End Header -->
-\t<!-- End Header -->
-
-\t<main id=\"main\">
-
-\t\t{% block body %}
-\t\t\tTemplate Body
-\t\t{% endblock %}
-\t\t<!-- End Hero Section -->
-\t\t{% if error %}
-\t\t\t\t<div class=\"modal fade\" id=\"modalerror\" tabindex=\"-1\" role=\"dialog\">
-\t\t\t\t\t<div class=\"modal-dialog\" role=\"document\">
-\t\t\t\t\t\t\t<div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div> 
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t{% endif %}
-\t\t<div class=\"modal fade\" id=\"modalLoginForm\" tabindex=\"-1\" role=\"dialog\">
-\t\t\t<div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
-\t\t\t\t<div class=\"modal-content\">
-\t\t\t\t\t<div class=\"modal-header text-center\">
-\t\t\t\t\t\t<h4 class=\"modal-title w-100 font-weight-bold\">Sign in</h4>
-\t\t\t\t\t\t<button type=\"button\" class=\"btn-close\" data-dismiss=\"modal\" aria-label=\"Close\">
-\t\t\t\t\t\t</button>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"modal-body mx-3\">
-\t\t\t\t\t\t<form method=\"post\">
-\t\t\t\t\t\t\t<label for=\"inputEmail\">Email</label>
-\t\t\t\t\t\t\t<input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control my-1\" autocomplete=\"email\" style=\"padding-top: 12px; padding-bottom: 12px;\" required autofocus>
-\t\t\t\t\t\t\t<label for=\"inputPassword\">Password</label>
-\t\t\t\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control my-1\" autocomplete=\"current-password\" style=\"padding-top: 12px; padding-bottom: 12px;\" required>
-
-\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
-
-\t\t\t\t\t\t\t<div class=\"form-check my-2\">
-\t\t\t\t\t\t\t\t<input class=\"form-check-input\" type=\"checkbox\" name=\"_remember_me\" id=\"flexCheckDefault\">
-\t\t\t\t\t\t\t\t<label class=\"form-check-label\" for=\"flexCheckDefault\">
-\t\t\t\t\t\t\t\t\tRemember me
-\t\t\t\t\t\t\t\t</label>
-\t\t\t\t\t\t\t\t<a style=\"margin-left: 163px\" href=\"{{ path('app_forgot_password_request') }}\">Forgot password?</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"modal-footer d-flex justify-content-center\">
-\t\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-primary\" type=\"submit\">
-\t\t\t\t\t\t\t\t\tSign in
-\t\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</form>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
 \t\t\t</div>
+\t\t</header>
+\t\t<!-- End Header -->
+\t\t<!-- End Header -->
+
+\t\t<main id=\"main\">
+
+\t\t\t{% block body %}
+\t\t\t\tTemplate Body
+\t\t\t{% endblock %}
+\t\t\t<!-- End Hero Section -->
 \t\t</main>
 \t\t<!-- End #main -->
 
 \t\t<!-- ======= Footer ======= -->
 \t\t<footer id=\"footer\" class=\"footer\">
 
-\t\t\t<div class=\"container\">
+\t\t\t<div class=\"container mt-100\">
 \t\t\t\t<div class=\"row gy-4\">
 \t\t\t\t\t<div class=\"col-lg-5 col-md-12 footer-info\">
-\t\t\t\t\t\t<a href=\"index.html\" class=\"logo d-flex align-items-center\">
+\t\t\t\t\t\t<a href={{ path('app_reservation_new_step1') }} class=\"logo d-flex align-items-center\">
 \t\t\t\t\t\t\t<span>iPark</span>
 \t\t\t\t\t\t</a>
 \t\t\t\t\t\t<p>We offer hassle-free and secure parking solutions that are designed to meet your needs. With our easy-to-use website, you can quickly find and reserve the perfect parking spot for your vehicle. Our 24/7 surveillance and monitoring system provides peace of mind, knowing that your vehicle is safe and secure.</p>
@@ -661,13 +661,8 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t<script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
 \t\t<script src={{ asset('assets/js/main.js') }}></script>
 \t\t<script src={{ asset('assets/js/sss.js') }}></script>
-\t\t<script>
-\t\t\t\$(document).ready(function(){
-\t\t\t\$(\"#modalerror\").modal('show');
-\t\t\t});
-\t\t</script>
 \t</body>
-</body></html>
+</html></body></html>
 ", "template2.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\template2.html.twig");
     }
 }

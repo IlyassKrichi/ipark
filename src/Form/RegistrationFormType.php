@@ -38,7 +38,9 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('nom')
             ->add('prenom')
-            ->add('genre', ChoiceType::class, ['expanded' => true, 'multiple' => false, 'choices' => ['M' => 'Masculin', 'F' => 'Feminin']])
+            ->add('genre', ChoiceType::class, ['expanded' => true, 'multiple' => false, 'choices' => ['M' => 'Masculin', 'F' => 'Feminin'], 'label_attr' => [
+                'class' => 'radio-inline'
+            ]])
             ->add('gsm')
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -47,8 +49,7 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

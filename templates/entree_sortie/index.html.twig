@@ -1,0 +1,39 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Check in - out index{% endblock %}
+{% block PageTitle %}
+    <h1>Check in - out index</h1>
+{% endblock %}
+{% block body %}
+    
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date_entree</th>
+                <th>Date_sortie</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entree_sortie in entree_sorties %}
+            <tr>
+                <td>{{ entree_sortie.id }}</td>
+                <td>{{ entree_sortie.dateEntree ? entree_sortie.dateEntree|date('Y-m-d') : '' }}</td>
+                <td>{{ entree_sortie.dateSortie ? entree_sortie.dateSortie|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_entree_sortie_show', {'id': entree_sortie.id}) }}">show</a>
+                    <a href="{{ path('app_entree_sortie_edit', {'id': entree_sortie.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_entree_sortie_new') }}">Create new</a>
+{% endblock %}

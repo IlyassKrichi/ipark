@@ -1,0 +1,52 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+{% block PageTitle %}
+{% endblock %}
+{% block body %}
+<div class="row">
+  <div class="col-md-4 mb-4">
+    <a href={{ path('app_client_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Clients</h5>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4 mb-4">
+    <a href={{ path('app_reservation_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Reservations</h5>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4 mb-4">
+    <a href={{ path('app_parking_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Parkings</h5>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href={{ path('app_paiement_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Payments</h5>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href={{ path('app_place_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Places</h5>
+      </div>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <a href={{ path('app_entree_sortie_index') }} class="card shadow rounded text-center" style="text-decoration: none;">
+      <div class="card-body my-5">
+        <h5 class="card-title" style="font-size: 40px;">Check in - out</h5>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Edit Check in - out{% endblock %}
+{% block PageTitle %}
+    <h1>Edit Check in - out</h1>
+{% endblock %}
+{% block body %}
+    
+
+    {{ include('entree_sortie/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('entree_sortie/_delete_form.html.twig') }}
+    <a href="{{ path('app_entree_sortie_index') }}">back to list</a>
+
+    
+{% endblock %}

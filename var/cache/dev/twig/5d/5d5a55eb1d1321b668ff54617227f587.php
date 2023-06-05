@@ -26,6 +26,7 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'PageTitle' => [$this, 'block_PageTitle'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -33,7 +34,7 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "template2.html.twig";
+        return "template.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +46,7 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/edit1.html.twig"));
 
-        $this->parent = $this->loadTemplate("template2.html.twig", "reservation/edit1.html.twig", 1);
+        $this->parent = $this->loadTemplate("template.html.twig", "reservation/edit1.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -74,7 +75,28 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
 
     }
 
-    // line 5
+    // line 4
+    public function block_PageTitle($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "PageTitle"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "PageTitle"));
+
+        // line 5
+        echo "    <h1>Edit Reservation</h1>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,22 +106,22 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Edit Reservation</h1>
+        // line 8
+        echo "    
 
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "reservation/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     ";
-        // line 10
+        // line 12
         echo twig_include($this->env, $context, "reservation/_delete_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_admin");
         echo "\">back to list</a>
 ";
         
@@ -122,23 +144,25 @@ class __TwigTemplate_2dc8432f7a5034aea721ee2476a311cf extends Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 12,  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  124 => 14,  119 => 12,  114 => 10,  110 => 8,  100 => 7,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'template2.html.twig' %}
+        return new Source("{% extends 'template.html.twig' %}
 
 {% block title %}Edit Reservation{% endblock %}
-
-{% block body %}
+{% block PageTitle %}
     <h1>Edit Reservation</h1>
+{% endblock %}
+{% block body %}
+    
 
     {{ include('reservation/_form.html.twig', {'button_label': 'Update'}) }}
 
     {{ include('reservation/_delete_form.html.twig') }}
 
-    <a href=\"{{ path('app_reservation_index') }}\">back to list</a>
+    <a href=\"{{ path('app_admin') }}\">back to list</a>
 {% endblock %}
 ", "reservation/edit1.html.twig", "D:\\Personal files\\Documents\\ENSIAS IDSIT\\Frameworks Web\\Workspace\\ipark\\templates\\reservation\\edit1.html.twig");
     }

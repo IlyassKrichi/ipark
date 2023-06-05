@@ -13,6 +13,7 @@ use App\Form\PaiementType;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use App\Form\ReservationStep1Type;
 use App\Form\ReservationStep2Type;
+use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
 use App\Service\PdfService;
 use Doctrine\ORM\EntityManagerInterface;
@@ -23,7 +24,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 #[Route('/')]
 class ReservationController extends AbstractController
@@ -46,7 +46,7 @@ class ReservationController extends AbstractController
                 $endCoordinates = $endResult->getCoordinates();
                 if ($startCoordinates && $endCoordinates) {
                     $distance = $this->calculateDistance($startCoordinates, $endCoordinates);
-                    $distances[$parking->getNom()] = $distance;
+                    $distances[$parking->getNom()] = round($distance, 2);
                 }
             }
         }
@@ -71,13 +71,11 @@ class ReservationController extends AbstractController
     }
 
     #[Route('/dashboard', name: 'app_reservation_new_step1', methods: ['GET', 'POST'])]
-    public function step1new(Request $request, AuthenticationUtils $authenticationUtils): Response
+    public function step1new(Request $request): Response
     {
         $reservation = new Reservation();
         $form = $this->createForm(ReservationStep1Type::class, $reservation);
         $form->handleRequest($request);
-        $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $request->getSession()->set('adresse', $form->get('adresse')->getData());
@@ -87,14 +85,12 @@ class ReservationController extends AbstractController
         }
 
         return $this->render('reservation/step1.html.twig', [
-            'form' => $form,
-            'last_username' => $lastUsername,
-            'error' => $error
+            'form' => $form
         ]);
     }
 
     #[Route('/parkings', name: 'app_reservation_new_step2', methods: ['GET', 'POST'])]
-    public function step2new(Request $request, EntityManagerInterface $em, AuthenticationUtils $authenticationUtils): Response
+    public function step2new(Request $request, EntityManagerInterface $em): Response
     {
         $adresse = $request->getSession()->get('adresse');
         $date_reservation = $request->getSession()->get('date_reservation');
@@ -105,8 +101,6 @@ class ReservationController extends AbstractController
         $form->handleRequest($request);
         $parkings = $em->getRepository(Parking::class)->findAll();
         $places = $em->getRepository(Place::class)->findAll();
-        $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $request->getSession()->remove('adresse');
@@ -116,18 +110,27 @@ class ReservationController extends AbstractController
             return $this->redirectToRoute('app_reservation_new_step3', [], Response::HTTP_SEE_OTHER);
         }
 
+        $flag = false;
+
+        foreach ($distances as $distance) {
+            if ($distance <= 3) {
+                $flag = true;
+                break;
+            }
+        }
+
         return $this->render('reservation/step2.html.twig', [
             'reservation' => $reservation,
             'form' => $form,
             'parkings' => $parkings,
             'places' => $places,
-            'last_username' => $lastUsername,
-            'error' => $error
+            'distances' => $distances,
+            'flag' => $flag
         ]);
     }
 
     #[Route('/paiement', name: 'app_reservation_new_step3', methods: ['GET', 'POST'])]
-    public function step3new(Request $request, EntityManagerInterface $em, AuthenticationUtils $authenticationUtils): Response
+    public function step3new(Request $request, EntityManagerInterface $em): Response
     {
         $date_reservation = $request->getSession()->get('date_reservation');
         $type_vehicule = $request->getSession()->get('type_vehicule');
@@ -136,8 +139,6 @@ class ReservationController extends AbstractController
         $paiement = new Paiement();
         $form = $this->createForm(PaiementType::class, $paiement);
         $form->handleRequest($request);
-        $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getLastUsername();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $reservation->setDateReservation($date_reservation);
@@ -158,60 +159,90 @@ class ReservationController extends AbstractController
 
         return $this->render('reservation/step3.html.twig', [
             'reservation' => $reservation,
+            'form' => $form
+        ]);
+    }
+
+    #[Route('/index', name: 'app_admin')]
+    public function admin(EntityManagerInterface $em): Response
+    {
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
+        }
+        return $this->render('reservation/admin.html.twig');
+    }
+
+    #[Route('/reservation', name: 'app_reservation_index', methods: ['GET'])]
+    public function index(EntityManagerInterface $em): Response
+    {
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
+        }
+        $reservations = $em->getRepository(Reservation::class)->findAll();
+        return $this->render('reservation/index.html.twig', [
+            'reservations' => $reservations,
+        ]);
+    }
+
+    #[Route('/new', name: 'app_reservation_new', methods: ['GET', 'POST'])]
+    public function new(Request $request, ReservationRepository $reservationRepository): Response
+    {
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
+        }
+        $reservation = new Reservation();
+        $form = $this->createForm(ReservationType::class, $reservation);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $reservationRepository->save($reservation, true);
+
+            return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->render('reservation/new.html.twig', [
+            'reservation' => $reservation,
             'form' => $form,
-            'last_username' => $lastUsername,
-            'error' => $error
         ]);
     }
 
     #[Route('/show/{id}', name: 'app_reservation_show', methods: ['GET'])]
     public function show(Reservation $reservation): Response
     {
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
+        }
         return $this->render('reservation/show.html.twig', [
             'reservation' => $reservation,
         ]);
     }
 
-    #[Route('/step1edit/{id}', name: 'app_reservation_edit_step1', methods: ['GET', 'POST'])]
-    public function step1edit(Request $request, Reservation $reservation): Response
+    #[Route('/edit/{id}', name: 'app_reservation_edit', methods: ['GET', 'POST'])]
+    public function edit(Request $request, Reservation $reservation, ReservationRepository $reservationRepository): Response
     {
-        $form = $this->createForm(ReservationStep1Type::class, $reservation);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $request->getSession()->set('adresse', $form->get('adresse')->getData());
-            $request->getSession()->set('date_reservation', $form->get('date_reservation')->getData());
-            $request->getSession()->set('type_vehicule', $form->get('type_vehicule')->getData());
-            return $this->redirectToRoute('app_reservation_edit_step2', ['id' => $reservation->getId()], Response::HTTP_SEE_OTHER);
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
         }
-
-        return $this->render('reservation/edit1.html.twig', [
-            'reservation' => $reservation,
-            'form' => $form,
-        ]);
-    }
-
-    #[Route('/step2edit/{id}', name: 'app_reservation_edit_step2', methods: ['GET', 'POST'])]
-    public function step2edit(Request $request, Reservation $reservation, EntityManagerInterface $em): Response
-    {
-        $adresse = $request->getSession()->get('adresse');
-        $date_reservation = $request->getSession()->get('date_reservation');
-        $type_vehicule = $request->getSession()->get('type_vehicule');
-        $form = $this->createForm(ReservationStep2Type::class, $reservation, ['adresse' => $adresse]);
+        $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $request->getSession()->remove('adresse');
-            $reservation->setDateReservation($date_reservation);
-            $reservation->setTypeVehicule($type_vehicule);
-            $reservation->setClient($this->getUser());
-            $em->persist($reservation);
-            $em->flush();
+            $reservationRepository->save($reservation, true);
 
             return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('reservation/edit2.html.twig', [
+        return $this->render('reservation/edit.html.twig', [
             'reservation' => $reservation,
             'form' => $form,
         ]);
@@ -220,11 +251,16 @@ class ReservationController extends AbstractController
     #[Route('/delete/{id}', name: 'app_reservation_delete', methods: ['POST'])]
     public function delete(Request $request, Reservation $reservation, ReservationRepository $reservationRepository): Response
     {
+        if (
+            !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
+        ) {
+            return $this->redirectToRoute('app_login');
+        }
         if ($this->isCsrfTokenValid('delete' . $reservation->getId(), $request->request->get('_token'))) {
             $reservationRepository->remove($reservation, true);
         }
 
-        return $this->redirectToRoute('app_reservation_new_step1', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
     }
     #[Route('/pdf/{id}', name: 'reservation.pdf')]
     public function generatePdfReservation(Reservation $reservation = null, PdfService $pdf)

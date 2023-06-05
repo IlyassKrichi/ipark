@@ -140,4 +140,9 @@ class Reservation
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return "Reservation";
+    }
 }

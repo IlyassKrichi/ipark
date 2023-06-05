@@ -1,0 +1,40 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Parking{% endblock %}
+{% block PageTitle %}
+    <h1>Parking</h1>
+{% endblock %}
+{% block body %}
+    
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ parking.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ parking.nom }}</td>
+            </tr>
+            <tr>
+                <th>Capacite</th>
+                <td>{{ parking.capacite }}</td>
+            </tr>
+            <tr>
+                <th>Emplacement_geo</th>
+                <td>{{ parking.emplacementGeo }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ parking.adresse }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_parking_index') }}">back to list</a>
+
+    <a href="{{ path('app_parking_edit', {'id': parking.id}) }}">edit</a>
+
+    {{ include('parking/_delete_form.html.twig') }}
+{% endblock %}

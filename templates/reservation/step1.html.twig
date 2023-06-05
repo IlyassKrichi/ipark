@@ -1,29 +1,63 @@
 {% extends 'template2.html.twig' %}
 
-{% block title %}Step1
+{% block title %}iPark - Parking Services
 {% endblock %}
 
 {% block body %}
 
-	<section id="hero" class="hero d-flex align-items-center">
-		<div class="container">
-			<div class="row gy-4 d-flex justify-content-center">
-				<div class="col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center">
-					<h2 data-aos="fade-up" style="text-align:center">Your Swift Parking Partner</h2>
-					<p data-aos="fade-up" data-aos-delay="100" style="text-align:center">Welcome to iPark. where finding a spot is a breeze! We're here to make your parking experience lightning fast and hassle-free.</p>
+	<section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh;">
+		{% if app.user %}
+			{% set roles = app.user.getRoles() %}
+			{% if app.user.isVerified or 'ROLE_ADMIN' in roles %}
+				<div class="container">
+					<div class="row gy-4 d-flex justify-content-center">
+						<div class="col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center" style="margin-left: 50px;">
+							<h2 data-aos="fade-up" style="margin-right:auto">Welcome to iPark,
+								{{ app.user.prenom }}
+								{{ app.user.nom }}!</h2>
+							<p data-aos="fade-up" data-aos-delay="100" style="font-size: 20px">We are happy you chose our service! Go ahead and make a reservation.</p>
+							<h1 data-aos="fade-up" data-aos-delay="100">&#128513;</h1>
+						</div>
+						<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
+							<img src="{{ asset('assets/img/parking-car.png') }}" class="img-fluid mb-3 mb-lg-0" alt="">
+						</div>
+						<div class="col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center">
+							{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
+							{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
+							{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
+							{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Address', 'autocomplete': 'on'}}) }}
+							{{ include('reservation/_form.html.twig') }}
+							{{ form_end(form) }}
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
-					<img src="{{ asset('assets/img/hero-img.svg') }}" class="img-fluid mb-3 mb-lg-0" alt="">
+			{% else %}
+				<div class="container">
+					<div class="row gy-4 d-flex justify-content-center">
+						<div class="col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center" style="margin-left: 50px;">
+							<h2 data-aos="fade-up" style="margin-right:auto">Your Swift Parking Partner</h2>
+							<p data-aos="fade-up" data-aos-delay="100" style="font-size: 20px">Welcome to iPark. where finding a spot is a breeze! We're here to make your parking experience lightning fast and hassle-free.</p>
+							<span data-aos="fade-up" data-aos-delay="200" style="font-size: 20px; font-weight: bold; margin-top: 20px">Please verify your email to continue. (check spam if not in inbox)</span>
+						</div>
+						<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
+							<img src="{{ asset('assets/img/parking-car.png') }}" class="img-fluid mb-3 mb-lg-0" alt="">
+						</div>
+					</div>
 				</div>
-				<div class="col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center">
-					{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
-					{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
-					{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
-					{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Address', 'autocomplete': 'on'}}) }}
-					{{ include('reservation/_form.html.twig') }}
-					{{ form_end(form) }}
+			{% endif %}
+		{% else %}
+			<div class="container">
+				<div class="row gy-4 d-flex justify-content-center">
+					<div class="col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center" style="margin-left: 50px;">
+						<h2 data-aos="fade-up" style="margin-right:auto">Your Swift Parking Partner</h2>
+						<p data-aos="fade-up" data-aos-delay="100" style="font-size: 20px">Welcome to iPark. where finding a spot is a breeze! We're here to make your parking experience lightning fast and hassle-free.</p>
+						<span data-aos="fade-up" data-aos-delay="200" style="font-size: 30px; font-weight: bold; margin-top: 20px">Sign in or Register to make a reservation.</span>
+					</div>
+					<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
+						<img src="{{ asset('assets/img/parking-car.png') }}" class="img-fluid mb-3 mb-lg-0" alt="">
+					</div>
 				</div>
 			</div>
-		</div>
+		{% endif %}
 	</section>
 {% endblock %}

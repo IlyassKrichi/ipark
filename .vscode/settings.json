@@ -1,0 +1,5 @@
+{
+  "[twig]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

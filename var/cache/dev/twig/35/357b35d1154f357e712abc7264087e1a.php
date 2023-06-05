@@ -86,13 +86,13 @@ class __TwigTemplate_d3bd6cd3843ce734bec431fd5ee34bf9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
+        echo "\t<section id=\"hero\" class=\"hero d-flex align-items-center\" style=\"min-height: 100vh;\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-8 mx-auto\">
 \t\t\t\t\t<div class=\"card rounded-3 border-1\">
+\t\t\t\t\t<div class=\"card-header bg-transparent\" style=\"color: black;\"><h1 class=\"card-title text-center color-black\">Register</h1></div>
 \t\t\t\t\t\t<div class=\"card-body\" style=\"color: black;\">
-\t\t\t\t\t\t\t<h1 class=\"card-title text-center color-black\">Register</h1>
 \t\t\t\t\t\t\t";
         // line 14
         $context['_parent'] = $context;
@@ -194,13 +194,13 @@ class __TwigTemplate_d3bd6cd3843ce734bec431fd5ee34bf9 extends Template
 {% endblock %}
 
 {% block body %}
-\t<section id=\"hero\" class=\"hero d-flex align-items-center\">
+\t<section id=\"hero\" class=\"hero d-flex align-items-center\" style=\"min-height: 100vh;\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-md-8 mx-auto\">
 \t\t\t\t\t<div class=\"card rounded-3 border-1\">
+\t\t\t\t\t<div class=\"card-header bg-transparent\" style=\"color: black;\"><h1 class=\"card-title text-center color-black\">Register</h1></div>
 \t\t\t\t\t\t<div class=\"card-body\" style=\"color: black;\">
-\t\t\t\t\t\t\t<h1 class=\"card-title text-center color-black\">Register</h1>
 \t\t\t\t\t\t\t{% for flash_error in app.flashes('verify_email_error') %}
 \t\t\t\t\t\t\t\t<div class=\"alert alert-danger\" role=\"alert\">{{ flash_error }}</div>
 \t\t\t\t\t\t\t{% endfor %}

@@ -1,0 +1,31 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}Check in - out{% endblock %}
+{% block PageTitle %}
+    <h1>Check in - out</h1>
+{% endblock %}
+{% block body %}
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entree_sortie.id }}</td>
+            </tr>
+            <tr>
+                <th>Date_entree</th>
+                <td>{{ entree_sortie.dateEntree ? entree_sortie.dateEntree|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Date_sortie</th>
+                <td>{{ entree_sortie.dateSortie ? entree_sortie.dateSortie|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_entree_sortie_index') }}">back to list</a>
+
+    <a href="{{ path('app_entree_sortie_edit', {'id': entree_sortie.id}) }}">edit</a>
+
+    {{ include('entree_sortie/_delete_form.html.twig') }}
+{% endblock %}
