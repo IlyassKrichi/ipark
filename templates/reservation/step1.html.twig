@@ -21,9 +21,11 @@
 						<div class="col-lg-3 order-1 order-lg-1 hero-img" data-aos="zoom-out">
 							<img src="{{ asset('assets/img/parking-car.png') }}" class="img-fluid mb-3 mb-lg-0" alt="">
 						</div>
-						<div class="col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center">
+						<div class="col-lg-11 order-1 order-lg-1 d-flex flex-column justify-content-center">
 							{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
-							{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
+							<input class="form-control" type="datetime-local" id="check-in" name="check-in">
+							<strong style="align-self: center; color: black">TO</strong>
+							<input class="form-control" type="datetime-local" id="check-out" name="check-out">
 							{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
 							{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Address', 'autocomplete': 'on'}}) }}
 							{{ include('reservation/_form.html.twig') }}

@@ -19,7 +19,7 @@ class EntreeSortieController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('entree_sortie/index.html.twig', [
             'entree_sorties' => $entreeSortieRepository->findAll(),
@@ -32,7 +32,7 @@ class EntreeSortieController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $entreeSortie = new EntreeSortie();
         $form = $this->createForm(EntreeSortieType::class, $entreeSortie);
@@ -56,7 +56,7 @@ class EntreeSortieController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('entree_sortie/show.html.twig', [
             'entree_sortie' => $entreeSortie,
@@ -69,7 +69,7 @@ class EntreeSortieController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $form = $this->createForm(EntreeSortieType::class, $entreeSortie);
         $form->handleRequest($request);
@@ -92,7 +92,7 @@ class EntreeSortieController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         if ($this->isCsrfTokenValid('delete' . $entreeSortie->getId(), $request->request->get('_token'))) {
             $entreeSortieRepository->remove($entreeSortie, true);

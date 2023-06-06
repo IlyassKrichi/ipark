@@ -15,11 +15,9 @@ class ReservationStep1Type extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('date_reservation', DateType::class, [
-                'widget' => 'single_text'
-            ])
             ->add('adresse', TextType::class)
             ->add('type_vehicule', ChoiceType::class, ['choices' => [
+                '--- Choose Vehicle ---' => '',
                 'Car' => 'Car',
                 'Motorcyle' => 'Motorcyle', 'Bike' => 'Bike',
                 'Truck' => 'Truck'

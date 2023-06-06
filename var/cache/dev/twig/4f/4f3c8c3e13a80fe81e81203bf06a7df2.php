@@ -183,7 +183,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
             } else {
                 // line 86
                 echo "\t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t<a href=\"#\" style=\"pointer-events: none; cursor: default;\">
 \t\t\t\t\t\t\t\t\t<span>";
                 // line 88
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 88, $this->source); })()), "user", [], "any", false, false, false, 88), "prenom", [], "any", false, false, false, 88), "html", null, true);
@@ -526,7 +526,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<li class=\"dropdown\">
-\t\t\t\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t\t\t<a href=\"#\" style=\"pointer-events: none; cursor: default;\">
 \t\t\t\t\t\t\t\t\t<span>{{ app.user.prenom }}
 \t\t\t\t\t\t\t\t\t\t{{ app.user.nom }}</span>
 \t\t\t\t\t\t\t\t\t<i class=\"bi bi-chevron-down dropdown-indicator\"></i>

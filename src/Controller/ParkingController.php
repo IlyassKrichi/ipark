@@ -19,7 +19,7 @@ class ParkingController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('parking/index.html.twig', [
             'parkings' => $parkingRepository->findAll(),
@@ -32,7 +32,7 @@ class ParkingController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $parking = new Parking();
         $form = $this->createForm(ParkingType::class, $parking);
@@ -56,7 +56,7 @@ class ParkingController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('parking/show.html.twig', [
             'parking' => $parking,
@@ -69,7 +69,7 @@ class ParkingController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $form = $this->createForm(ParkingType::class, $parking);
         $form->handleRequest($request);
@@ -92,7 +92,7 @@ class ParkingController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         if ($this->isCsrfTokenValid('delete' . $parking->getId(), $request->request->get('_token'))) {
             $parkingRepository->remove($parking, true);

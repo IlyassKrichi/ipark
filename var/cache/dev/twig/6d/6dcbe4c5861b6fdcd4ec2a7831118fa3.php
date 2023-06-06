@@ -119,37 +119,36 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/parking-car.png"), "html", null, true);
                 echo "\" class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center\">
+\t\t\t\t\t\t<div class=\"col-lg-11 order-1 order-lg-1 d-flex flex-column justify-content-center\">
 \t\t\t\t\t\t\t";
                 // line 25
                 echo                 $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), 'form_start', ["attr" => ["class" => "form-search d-flex align-items-stretch mb-3 mt-3", "data-aos" => "fade-up", "data-aos-delay" => "200"]]);
                 echo "
-\t\t\t\t\t\t\t";
-                // line 26
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), "date_reservation", [], "any", false, false, false, 26), 'widget', ["attr" => ["class" => "form-control", "id" => "date_reservation"]]);
-                echo "
-\t\t\t\t\t\t\t";
-                // line 27
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), "type_vehicule", [], "any", false, false, false, 27), 'widget', ["attr" => ["class" => "form-select", "id" => "type_vehicule", "required" => "required"]]);
-                echo "
-\t\t\t\t\t\t\t";
-                // line 28
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "adresse", [], "any", false, false, false, 28), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Address", "autocomplete" => "on"]]);
-                echo "
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"datetime-local\" id=\"check-in\" name=\"check-in\">
+\t\t\t\t\t\t\t<strong style=\"align-self: center; color: black\">TO</strong>
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"datetime-local\" id=\"check-out\" name=\"check-out\">
 \t\t\t\t\t\t\t";
                 // line 29
-                echo twig_include($this->env, $context, "reservation/_form.html.twig");
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "type_vehicule", [], "any", false, false, false, 29), 'widget', ["attr" => ["class" => "form-select", "id" => "type_vehicule", "required" => "required"]]);
                 echo "
 \t\t\t\t\t\t\t";
                 // line 30
-                echo                 $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'form_end');
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), "adresse", [], "any", false, false, false, 30), 'widget', ["attr" => ["class" => "form-control", "id" => "adresse", "placeholder" => "Address", "autocomplete" => "on"]]);
+                echo "
+\t\t\t\t\t\t\t";
+                // line 31
+                echo twig_include($this->env, $context, "reservation/_form.html.twig");
+                echo "
+\t\t\t\t\t\t\t";
+                // line 32
+                echo                 $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form_end');
                 echo "
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
             } else {
-                // line 35
+                // line 37
                 echo "\t\t\t\t<div class=\"container\">
 \t\t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
 \t\t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\" style=\"margin-left: 50px;\">
@@ -159,7 +158,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t\t\t<img src=\"";
-                // line 43
+                // line 45
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/parking-car.png"), "html", null, true);
                 echo "\" class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
 \t\t\t\t\t\t</div>
@@ -167,10 +166,10 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t</div>
 \t\t\t";
             }
-            // line 48
+            // line 50
             echo "\t\t";
         } else {
-            // line 49
+            // line 51
             echo "\t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row gy-4 d-flex justify-content-center\">
 \t\t\t\t\t<div class=\"col-lg-7 col-md-8 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center\" style=\"margin-left: 50px;\">
@@ -180,7 +179,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t\t<img src=\"";
-            // line 57
+            // line 59
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/parking-car.png"), "html", null, true);
             echo "\" class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
 \t\t\t\t\t</div>
@@ -188,7 +187,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t</div>
 \t\t";
         }
-        // line 62
+        // line 64
         echo "\t</section>
 ";
         
@@ -211,7 +210,7 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 
     public function getDebugInfo()
     {
-        return array (  192 => 62,  184 => 57,  174 => 49,  171 => 48,  163 => 43,  153 => 35,  145 => 30,  141 => 29,  137 => 28,  133 => 27,  129 => 26,  125 => 25,  119 => 22,  111 => 17,  107 => 16,  101 => 12,  98 => 11,  95 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  191 => 64,  183 => 59,  173 => 51,  170 => 50,  162 => 45,  152 => 37,  144 => 32,  140 => 31,  136 => 30,  132 => 29,  125 => 25,  119 => 22,  111 => 17,  107 => 16,  101 => 12,  98 => 11,  95 => 10,  93 => 9,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -239,9 +238,11 @@ class __TwigTemplate_78eee2bfb5700435aacb246856fc9060 extends Template
 \t\t\t\t\t\t<div class=\"col-lg-3 order-1 order-lg-1 hero-img\" data-aos=\"zoom-out\">
 \t\t\t\t\t\t\t<img src=\"{{ asset('assets/img/parking-car.png') }}\" class=\"img-fluid mb-3 mb-lg-0\" alt=\"\">
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"col-lg-10 order-1 order-lg-1 d-flex flex-column justify-content-center\">
+\t\t\t\t\t\t<div class=\"col-lg-11 order-1 order-lg-1 d-flex flex-column justify-content-center\">
 \t\t\t\t\t\t\t{{ form_start(form, {'attr': {'class': 'form-search d-flex align-items-stretch mb-3 mt-3', 'data-aos': 'fade-up', 'data-aos-delay': '200'}}) }}
-\t\t\t\t\t\t\t{{ form_widget(form.date_reservation, {'attr': {'class': 'form-control', 'id': 'date_reservation'}}) }}
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"datetime-local\" id=\"check-in\" name=\"check-in\">
+\t\t\t\t\t\t\t<strong style=\"align-self: center; color: black\">TO</strong>
+\t\t\t\t\t\t\t<input class=\"form-control\" type=\"datetime-local\" id=\"check-out\" name=\"check-out\">
 \t\t\t\t\t\t\t{{ form_widget(form.type_vehicule, {'attr': {'class': 'form-select', 'id': 'type_vehicule', 'required': 'required'}}) }}
 \t\t\t\t\t\t\t{{ form_widget(form.adresse, {'attr': {'class': 'form-control', 'id': 'adresse', 'placeholder': 'Address', 'autocomplete': 'on'}}) }}
 \t\t\t\t\t\t\t{{ include('reservation/_form.html.twig') }}

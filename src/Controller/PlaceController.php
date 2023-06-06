@@ -19,7 +19,7 @@ class PlaceController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('place/index.html.twig', [
             'places' => $placeRepository->findAll(),
@@ -32,7 +32,7 @@ class PlaceController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $place = new Place();
         $form = $this->createForm(PlaceType::class, $place);
@@ -56,7 +56,7 @@ class PlaceController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('place/show.html.twig', [
             'place' => $place,
@@ -69,7 +69,7 @@ class PlaceController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $form = $this->createForm(PlaceType::class, $place);
         $form->handleRequest($request);
@@ -92,7 +92,7 @@ class PlaceController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         if ($this->isCsrfTokenValid('delete' . $place->getId(), $request->request->get('_token'))) {
             $placeRepository->remove($place, true);

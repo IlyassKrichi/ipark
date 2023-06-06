@@ -19,7 +19,7 @@ class ClientController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('client/index.html.twig', [
             'clients' => $clientRepository->findAll(),
@@ -32,7 +32,7 @@ class ClientController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $client = new Client();
         $form = $this->createForm(ClientType::class, $client);
@@ -56,7 +56,7 @@ class ClientController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('client/show.html.twig', [
             'client' => $client,
@@ -69,7 +69,7 @@ class ClientController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $form = $this->createForm(ClientType::class, $client);
         $form->handleRequest($request);
@@ -92,7 +92,7 @@ class ClientController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         if ($this->isCsrfTokenValid('delete' . $client->getId(), $request->request->get('_token'))) {
             $clientRepository->remove($client, true);

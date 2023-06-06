@@ -13,15 +13,16 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PaiementType extends AbstractType 
+class PaiementType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('montant_paye')
             ->add('date_paiement')
-            ->add('mode_paiement')
-        ;
+            ->add('mode_paiement', ChoiceType::class, ['choices' => [
+                'Visa' => 'Visa', 'Mastercard' => 'Mastercard'
+            ]]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

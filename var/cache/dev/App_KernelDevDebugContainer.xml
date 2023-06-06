@@ -20,6 +20,7 @@
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SymfonyCastsResetPasswordBundle">SymfonyCasts\Bundle\ResetPassword\SymfonyCastsResetPasswordBundle</parameter>
+      <parameter key="TwigExtraBundle">Twig\Extra\TwigExtraBundle\TwigExtraBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -65,6 +66,10 @@
       <parameter key="SymfonyCastsResetPasswordBundle" type="collection">
         <parameter key="path">D:\Personal files\Documents\ENSIAS IDSIT\Frameworks Web\Workspace\ipark\vendor\symfonycasts\reset-password-bundle\src</parameter>
         <parameter key="namespace">SymfonyCasts\Bundle\ResetPassword</parameter>
+      </parameter>
+      <parameter key="TwigExtraBundle" type="collection">
+        <parameter key="path">D:\Personal files\Documents\ENSIAS IDSIT\Frameworks Web\Workspace\ipark\vendor\twig\extra-bundle</parameter>
+        <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -3843,6 +3848,24 @@
       <call method="addRuntimeLoader">
         <argument type="service" id="twig.runtime_loader"/>
       </call>
+      <call method="registerUndefinedFilterCallback">
+        <argument type="collection">
+          <argument type="service" id="twig.missing_extension_suggestor"/>
+          <argument>suggestFilter</argument>
+        </argument>
+      </call>
+      <call method="registerUndefinedFunctionCallback">
+        <argument type="collection">
+          <argument type="service" id="twig.missing_extension_suggestor"/>
+          <argument>suggestFunction</argument>
+        </argument>
+      </call>
+      <call method="registerUndefinedTokenParserCallback">
+        <argument type="collection">
+          <argument type="service" id="twig.missing_extension_suggestor"/>
+          <argument>suggestTag</argument>
+        </argument>
+      </call>
       <configurator service="twig.configurator.environment" method="configure"/>
     </service>
     <service id="twig.app_variable" class="Symfony\Bridge\Twig\AppVariable">
@@ -5057,6 +5080,7 @@
       <argument>3600</argument>
       <argument>3600</argument>
     </service>
+    <service id="twig.missing_extension_suggestor" class="Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ClientController" class="App\Controller\ClientController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5625,7 +5649,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.zatYHOh" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.Pl4zgr." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ClientController::delete" type="service_closure" id=".service_locator.T1NedXT"/>
@@ -5654,7 +5678,6 @@
         <argument key="App\Controller\PlaceController::new" type="service_closure" id=".service_locator.yzAlZAS"/>
         <argument key="App\Controller\PlaceController::show" type="service_closure" id=".service_locator.dSUTG.M"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.JIwYVTk"/>
-        <argument key="App\Controller\ReservationController::admin" type="service_closure" id=".service_locator.9kKwU2t"/>
         <argument key="App\Controller\ReservationController::delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController::generatePdfReservation" type="service_closure" id=".service_locator.Wpr_aEu"/>
@@ -5696,7 +5719,6 @@
         <argument key="App\Controller\PlaceController:new" type="service_closure" id=".service_locator.yzAlZAS"/>
         <argument key="App\Controller\PlaceController:show" type="service_closure" id=".service_locator.dSUTG.M"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.JIwYVTk"/>
-        <argument key="App\Controller\ReservationController:admin" type="service_closure" id=".service_locator.9kKwU2t"/>
         <argument key="App\Controller\ReservationController:delete" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:edit" type="service_closure" id=".service_locator.doLz9ae"/>
         <argument key="App\Controller\ReservationController:generatePdfReservation" type="service_closure" id=".service_locator.Wpr_aEu"/>
@@ -6133,12 +6155,12 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.zatYHOh"/>
+      <argument type="service" id=".service_locator.Pl4zgr."/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.zatYHOh"/>
+      <argument type="service" id=".service_locator.Pl4zgr."/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6954,14 +6976,14 @@
     <service id="SymfonyCasts\Bundle\ResetPassword\ResetPasswordHelperInterface" alias="symfonycasts.reset_password.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.zatYHOh"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Pl4zgr."/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.o.uf2zi" alias=".service_locator.7nzbL4K"/>
     <service id=".service_locator.wzAH9iO" alias=".service_locator.JIwYVTk"/>
     <service id=".service_locator.dVq5m80" alias=".service_locator.Wpr_aEu"/>
-    <service id=".service_locator.Gg99cxF" alias=".service_locator.zatYHOh"/>
+    <service id=".service_locator.VpduIBN" alias=".service_locator.Pl4zgr."/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.oT2SCHR" alias=".service_locator.rndH0kZ"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>

@@ -19,7 +19,7 @@ class PaiementController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('paiement/index.html.twig', [
             'paiements' => $paiementRepository->findAll(),
@@ -32,7 +32,7 @@ class PaiementController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $paiement = new Paiement();
         $form = $this->createForm(Paiement1Type::class, $paiement);
@@ -56,7 +56,7 @@ class PaiementController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         return $this->render('paiement/show.html.twig', [
             'paiement' => $paiement,
@@ -69,7 +69,7 @@ class PaiementController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         $form = $this->createForm(Paiement1Type::class, $paiement);
         $form->handleRequest($request);
@@ -92,7 +92,7 @@ class PaiementController extends AbstractController
         if (
             !$this->getUser() || !in_array('ROLE_ADMIN', $this->getUser()->getRoles())
         ) {
-            return $this->redirectToRoute('app_login');
+            return $this->render('error/404.html.twig');
         }
         if ($this->isCsrfTokenValid('delete' . $paiement->getId(), $request->request->get('_token'))) {
             $paiementRepository->remove($paiement, true);

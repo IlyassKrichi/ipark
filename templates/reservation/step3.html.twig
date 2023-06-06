@@ -1,11 +1,44 @@
-{% extends 'template.html.twig' %}
+{% extends 'template2.html.twig' %}
 
 {% block title %}Payment
 {% endblock %}
 
 {% block body %}
-	{{ form_start(form) }}
-	{{ form_widget(form) }}
-	<button class="btn btn-primary" type="submit">Save</button>
-	{{ form_end(form) }}
+<section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="card rounded-3 border-1">
+					<div class="card-header bg-transparent" style="color: black;"><h1 class="card-title text-center color-black">Payment</h1></div>
+						<div class="card-body" style="color: black;">
+						{{ form_start(form) }}
+						{{ form_row(form.mode_paiement, { label: 'Payment Card' }) }}
+							<label for="lastname" class="form-label">Last Name</label>
+							<input type="text" id="lastname" class="form-control">
+							<label for="firstname" class="form-label mt-3">First Name</label>
+							<input type="text" id="firstname" class="form-control">
+								<input type="hidden" id="montant_paye" value="{{ price }}" name="{{ field_name(form.montant_paye) }}">
+								<input type="hidden" id="date_paiement" value="{{ 'now'|date('Y-m-d') }}" name="{{ field_name(form.date_paiement) }}">
+								<label for="creditcard" class="form-label mt-3">Credit Card Number</label>
+								<input type="tel" id="creditcard" name="creditcard" inputmode="numeric" class="form-control" maxlength="16" pattern="[0-9]{16}" autocomplete="cc-number" required>
+								<label for="cvc" class="form-label mt-3">CVC Code</label>
+								<input type="tel" id="cvc" name="cvc" inputmode="numeric" class="form-control" maxlength="4" pattern="[0-9]{3,4}" autocomplete="cc-csc" required>
+								<label for="expiration" class="form-label mt-3">Expiration Date</label>
+								<input type="text" id="expiration" name="expiration" class="form-control" placeholder="MM / YY" pattern="(0[1-9]|1[0-2]) \/ ([0-9]{2})" autocomplete="cc-exp" required>
+
+								<div class="card-footer d-flex justify-content-center bg-transparent mt-3">
+								<button class="btn btn-lg btn-primary" type="submit">
+									Submit
+								</button>
+								
+
+								</div>
+						{{ form_end(form) }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
 {% endblock %}
