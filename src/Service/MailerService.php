@@ -11,14 +11,12 @@ class MailerService
 {
     public function __construct(private MailerInterface $mailer)
     {
-        
     }
     public function sendEmail(
-        $to = 'mc.mono20@gmail.com',
-        $content = '<p>See Twig integration for better HTML integration!</p>',
-        $subject = 'Time for Symfony Mailer!'
-        ): void
-    {
+        $to,
+        $content,
+        $subject
+    ): void {
         $email = (new Email())
             ->from('contact.ipark.info@gmail.com')
             ->to($to)

@@ -293,7 +293,6 @@ class ReservationController extends AbstractController
         $client = $reservation->getClient();
         $clientName = $client->getNom();
         $clientEmail = $client->getEmail();
-        $clientId = $client->getId();
         $clientPrenom = $client->getPrenom();
         $clientGsm = $client->getGsm();
         $checkin1 = $reservation->getEntreeSortie()->getDateEntree();
@@ -308,7 +307,6 @@ class ReservationController extends AbstractController
             'clientNom' => $clientName,
             'clientEmail' => $clientEmail,
             'clientPrenom' => $clientPrenom,
-            'clientId' => $clientId,
             'clientGsm' => $clientGsm,
             'checkin' => $checkin,
             'checkout' => $checkout

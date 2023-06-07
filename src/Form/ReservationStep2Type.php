@@ -13,20 +13,25 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ReservationStep2Type extends AbstractType 
+class ReservationStep2Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('parking', EntityType::class, [
                 'class' => Parking::class,
-                'choice_label' => 'nom'
+                'choice_label' => 'nom',
+                'attr' => [
+                    'hidden' => 'hidden'
+                ]
             ])
             ->add('place', EntityType::class, [
                 'class' => Place::class,
-                'choice_label' => 'id'
-            ])
-        ;
+                'choice_label' => 'id',
+                'attr' => [
+                    'hidden' => 'hidden'
+                ]
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
