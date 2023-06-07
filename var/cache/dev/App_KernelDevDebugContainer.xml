@@ -469,7 +469,6 @@
     <service id="App\Service\MailerService" class="App\Service\MailerService" autowire="true" autoconfigure="true">
       <argument type="service" id="mailer.mailer"/>
     </service>
-    <service id="App\Service\PdfReservation" class="App\Service\PdfReservation" autowire="true" autoconfigure="true"/>
     <service id="App\Service\PdfService" class="App\Service\PdfService" autowire="true" autoconfigure="true"/>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">

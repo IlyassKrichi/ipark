@@ -10,6 +10,7 @@ use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,7 +20,7 @@ class PaiementType extends AbstractType
     {
         $builder
             ->add('montant_paye')
-            ->add('date_paiement')
+            ->add('date_paiement', DateType::class, ['widget' => 'single_text'])
             ->add('mode_paiement', ChoiceType::class, ['choices' => [
                 'Visa' => 'Visa', 'Mastercard' => 'Mastercard'
             ]]);

@@ -65,7 +65,7 @@ class __TwigTemplate_9345f36b1d7f4b908723f6d185ebccc7 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "iPark - Parking Services
+        echo "Verified
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -90,7 +90,7 @@ class __TwigTemplate_9345f36b1d7f4b908723f6d185ebccc7 extends Template
 \t<section id=\"hero\" class=\"hero d-flex align-items-center\" style=\"min-height: 100vh;\">
 \t\t<div class=\"container\">
 \t\t\t<h1 class=\"text-center text-success\" style=\"margin-bottom: 250px;\">
-\t\t\t\t<div>
+\t\t\t\t<div data-aos=\"zoom-out\">
 \t\t\t\t\t<i class=\"bi bi-check2-circle\" style=\"font-size: 300px;\"></i>
 \t\t\t\t</div>
 
@@ -132,7 +132,7 @@ class __TwigTemplate_9345f36b1d7f4b908723f6d185ebccc7 extends Template
     {
         return new Source("{% extends 'template2.html.twig' %}
 
-{% block title %}iPark - Parking Services
+{% block title %}Verified
 {% endblock %}
 
 {% block body %}
@@ -140,7 +140,7 @@ class __TwigTemplate_9345f36b1d7f4b908723f6d185ebccc7 extends Template
 \t<section id=\"hero\" class=\"hero d-flex align-items-center\" style=\"min-height: 100vh;\">
 \t\t<div class=\"container\">
 \t\t\t<h1 class=\"text-center text-success\" style=\"margin-bottom: 250px;\">
-\t\t\t\t<div>
+\t\t\t\t<div data-aos=\"zoom-out\">
 \t\t\t\t\t<i class=\"bi bi-check2-circle\" style=\"font-size: 300px;\"></i>
 \t\t\t\t</div>
 

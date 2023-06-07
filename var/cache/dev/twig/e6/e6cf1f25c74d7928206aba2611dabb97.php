@@ -92,11 +92,11 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
 \t\t\t\t<div class=\"col-md-8 mx-auto\">
 \t\t\t\t\t<div class=\"card rounded-3 border-1\">
 \t\t\t\t\t<div class=\"card-header bg-transparent\" style=\"color: black;\"><h1 class=\"card-title text-center color-black\">Payment</h1></div>
-\t\t\t\t\t\t<div class=\"card-body\" style=\"color: black;\">
-\t\t\t\t\t\t";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_start');
+\t\t\t\t\t";
+        // line 13
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
         echo "
+\t\t\t\t\t\t<div class=\"card-body\" style=\"color: black;\">
 \t\t\t\t\t\t";
         // line 15
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "mode_paiement", [], "any", false, false, false, 15), 'row', ["label" => "Payment Card"]);
@@ -105,18 +105,14 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
 \t\t\t\t\t\t\t<input type=\"text\" id=\"lastname\" class=\"form-control\">
 \t\t\t\t\t\t\t<label for=\"firstname\" class=\"form-label mt-3\">First Name</label>
 \t\t\t\t\t\t\t<input type=\"text\" id=\"firstname\" class=\"form-control\">
-\t\t\t\t\t\t\t\t<input type=\"hidden\" id=\"montant_paye\" value=\"";
+\t\t\t\t\t\t\t\t";
         // line 20
-        echo twig_escape_filter($this->env, (isset($context["price"]) || array_key_exists("price", $context) ? $context["price"] : (function () { throw new RuntimeError('Variable "price" does not exist.', 20, $this->source); })()), "html", null, true);
-        echo "\" name=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\FormExtension']->getFieldName(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "montant_paye", [], "any", false, false, false, 20)), "html", null, true);
-        echo "\">
-\t\t\t\t\t\t\t\t<input type=\"hidden\" id=\"date_paiement\" value=\"";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "montant_paye", [], "any", false, false, false, 20), 'widget', ["attr" => ["id" => "montant_paye", "value" => (isset($context["price"]) || array_key_exists("price", $context) ? $context["price"] : (function () { throw new RuntimeError('Variable "price" does not exist.', 20, $this->source); })()), "required" => "required", "hidden" => "hidden"]]);
+        echo "
+\t\t\t\t\t\t\t\t";
         // line 21
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y-m-d"), "html", null, true);
-        echo "\" name=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\FormExtension']->getFieldName(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "date_paiement", [], "any", false, false, false, 21)), "html", null, true);
-        echo "\">
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "date_paiement", [], "any", false, false, false, 21), 'widget', ["attr" => ["id" => "date_paiement", "value" => twig_date_format_filter($this->env, "now", "Y-m-d"), "required" => "required", "hidden" => "hidden"]]);
+        echo "
 \t\t\t\t\t\t\t\t<label for=\"creditcard\" class=\"form-label mt-3\">Credit Card Number</label>
 \t\t\t\t\t\t\t\t<input type=\"tel\" id=\"creditcard\" name=\"creditcard\" inputmode=\"numeric\" class=\"form-control\" maxlength=\"16\" pattern=\"[0-9]{16}\" autocomplete=\"cc-number\" required>
 \t\t\t\t\t\t\t\t<label for=\"cvc\" class=\"form-label mt-3\">CVC Code</label>
@@ -163,7 +159,7 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
 
     public function getDebugInfo()
     {
-        return array (  136 => 36,  116 => 21,  110 => 20,  102 => 15,  98 => 14,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  132 => 36,  114 => 21,  110 => 20,  102 => 15,  97 => 13,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -180,15 +176,15 @@ class __TwigTemplate_33bcf39fdaae02edd38f8cc5f5534423 extends Template
 \t\t\t\t<div class=\"col-md-8 mx-auto\">
 \t\t\t\t\t<div class=\"card rounded-3 border-1\">
 \t\t\t\t\t<div class=\"card-header bg-transparent\" style=\"color: black;\"><h1 class=\"card-title text-center color-black\">Payment</h1></div>
+\t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t\t<div class=\"card-body\" style=\"color: black;\">
-\t\t\t\t\t\t{{ form_start(form) }}
 \t\t\t\t\t\t{{ form_row(form.mode_paiement, { label: 'Payment Card' }) }}
 \t\t\t\t\t\t\t<label for=\"lastname\" class=\"form-label\">Last Name</label>
 \t\t\t\t\t\t\t<input type=\"text\" id=\"lastname\" class=\"form-control\">
 \t\t\t\t\t\t\t<label for=\"firstname\" class=\"form-label mt-3\">First Name</label>
 \t\t\t\t\t\t\t<input type=\"text\" id=\"firstname\" class=\"form-control\">
-\t\t\t\t\t\t\t\t<input type=\"hidden\" id=\"montant_paye\" value=\"{{ price }}\" name=\"{{ field_name(form.montant_paye) }}\">
-\t\t\t\t\t\t\t\t<input type=\"hidden\" id=\"date_paiement\" value=\"{{ 'now'|date('Y-m-d') }}\" name=\"{{ field_name(form.date_paiement) }}\">
+\t\t\t\t\t\t\t\t{{ form_widget(form.montant_paye, {'attr': {'id': 'montant_paye', 'value': price, 'required': 'required', 'hidden': 'hidden'}}) }}
+\t\t\t\t\t\t\t\t{{ form_widget(form.date_paiement, {'attr': {'id': 'date_paiement', 'value': \"now\"|date('Y-m-d'), 'required': 'required', 'hidden': 'hidden'}}) }}
 \t\t\t\t\t\t\t\t<label for=\"creditcard\" class=\"form-label mt-3\">Credit Card Number</label>
 \t\t\t\t\t\t\t\t<input type=\"tel\" id=\"creditcard\" name=\"creditcard\" inputmode=\"numeric\" class=\"form-control\" maxlength=\"16\" pattern=\"[0-9]{16}\" autocomplete=\"cc-number\" required>
 \t\t\t\t\t\t\t\t<label for=\"cvc\" class=\"form-label mt-3\">CVC Code</label>

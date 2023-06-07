@@ -1,48 +1,58 @@
 {% extends 'template3.html.twig' %}
 
-{% block title %}Reservation{% endblock %}
+{% block title %}Purchase Confirmation{% endblock %}
+{% block PageTitle %}
+    <h1>Purchase Confirmation</h1>
+{% endblock %}
 
 {% block body %}
-    <h1>Reservation</h1>
-
-    <table class="table">
-    
-        <tbody>
-            <tr>
-                <th class="text-left"><span style="color: blue;">Numero de reservation</span></th>
-                <td>{{ reservation.id }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue; text-align: left;">Id Client</span></th>
-                <td>{{ clientId }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue;">Nom</span></th>
-                <td>{{ clientNom }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue;">Prenom</span></th>
-                <td>{{ clientPrenom }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue;">Email</span></th>
-                <td>{{ clientEmail }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue;">GSM</span></th>
-                <td>{{ clientGsm }}</td>
-            </tr>
-            
-
-            <tr>
-                <th class="text-left"><span style="color: blue;">Date_reservation</span></th>
-                <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th class="text-left"><span style="color: blue;">Type_vehicule</th>
-                <td>{{ reservation.typeVehicule }}</td>
-            </tr>
-            
-        </tbody>
-    </table>
+    <section id="hero" class="hero d-flex align-items-center" style="min-height: 100vh;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="card rounded-3 border-1">
+					<div class="card-header bg-transparent" style="color: black;"><h1 class="card-title text-center color-black">Ticket</h1></div>
+						<div class="card-body" style="color: black;">
+							 <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;"><strong>Last Name:</strong></span></th>
+                                        <td>{{ clientNom }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">First Name:</span></th>
+                                        <td>{{ clientPrenom }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Email:</span></th>
+                                        <td>{{ clientEmail }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Phone:</span></th>
+                                        <td>{{ clientGsm }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Booking Date:</span></th>
+                                        <td>{{ reservation.dateReservation ? reservation.dateReservation|date('Y-m-d') : '' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Vehicle:</th>
+                                        <td>{{ reservation.typeVehicule }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Check-in:</th>
+                                        <td>{{ checkin }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-left"><span style="color: blue;">Check-out:</th>
+                                        <td>{{ checkout }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

@@ -62,7 +62,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\t<!-- Favicons -->
 \t\t<link href=";
         // line 18
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/favicon.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/favicon-32x32.png"), "html", null, true);
         echo " rel=\"icon\">
 \t\t<link
 \t\thref=";
@@ -457,7 +457,7 @@ class __TwigTemplate_f8cca4546e27444bdd25ba2b65aa175f extends Template
 \t\tcontent=\"\" name=\"keywords\">
 
 \t\t<!-- Favicons -->
-\t\t<link href={{ asset('assets/img/favicon.png') }} rel=\"icon\">
+\t\t<link href={{ asset('assets/img/favicon-32x32.png') }} rel=\"icon\">
 \t\t<link
 \t\thref={{ asset('assets/img/apple-touch-icon.png') }} rel=\"apple-touch-icon\">
 

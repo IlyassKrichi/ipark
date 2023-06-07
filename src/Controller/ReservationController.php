@@ -10,7 +10,6 @@ use App\Entity\Place;
 use Geocoder\Model\Coordinates;
 use Geocoder\Query\GeocodeQuery;
 use App\Entity\Reservation;
-use App\Entity\TypePrix;
 use App\Form\PaiementType;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 use App\Form\ReservationStep1Type;
@@ -104,11 +103,10 @@ class ReservationController extends AbstractController
         $form = $this->createForm(ReservationStep2Type::class, $reservation);
         $form->handleRequest($request);
         $parkings = $em->getRepository(Parking::class)->findAll();
-        $type_prix = $em->getRepository(TypePrix::class)->findAll();
         $places = $em->getRepository(Place::class)->findAll();
+        $checkinout = $em->getRepository(EntreeSortie::class)->findAll();
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $request->getSession()->remove('adresse');
             $request->getSession()->set('check-in', $checkin);
             $request->getSession()->set('check-out', $checkout);
             $request->getSession()->set('type_vehicule', $type_vehicule);
@@ -136,7 +134,10 @@ class ReservationController extends AbstractController
             'distances' => $distances,
             'flag' => $flag,
             'type' => $type_vehicule,
-            'difference' => $difference
+            'difference' => $difference,
+            'checkinout' => $checkinout,
+            'checkin' => $checkin,
+            'checkout' => $checkout
         ]);
     }
 
@@ -147,16 +148,16 @@ class ReservationController extends AbstractController
         $checkout = $request->getSession()->get('check-out');
         $type_vehicule = $request->getSession()->get('type_vehicule');
         $place = $request->getSession()->get('place_id');
-        $price = $request->getSession()->get('montant');
+        $price = $request->getSession()->get('price');
         $reservation = new Reservation();
         $paiement = new Paiement();
         $checkinout = new EntreeSortie();
         $form = $this->createForm(PaiementType::class, $paiement);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $checkinout->setDateEntree($checkin);
-            $checkinout->setDateSortie($checkout);
+        if ($form->isSubmitted()) {
+            $checkinout->setDateEntree(new \DateTime($checkin));
+            $checkinout->setDateSortie(new \DateTime($checkout));
             $datestring = date('Y-m-d');
             $date = new \DateTime($datestring);
             $reservation->setDateReservation($date);
@@ -164,13 +165,10 @@ class ReservationController extends AbstractController
             $reservation->setClient($this->getUser());
             $reservation->setPlace($place);
             $reservation->setPaiement($paiement);
-            $request->getSession()->remove('adresse');
-            $request->getSession()->remove('type_vehicule');
-            $request->getSession()->remove('place_id');
-            $request->getSession()->remove('check-in');
-            $request->getSession()->remove('check-out');
-            $em->persist($reservation);
+            $checkinout->setReservation($reservation);
+            $checkinout->setPaiement($paiement);
             $em->persist($paiement);
+            $em->persist($reservation);
             $em->persist($checkinout);
             $em->flush();
 
@@ -187,13 +185,7 @@ class ReservationController extends AbstractController
     #[Route('/success', name: 'app_success')]
     public function success(): Response
     {
-        $url = $_SERVER['REQUEST_URI'];
-        $path = parse_url($url, PHP_URL_PATH);
-        parse_str(parse_url($url, PHP_URL_QUERY), $params);
-        if ($path == '/payment') {
-            return $this->render('reservation/success.html.twig');
-        }
-        return $this->render('error/404.html.twig');
+        return $this->render('reservation/success.html.twig');
     }
 
     #[Route('/index', name: 'app_admin')]
@@ -304,6 +296,10 @@ class ReservationController extends AbstractController
         $clientId = $client->getId();
         $clientPrenom = $client->getPrenom();
         $clientGsm = $client->getGsm();
+        $checkin1 = $reservation->getEntreeSortie()->getDateEntree();
+        $checkout1 = $reservation->getEntreeSortie()->getDateSortie();
+        $checkin = $checkin1->format('Y-m-d H:i:s');
+        $checkout = $checkout1->format('Y-m-d H:i:s');
 
 
 
@@ -313,7 +309,9 @@ class ReservationController extends AbstractController
             'clientEmail' => $clientEmail,
             'clientPrenom' => $clientPrenom,
             'clientId' => $clientId,
-            'clientGsm' => $clientGsm
+            'clientGsm' => $clientGsm,
+            'checkin' => $checkin,
+            'checkout' => $checkout
         ]);
 
 

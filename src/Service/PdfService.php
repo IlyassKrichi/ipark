@@ -13,7 +13,7 @@ class PdfService
     {
         $this->domPdf = new Dompdf();
         $pdfOptions = new Options();
-        $pdfOptions->set('defaultFont', 'Garamond');
+        $pdfOptions->set('DefaultFont', 'Arial');
         $this->domPdf->setOptions($pdfOptions);
     }
 
@@ -21,7 +21,7 @@ class PdfService
     {
         $this->domPdf->loadHtml($html);
         $this->domPdf->render();
-        $this->domPdf->stream('details.pdf', ['Attachment' => false]);
+        $this->domPdf->stream('Ticket.pdf', ['Attachment' => false]);
     }
 
     public function generateBinaryPdf($html)

@@ -10,15 +10,15 @@
 				<div class="col-md-8 mx-auto">
 					<div class="card rounded-3 border-1">
 					<div class="card-header bg-transparent" style="color: black;"><h1 class="card-title text-center color-black">Payment</h1></div>
+					{{ form_start(form) }}
 						<div class="card-body" style="color: black;">
-						{{ form_start(form) }}
 						{{ form_row(form.mode_paiement, { label: 'Payment Card' }) }}
 							<label for="lastname" class="form-label">Last Name</label>
 							<input type="text" id="lastname" class="form-control">
 							<label for="firstname" class="form-label mt-3">First Name</label>
 							<input type="text" id="firstname" class="form-control">
-								<input type="hidden" id="montant_paye" value="{{ price }}" name="{{ field_name(form.montant_paye) }}">
-								<input type="hidden" id="date_paiement" value="{{ 'now'|date('Y-m-d') }}" name="{{ field_name(form.date_paiement) }}">
+								{{ form_widget(form.montant_paye, {'attr': {'id': 'montant_paye', 'value': price, 'required': 'required', 'hidden': 'hidden'}}) }}
+								{{ form_widget(form.date_paiement, {'attr': {'id': 'date_paiement', 'value': "now"|date('Y-m-d'), 'required': 'required', 'hidden': 'hidden'}}) }}
 								<label for="creditcard" class="form-label mt-3">Credit Card Number</label>
 								<input type="tel" id="creditcard" name="creditcard" inputmode="numeric" class="form-control" maxlength="16" pattern="[0-9]{16}" autocomplete="cc-number" required>
 								<label for="cvc" class="form-label mt-3">CVC Code</label>

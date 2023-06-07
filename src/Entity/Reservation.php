@@ -21,7 +21,7 @@ class Reservation
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_reservation = null;
 
-    #[ORM\ManyToOne(inversedBy: 'Reservation')]
+    #[ORM\ManyToOne(inversedBy: 'Reservation', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Place $place = null;
 

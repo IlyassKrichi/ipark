@@ -58,6 +58,7 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\PropertyInfo\\' => 31,
             'Symfony\\Component\\PropertyAccess\\' => 33,
+            'Symfony\\Component\\Process\\' => 26,
             'Symfony\\Component\\PasswordHasher\\' => 33,
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Mime\\' => 23,
@@ -107,6 +108,11 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'M' => 
         array (
             'Masterminds\\' => 12,
+        ),
+        'K' => 
+        array (
+            'Knp\\Snappy\\' => 11,
+            'Knp\\Bundle\\SnappyBundle\\' => 24,
         ),
         'H' => 
         array (
@@ -283,6 +289,10 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         array (
             0 => __DIR__ . '/..' . '/symfony/property-access',
         ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
         'Symfony\\Component\\PasswordHasher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/password-hasher',
@@ -443,6 +453,14 @@ class ComposerStaticInit3cea3dd901073de1072e09d89bf2c6b3
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
+        ),
+        'Knp\\Snappy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy/src/Knp/Snappy',
+        ),
+        'Knp\\Bundle\\SnappyBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-snappy-bundle/src',
         ),
         'Http\\Promise\\' => 
         array (

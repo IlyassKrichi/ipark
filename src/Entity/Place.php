@@ -21,7 +21,7 @@ class Place
     #[ORM\Column(length: 100)]
     private ?string $couverture = null;
 
-    #[ORM\ManyToOne(inversedBy: 'Place')]
+    #[ORM\ManyToOne(inversedBy: 'Place', cascade: ['persist'])]
     #[ORM\JoinColumn(nullable: false)]
     private ?Parking $parking = null;
 
